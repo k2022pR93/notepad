@@ -1,0 +1,81 @@
+Ticket
+===============
+MP-1796
+==============
+ADR
+ documents/HRMSDEV/images/adr_attachments -> Created Folder
+/frontend/controllers/DefaultController.php
+/frontend/config/main.php  
+/frontend/views/adr/view.php
+
+-------
+passport
+ documents/HRMSDEV/images/passport_attachments -> Created Folder
+/frontend/views/passportverification/view.php
+/frontend/controllers/DefaultController.php
+
+----------------
+missing
+ documents/HRMSDEV/images/missing_attachments -> Created Folder
+/frontend/views/missing/view.php
+/frontend/controllers/DefaultController.php
+
+=====================
+MP-1793
+=====================
+/frontend/controllers/VcController.php
+/frontend/views/vc/online-statement.php
+
+===============
+MP-1790
+===============
+/frontend/views/vc/online-statement.php
+
+---
+
+Crime
+Table : crime_details
+documents/HRMSDEV/images/crime_attachments -- Create Folder
+
+/frontend/controllers/VcController.php
+/frontend/views/vc/online-statement.php
+
+/frontend/views/crime/view.php
+/frontend/views/crime/index.php
+/frontend/views/crime/_form.php
+
+/frontend/models/CrimeDetails.php
+/frontend/controllers/DefaultController.php
+/frontend/controllers/VcDefaultConsentController.php
+/frontend/models/VcManualParticipants.php
+
+Event
+Table : event_permission_details  -> replace if table is exists in a prod
+documents/HRMSDEV/images/event_attachments -- Create Folder
+
+/frontend/controllers/DefaultController.php
+/frontend/controllers/VcController.php
+/frontend/controllers/VcDefaultConsentController.php
+
+/frontend/views/eventpermission/_form.php
+/frontend/views/eventpermission/index.php
+/frontend/views/eventpermission/view.php
+
+/frontend/views/vc/online-statement.php
+
+/frontend/models/EventPermissionDetails.php
+
+=====
+MP-1675
+/frontend/views/adr/view.php
+/frontend/views/crime/view.php
+/frontend/views/eventpermission/view.php
+/frontend/views/missing/view.php
+/frontend/views/passportverification/view.php
+
+=====================
+Page redirect 
+ /frontend/views/vc/online-statement.php
+
+
+

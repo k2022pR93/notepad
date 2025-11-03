@@ -1,0 +1,126 @@
+Qeury
+
+SELECT 
+    cd.crm_detail_srno,
+    cd.fir_reg_num,
+    cd.case_gist,
+    cd.phy_evidence_detail,
+    cd.crime_detail_prep_dt,
+    cd.record_status AS crime_status,
+    cd.record_created_on,
+
+    cc.person_code,
+    cc.record_status AS complainant_status,
+
+    ch.crime_character_type,
+    ch.other_crime_character,
+
+    ai.accused_srno as accused_id,
+    ai.first_name,
+    ai.middle_name,
+    ai.last_name,
+    ai.full_name,
+    ai.age,
+    ai.relative_name,
+    ai.relative_alias,
+    ai.mobile_1,
+    ai.mobile_2,
+    ai.telephone,
+
+    aa.address_line_1,
+    aa.address_line_2,
+    aa.address_line_3,
+    aa.village,
+    aa.tehsil,
+    aa.country_cd,
+    aa.distrct_cd,
+    aa.state_cd,
+    aa.pincode
+
+FROM t_crime_detail_o cd
+
+LEFT JOIN t_crime_complainant_o cc
+    ON cd.fir_reg_num = cc.fir_reg_num
+
+LEFT JOIN t_crime_character_o ch
+    ON cd.fir_reg_num = ch.fir_reg_num
+
+LEFT JOIN t_accused_info_o ai
+    ON cd.fir_reg_num = ai.fir_reg_num
+
+LEFT JOIN t_accused_addresses_o aa
+    ON ai.accused_srno = aa.accused_srno
+
+--ORDER BY cd.fir_reg_num DESC
+LIMIT 100;
+
+===============================================================
+SELECT DISTINCT ON (cd.fir_reg_num)
+    cd.crm_detail_srno,
+    cd.fir_reg_num,
+    cd.case_gist,
+    cd.phy_evidence_detail,
+    cd.crime_detail_prep_dt,
+    cd.record_status AS crime_status,
+    cd.record_created_on,
+
+    cc.person_code AS complainant_id,
+    cc.record_status AS complainant_status,
+    pi.person_type_cd,
+    pi.state_cd AS complainant_state,
+    pi.district_cd AS complainant_district,
+    pi.ps_id,
+    pi.first_name AS complainant_fname,
+    pi.middle_name AS complainant_mname,
+    pi.last_name AS complainant_lname,
+    pi.age AS complainant_age,
+    pi.yob AS complainant_birth_year,
+    pi.mobile_1 AS complainant_mobile1,
+    pi.mobile_2 AS complainant_mobile2,
+    pi.telephone AS complainant_telephone,
+    pi.record_created_on AS complainant_created_dt,
+    pi.record_created_by AS complainant_created_by,
+
+    ch.crime_character_type,
+    ch.other_crime_character,
+
+    ai.accused_srno AS accused_id,
+    ai.first_name AS acc_fname,
+    ai.middle_name AS acc_mname,
+    ai.last_name AS acc_lname,
+    ai.full_name AS acc_full_name,
+    ai.age AS acc_age,
+    ai.relative_name AS acc_relative_name,
+    ai.relative_alias AS acc_relative_alias,
+    ai.mobile_1 AS acc_mobile_1,
+    ai.mobile_2 AS acc_mobile_2,
+    ai.telephone AS acc_telephone,
+
+    aa.address_line_1 AS acc_address_line_1,
+    aa.address_line_2 AS acc_address_line_2,
+    aa.address_line_3 AS acc_address_line_3,
+    aa.village AS acc_village,
+    aa.tehsil AS acc_tehsil,
+    aa.country_cd AS acc_country,
+    aa.distrct_cd AS acc_distrct,
+    aa.state_cd AS acc_state,
+    aa.pincode AS acc_pincode
+
+FROM t_crime_detail_o cd
+
+LEFT JOIN t_crime_complainant_o cc
+    ON cd.fir_reg_num = cc.fir_reg_num
+
+LEFT JOIN t_crime_character_o ch
+    ON cd.fir_reg_num = ch.fir_reg_num
+
+LEFT JOIN t_accused_info_o ai
+    ON cd.fir_reg_num = ai.fir_reg_num
+
+LEFT JOIN t_accused_addresses_o aa
+    ON ai.accused_srno = aa.accused_srno
+
+LEFT JOIN t_person_info_o pi ON pi.person_code = cc.person_code
+WHERE cd.fir_reg_num = 19841003150301
+ORDER BY cd.fir_reg_num, cd.record_created_on DESC LIMIT 1;
+

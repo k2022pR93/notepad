@@ -1,0 +1,444 @@
+
+/frontend/controllers/VcConsentController.php
+/frontend/controllers/VcDefaultConsentController.php
+ /frontend/views/vc-consent/vc_consent_page.php
+/frontend/views/vc-default-consent/vc_consent_page.php
+/frontend/views/vc-consent/thank_you_page.php
+/frontend/views/vc-default-consent/thank_you_page.php
+
+------------
+8-7-25
+Table : igrms_calendar_schedule_time 
+Added columns : 
+type (character varying 225)
+type_of_id	integer
+
+/frontend/views/vc-default-consent/vc_consent_page.php
+/frontend/views/vc-default-consent/thank_you_page.php
+
+/frontend/views/vc-consent/vc_consent_page.php
+/frontend/views/vc-consent/schedule-meeting-act.php
+/frontend/views/vc-consent/thank_you_page_act.php
+/frontend/views/vc-consent/thank_you_page.php
+
+/frontend/controllers/VcController.php
+/frontend/controllers/VcConsentController.php
+/frontend/controllers/ScheduleCalendarMeetingController.php
+/frontend/controllers/VcDefaultConsentController.php
+
+/frontend/views/schedule-calendar-meeting/index.php
+
+8-7-2025
+---------------
+/frontend/controllers/ScheduleCalendarMeetingController.php
+/frontend/controllers/VcConsentController.php
+/frontend/controllers/VcDefaultConsentController.php
+
+/frontend/views/vc-default-consent/thank_you_page.php
+/frontend/views/vc-default-consent/vc_consent_page.php
+
+/frontend/views/vc-consent/vc_consent_page.php
+
+/frontend/views/vc/online-statement.php
+/frontend/views/igrms-master/online-statement.php
+
+
+9-7-2025
+====
+Table: igrms_calendar_schedule_time
+status	character varying(255)		
+updated_date	timestamp without time zone	
+
+/frontend/views/vc-consent/schedule-meeting-act.php
+/frontend/views/vc-consent/thank_you_page_act.php
+/frontend/views/vc-consent/thank_you_page.php
+/frontend/views/vc-consent/vc_consent_page.php
+
+/frontend/views/vc/online-statement.php
+
+/frontend/views/schedule-calendar-meeting/index.php
+
+/frontend/views/vc-default-consent/vc_consent_page.php
+
+/frontend/views/igrms-master/online-statement.php
+
+ /frontend/controllers/VcConsentController.php
+ /frontend/controllers/IgrmsMasterController.php
+ /frontend/controllers/ScheduleCalendarMeetingController.php
+ /frontend/controllers/VcDefaultConsentController.php
+ /frontend/controllers/VcController.php
+ 
+ 10-07-2025
+ /frontend/views/accused-details/update.php
+/frontend/controllers/AccusedDetailsController.php
+ /frontend/models/OffenseMaster.php
+
+ 11-7-2024
+ RAK-1394
+ Rakshak -> Updated on production-19072025
+/frontend/controllers/AccusedDetailsController.php 
+/frontend/views/accused-details/update.php 
+views/accused-details/digital_details_table.php 
+/views/accused-details/crime-details-table.php 
+views/accused-details/personal-details-form.php
+views/accused-details/accused-address-table.php
+/frontend/models/AccusedDetails.php
+/frontend/views/accused-details/alias-table.php
+d/views/accused-details/accused-details-tab.php
+/views/accused-details/accused-relative-tab.php
+views/accused-details/accused-related-info-tab.php
+views/accused-details/accused-vehical-info-table.php
+views/accused-details/accused-social-media-table.php
+views/accused-details/accused-bank-info-table.php
+views/accused-details/associates-details-table.php
+/views/accused-details/court-details-table.php
+
+14-07-2025
+RAK-1394
+Rakshak -> Updated on production-19072025
+/frontend/views/accused-details/alias-table.php
+views/accused-details/accused-address-table.php
+views/accused-details/personal-details-form.php
+views/accused-details/digital_details_table.php
+/views/accused-details/crime-details-table.php
+/frontend/views/accused-details/update.php
+/frontend/controllers/AccusedDetailsController.php
+views/accused-details/accused-relative-tab.php
+views/accused-details/accused-related-info-tab.php
+views/accused-details/accused-vehical-info-table.php
+views/accused-details/accused-social-media-table.php
+views/accused-details/accused-bank-info-table.php
+views/accused-details/associates-details-table.php
+views/views/accused-details/court-details-table.php
+
+16-07-2025
+mpolice
+/views/vc-consent/grievance-otp-verification.php
+ /frontend/config/main.php
+ /frontend/controllers/VcConsentController.php
+ /frontend/views/vc-consent/grievance-register-form.php
+ /frontend/views/vc-consent/success-thank-you.php
+
+17-07-2025
+nmwebsite mpolice  -> rework 21-07-2025
+ /frontend/models/IgrmsMaster.php
+ /frontend/views/igrms-master/index.php
+ /frontend/views/igrms-master/view.php
+ /frontend/views/vc-consent/grievance-register-form.php
+ /frontend/views/igrms-master/forward.php
+ /frontend/controllers/VcConsentController.php
+
+ https://mpolice.in/nm-website/register-grievance-application
+
+ 18-07-2025
+ 
+ https://sanpri.co.in/Rakshak/frontend/web/hrms_webservices/rakshak/get_accused_details_local.php
+ https://sanpri.co.in/Rakshak/frontend/web/hrms_webservices/rakshak/save_accused_address_info.php
+ https://sanpri.co.in/Rakshak/frontend/web/hrms_webservices/rakshak/search_accused.php
+
+===============================================================================================
+19-07-2025
+Done on development, Deployed on production - 22-07-2025
+/frontend/controllers/DefaultController.php
+/frontend/views/adr/index.php
+/frontend/views/missing/index.php
+/frontend/views/characterverification/index.php
+ /frontend/views/crime/index.php
+ /frontend/views/eventpermission/index.php
+/frontend/views/passportverification/index.php
+
+===
+ALTER TABLE adr_record_details
+ADD COLUMN login_unit_cd INTEGER DEFAULT 0,
+ADD COLUMN login_sub_unit_cd INTEGER DEFAULT 0;
+
+ALTER TABLE missing_record_details
+ADD COLUMN login_unit_cd INTEGER DEFAULT 0,
+ADD COLUMN login_sub_unit_cd INTEGER DEFAULT 0;
+
+ALTER TABLE character_verification_details
+ADD COLUMN login_unit_cd INTEGER DEFAULT 0,
+ADD COLUMN login_sub_unit_cd INTEGER DEFAULT 0;
+
+ALTER TABLE crime_details
+ADD COLUMN login_unit_cd INTEGER DEFAULT 0,
+ADD COLUMN login_sub_unit_cd INTEGER DEFAULT 0;
+
+ALTER TABLE event_permission_details
+ADD COLUMN login_unit_cd INTEGER DEFAULT 0,
+ADD COLUMN login_sub_unit_cd INTEGER DEFAULT 0;
+
+ALTER TABLE passport_details
+ADD COLUMN login_unit_cd INTEGER DEFAULT 0,
+ADD COLUMN login_sub_unit_cd INTEGER DEFAULT 0;
+
+ALTER TABLE adr_record_details
+ADD COLUMN created_by NUMERIC,
+ADD COLUMN updated_by NUMERIC;
+
+ALTER TABLE missing_record_details
+ADD COLUMN created_by NUMERIC,
+ADD COLUMN updated_by NUMERIC;
+
+ALTER TABLE character_verification_details
+ADD COLUMN created_by NUMERIC,
+ADD COLUMN updated_by NUMERIC;
+
+ALTER TABLE crime_details
+ADD COLUMN created_by NUMERIC,
+ADD COLUMN updated_by NUMERIC;
+
+ALTER TABLE event_permission_details
+ADD COLUMN created_by NUMERIC,
+ADD COLUMN updated_by NUMERIC;
+
+ALTER TABLE passport_details
+ADD COLUMN created_by NUMERIC,
+ADD COLUMN updated_by NUMERIC;
+=============================================================================
+21-07-2025
+MP-1965
+Done on development, Pending on production
+
+/frontend/views/nm-website/nmwebsite-otp-verification.php
+/frontend/views/nm-website/grievance-register-form.php
+/frontend/views/nm-website/success-thank-you.php
+
+/frontend/views/igrms-master/index.php
+
+/frontend/controllers/NmWebsiteController.php
+/frontend/controllers/VcConsentController.php
+
+/frontend/models/IgrmsMaster.php
+/frontend/config/main.php
+ALTER TABLE igrms_otp_manage
+ADD COLUMN type VARCHAR(255);
+=============================================================================
+22-07-2025
+MP-1980
+/controllers/CronSendSmsEnquiryOfficerController.php
+/frontend/config/main.php
+/common/components/MessageComponent.php
+=============================================================================
+23-07-2025
+MP-1980 Deployed on production
+https://mpolice.in/cron-send-sms-enquiry-officer/send-sms-enquiry-officer
+ /var/www/webroot/ROOT/frontend/web/hrms_webservices/CronJobs/cronSendSmsEnquiryOfficer.php
+https://sanpri.co.in/HRMSDEV/frontend/web/hrms_webservices/CronJobs/cronSendSmsEnquiryOfficer.php
+
+https://mpolice.in/frontend/web/hrms_webservices/CronJobs/cronSendSmsEnquiryOfficer.php
+
+====================================================================================
+24-07-2025
+
+ https://sanpri.co.in/HRMSDEV/nm-website/register-grievance-application
+
+========================================================================
+25-07-2025
+
+/frontend/controllers/NmWebsiteController.php
+=======================================================================
+26-07-2025
+Rakshak  - RAK-1423
+Table : accused_details - Added columns "life_status"
+
+/frontend/views/accused-details/update.php
+d/views/accused-details/accused-details-tab.php
+/frontend/views/accused-details/create.php
+/frontend/views/accused-details/index.php
+
+ /frontend/models/AccusedDetails.php
+ /frontend/controllers/AccusedDetailsController.php
+
+ web/hrms_webservices/rakshak/get_accused_details_local.php
+ web/hrms_webservices/rakshak/search_accused.php
+
+ --
+ Rakshak CCTNS
+ web/hrms_webservices/cctns/get_global_dtls.php
+ end/web/hrms_webservices/cctns/accused_dtls.php
+ /frontend/web/hrms_webservices/cctns/config.php
+ https://sanpri.co.in/Rakshak/frontend/web/hrms_webservices/cctns/accused_dtls.php
+
+ https://sanpri.co.in/Rakshak/hrms_webservices/cctns/accused_dtls.php
+ https://sanpri.co.in/Rakshak/hrms_webservices/cctns/get_global_dtls.php
+
+ {
+  "FIRST_NAME": "krishna",
+  "MIDDLE_NAME": "M",
+  "LAST_NAME": "Doe"
+}
+
+web/hrms_webservices/rakshak/get_accused_details_local.php
+web/hrms_webservices/rakshak/search_accused.php
+=============================================================
+28-07-2025
+
+rakshak.in.net
+sanpri.co.in
+https://rakshak.in.net/Rakshak/hrms_webservices/cctns/accused_dtls.php
+https://sanpri.co.in/Rakshak/hrms_webservices/cctns/accused_dtls.php
+
+https://rakshak.in.net/Rakshak/frontend/web/hrms_webservices/cctns/accused_dtls.php
+
+{
+  "FIRST_NAME": "krishna",
+  "MIDDLE_NAME": "M",
+  "LAST_NAME": "Doe",
+  "fir_no":"",
+  "mobile_no":"",
+  "selectedSevarth":"",
+  "module_name":"",
+  "id":""
+}
+
+$f_name= $datas['FIRST_NAME'];
+$m_name= $datas['MIDDLE_NAME'];
+$l_name= $datas['LAST_NAME'];
+$fir= $datas['fir_no'];
+$mobile_no= $datas['mobile_no'];
+$selectedSevarth= $datas['selectedSevarth'];
+$module_name= $datas['module_name'];
+$user_id= $datas['id'];
+
+/var/www/webroot/ROOT/Rakshak/frontend/web/hrms_webservices/cctns/get_global_dtls.php
+https://rakshak.in.net/Rakshak/hrms_webservices/cctns/get_global_dtls.php
+
+yyikKl4OhCemSv1rdG2vCbugLopSToaG+mo6n4mZYDZBTV04tU/lm1xgj13bjSUnj3
+aDHfiuHpfCt371pKP5XEv1E2mKA+e2EIv9HfkllP0=
+
+var/www/webroot/ROOT/Rakshak/frontend/web/hrms_webservices/cctns/get_accused_vc.php
+
+{
+  "FIRST_NAME": "krishna",
+  "MIDDLE_NAME": "M",
+  "LAST_NAME": "Doe",
+  "fir_no":"34/2025",
+  "mobile_no":"8655615809",
+  "selectedSevarth":"NMADMIN0001",
+  "module_name":"globle",
+  "id":"8541"
+}
+
+web/hrms_webservices/cctns/get_global_dtls.php
+================================================================
+29-07-2025
+
+https://sanpri.co.in/Rakshak/frontend/web/hrms_webservices/rakshak/search_accused.php
+https://rakshak.in.net/Rakshak/frontend/web/hrms_webservices/rakshak/search_accused.php
+
+1984141 - Rabale PS
+
+{
+  "name_search": "",
+  "region_id": "",
+  "zone_id": "",
+  "division_id": "",
+  "police_station_id": "1984141",
+  "residential_sub_unit":"",
+  "fir_no": "",
+  "type": 1,
+  "sevarth_number": "",
+  "user_id": "",
+  "city_id": ""
+}
+
+सागर शिवाजी मकामले
+श्रीकांत सखाराम पाटील
+https://sanpri.co.in/HRMSDEV/breath-analyzer-data/upload
+19841015160001951
+19841056240002972
+
+https://rakshak.in.net/Rakshak/hrms_webservices/cctns/get_accused_vc.php
+
+https://sanpri.co.in/HRMSDEV/default/get_cctns_accused_dtls
+
+https://sanpri.co.in/HRMSDEV/breath-analyzer-data/upload
+Payload:
+json:
+    {\"recordid\":\"REC123\",\"recordtype\":\"BAC\",\"deviceno\":\"DVC001\",\"devicemacorimei\":\"ABCDEF123456\",\"testtype\":\"TypeA\",\"testdata\":\"0.04\",\"testunit\":1,\"testtime\":\"2025-06-17 12:34:56\",\"validnum\":1}
+file: <fileName>
+=============================================================
+30-07-2025
+https://ba.sanpri.co.in/
+
+
+https://theliveupdates.com/api/device/uploadrecord
+
+Content-Type : application/json
+
+{
+    "recordid": "R20250728001",
+    "recordtype": "Routine",
+    "deviceno": "ALC-0001",
+    "devicemacorimei": "00:1A:7D:DA:71:13",
+    "testtype": "Standard",
+    "testdata": "0.05",
+    "testunit": "0",
+    "testtime": "2025-07-28T08:30:00",
+    "b2time": "2025-06-01T00:00:00",
+    "b10time": "2025-06-01T00:00:00",
+    "checktime": "2025-07-01T00:00:00",
+    "validnum": 3,
+    "validinfo1": "Sensor OK",
+    "validinfo2": "Battery OK",
+    "validinfo3": "Signal Strong",
+    "validinfo4": "",
+    "validinfo5": "",
+    "validinfo6": "",
+    "picflag": "1",
+    "sinfo": "E",
+    "ewinfo": "77.5946",
+    "lng": "N",
+    "lat": "12.9716",
+    "pok": "1",
+    "conformitynum": "ABCD1234",
+    "componentlos": "Sensor-A1"
+    
+}
+ https://sanpri.co.in/HRMSDEV/breath-analyzer-data/upload
+ https://sanpri.co.in/device/uploadrecord
+ https://sanpri.co.in/API/device/uploadrecord
+
+=================================================================
+ 31/07-2025
+{
+  "recordid": "REC123",
+  "recordtype": "BAC",
+  "deviceno": "DVC001",
+  "devicemacorimei": "ABCDEF123456",
+  "testtype": "TypeA",
+  "testdata": "0.04",
+  "testunit": 1,
+  "testtime": "2025-06-17 12:34:56",
+  "validnum": 1
+}
+
+Crime Details
+-----------------
+Missing columns
+----------------
+Complainant Relation to Case
+Accused Gender
+Victim Name
+Victim Contact
+Victim Age
+Victim Gender
+Type of Crime
+Police Station
+
+
+Crime Number
+Crime Date
+Crime Time
+Accused Name
+Accused Address
+Accused State
+Accused District
+Accused Contact
+Accused Age
+
+Complainant Name
+Complainant Contact
+
+=============================================================

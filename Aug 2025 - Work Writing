@@ -1,0 +1,410 @@
+01-08-2025
+ /common/config/main.php
+ /frontend/views/crime/_form.php
+ /frontend/controllers/DefaultController.php
+
+http://www.sanpri.co.in/api/device/uploadrecord
+https://emc.mpolice.in/api/device/uploadrecord
+alertMessage('success',response.message);
+alertMessage('danger',response.message);
+
+================================================================
+02-08-2025
+yyikKl4OhCemSv1rdG2vCbugLopSToaG+mo6n4mZYDZBTV04tU/lm1xgj13bjSUnj3aDHfiuHpfCt371pKP5XBso2WuUw2clq9oeXvwjbpGyyqrqHBel8OvtnzqaMgK8dWzdLtTq9DdAkz2s0w3qBRKNbxIQmenGGAJJL+6owVN3QKDPpOBCjehu5cnfjzPYTvBmzem9fP5zX/Fqi2ZM5H0dPnay8lgPJZA52Qe5E9VjNm7dZgiC1LrYfyNf8nBl
+
+{
+  "FIRST_NAME": "krishna",
+  "MIDDLE_NAME": "M",
+  "LAST_NAME": "Doe",
+  "fir_no":"",
+  "mobile_no":"",
+  "selectedSevarth":"NMADMIN0001",
+  "module_name":"globle",
+  "id":"8541"
+}
+
+
+====================================================================
+04-08-2025
+frontend/controllers/IgrmsMasterController.php
+frontend/views/igrms-master/index.php
+/frontend/views/igrms-master/allocate.php
+
+================================================================
+05-08-2025
+MP-1990 -> Canceled deploy
+Table : igrms_master - Added new column "forwarded_by"
+/frontend/views/igrms-master/index.php
+/frontend/models/IgrmsMaster.php  -> added one line in query ig.forwarded_by,
+
+MP-1810 -> done
+ /frontend/views/eventpermission/_form.php
+
+MP-1775 -> done
+ /frontend/views/igrms-master/view.php
+
+MP-1890 -> done
+ /frontend/controllers/VcConsentController.php
+ .tend/controllers/VcDefaultConsentController.php
+
+ /frontend/views/vc-consent/vc_consent_page.php
+ ntend/views/vc-consent/schedule-meeting-act.php
+ /frontend/views/vc-consent/thank_you_page_act.php
+
+ ...nd/views/vc-default-consent/vc_consent_page.php
+ 
+ 
+ MP-1919 -> done
+ /frontend/views/igrms-master/online-statement.php
+ /frontend/views/vc/online-statement.php
+
+MP-1926 -> done
+ ntend/views/schedule-calendar-meeting/index.php
+ =========================================================
+ 06-08-2025
+
+ MP-1939 -> done
+
+  Table : vc_notice_details_transaction, added column - confirmation_token -> done
+  Table : vc_notice_details, added column - confirmation_token -> done
+
+/frontend/controllers/VcConsentController.php
+ /frontend/controllers/IgrmsMasterController.php
+ /frontend/controllers/VcController.php
+
+ https://sanpri.co.in/HRMSDEV/vc-consent/submit-stmnt?user_id=NTM3
+
+ MP-1928 -> done
+ /frontend/views/characterverification/index.php
+ /frontend/views/crime/index.php
+ /frontend/views/eventpermission/index.php
+ /frontend/views/missing/index.php
+ /frontend/views/passportverification/index.php
+
+ MP-1494 done
+ .end/controllers/EmpCanteenTblMainController.php  -- actionCanteen()
+ =====================================================================================
+ 07-08-2025
+ Port: 8096 for breath analyzer device setup on this port all application
+
+ MP-1872 - Done deploy on prod
+ /frontend/controllers/DefaultController.php
+ /frontend/views/characterverification/_form.php
+ /frontend/views/characterverification/index.php
+ /frontend/views/characterverification/view.php
+
+ MP-1465 - Done deploy on prod
+ /frontend/views/adr/_form.php
+ /frontend/views/adr/index.php
+ /frontend/views/adr/view.php
+
+ /frontend/views/crime/_form.php
+ /frontend/views/crime/index.php
+ /frontend/views/crime/view.php
+
+ /frontend/views/eventpermission/_form.php
+ /frontend/views/eventpermission/index.php
+ /frontend/views/eventpermission/view.php
+
+ /frontend/views/missing/_form.php
+ /frontend/views/missing/index.php
+ /frontend/views/missing/view.php
+
+ /frontend/views/passportverification/_form.php
+ /frontend/views/passportverification/index.php
+ /frontend/views/passportverification/view.php
+
+ MP-1937 -
+ MP-1931 -
+ MP-1930 -
+ MP-1925 - 
+ MP-1923 - will not implement
+ MP-1902 - Closed
+ MP-1875 - Closed
+ MP-1784 -> done both dev and prod
+ MP-1677 -> done both dev and prod 
+ MP-1920 -> done both dev and prod 
+ MP-1789 -> done both dev and prod 
+==============================================
+08-08-2025
+MP-1859 
+ /frontend/controllers/VcConsentController.php -- AND igrms.status!=3";  more code added 
+
+ MP-1469 - Done deploy on prod
+/frontend/views/vc/online-statement.php
+/frontend/views/igrms-master/online-statement.php
+
+===================================================================
+09-08-2025
+
+MP-1356 - done both dev and prod
+/frontend/views/igrms-master/update_view.php
+
+MP-1774 -> Done Both Dev and Prod
+/frontend/views/adr/view.php -
+/frontend/views/characterverification/view.php -
+/frontend/views/crime/view.php -
+/frontend/views/eventpermission/view.php -
+/frontend/views/missing/view.php -
+/frontend/views/passportverification/view.php -
+ <p>Are you sure? You want to close this record?</p>
+
+ MP-1776 -> done both dev and prod
+ /frontend/views/igrms-master/view.php
+=================================================================================
+11-08-2025
+MP-1920 -> done both dev and prod again
+MP-1873 -> Done deploy on prod
+/frontend/views/adr/_form.php
+/frontend/views/characterverification/_form.php
+/frontend/views/crime/_form.php
+/frontend/views/missing/_form.php
+/frontend/views/eventpermission/_form.php
+/frontend/views/passportverification/_form.php
+
+MP-2170 -> Done on dev and already exist in production
+
+MP-1827 -> Done Dev and prod both
+/frontend/models/AdrRecordDetails.php
+/frontend/models/AdrForm.php
+
+MP-1780 -> done both dev and prod
+
+=================================================================================
+12-08-2025
+Worked and learn superset functionality for implementing dashboard 
+
+https://devbi.sanpri.in/login/
+username : admin
+password : admin@123987
+
+https://bi.sanpri.in/sqllab/
+http://localhost/docker/iframe_php_code.php
+
+https://devbi.sanpri.in/superset/dashboard/p/9GW0ElNjlQB/
+
+================================================================================
+13-08-2025
+
+RAK-1482
+/frontend/controllers/AccusedDetailsController.php
+
+==================================================================
+14-08-2025
+
+RAK-1488
+ /frontend/controllers/AccusedDetailsController.php
+
+ --
+ https://vc.sanpri.in/NMADMIN0001_19802_14082025_161515?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ0cmlkZXZhcHAiLCJpc3MiOiJ0cmlkZXZhcHAiLCJzdWIiOiJ2Yy5zYW5wcmkuaW4iLCJyb29tIjoiTk1BRE1JTjAwMDFfMTk4MDJfMTQwODIwMjVfMTYxNTE1IiwiaWF0IjoxNzU1MTY4MzE2LCJuYmYiOjE3NTUxNjgzMTYsImV4cCI6MzUxMDMzNzUzMSwiY29udGV4dCI6eyJ1c2VyIjp7ImlkIjoiYWRtaW4tMDAxIiwiYWZmaWxpYXRpb24iOiJvd25lciIsImxvYmJ5X2J5cGFzcyI6dHJ1ZSwic2VjdXJpdHlfYnlwYXNzIjp0cnVlfX19.Nbn9VUjW5oaXfgvFnsRhX1OChzT1BzKrXyCMCoifrlo
+ https://vc.sanpri.in/NMADMIN0001_19802_14082025_161515?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ0cmlkZXZhcHAiLCJpc3MiOiJ0cmlkZXZhcHAiLCJzdWIiOiJ2Yy5zYW5wcmkuaW4iLCJyb29tIjoiTk1BRE1JTjAwMDFfMTk4MDJfMTQwODIwMjVfMTYxNTE1IiwiaWF0IjoxNzU1MTY4MzE2LCJuYmYiOjE3NTUxNjgzMTYsImV4cCI6MzUxMDMzNzUzMSwiY29udGV4dCI6eyJ1c2VyIjp7ImlkIjoiYWRtaW4tMDAxIiwiYWZmaWxpYXRpb24iOiJvd25lciIsImxvYmJ5X2J5cGFzcyI6dHJ1ZSwic2VjdXJpdHlfYnlwYXNzIjp0cnVlfX19.Nbn9VUjW5oaXfgvFnsRhX1OChzT1BzKrXyCMCoifrlo
+
+
+$complete_meeting_url=> vc.sanpri.in/NMADMIN0001_19802_14082025_173352?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ0cmlkZXZhcHAiLCJpc3MiOiJ0cmlkZXZhcHAiLCJzdWIiOiJ2Yy5zYW5wcmkuaW4iLCJyb29tIjoiTk1BRE1JTjAwMDFfMTk4MDJfMTQwODIwMjVfMTczMzUyIiwiaWF0IjoxNzU1MTczMDMzLCJuYmYiOjE3NTUxNzMwMzMsImV4cCI6MzUxMDM0Njk2NSwiY29udGV4dCI6eyJ1c2VyIjp7ImlkIjoidXNlci01ODAxIiwiYWZmaWxpYXRpb24iOiJtZW1iZXIiLCJsb2JieV9ieXBhc3MiOmZhbHNlLCJzZWN1cml0eV9ieXBhc3MiOmZhbHNlfX19.Z-8rd4mBciRGrSsdmm5lbzOfE5gwAw-TSXvQrVMhQDA#config.startWithAudioMuted=false&config.startWithVideoMuted=false&userInfo.displayName=%22Public%22&config.disableDisplayNameChange=true
+$moderatorUrl =>         vc.sanpri.in/NMADMIN0001_19802_14082025_173352?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ0cmlkZXZhcHAiLCJpc3MiOiJ0cmlkZXZhcHAiLCJzdWIiOiJ2Yy5zYW5wcmkuaW4iLCJyb29tIjoiTk1BRE1JTjAwMDFfMTk4MDJfMTQwODIwMjVfMTczMzUyIiwiaWF0IjoxNzU1MTczMDMzLCJuYmYiOjE3NTUxNzMwMzMsImV4cCI6MzUxMDM0Njk2NSwiY29udGV4dCI6eyJ1c2VyIjp7ImlkIjoiYWRtaW4tMDAxIiwiYWZmaWxpYXRpb24iOiJvd25lciIsImxvYmJ5X2J5cGFzcyI6dHJ1ZSwic2VjdXJpdHlfYnlwYXNzIjp0cnVlfX19.2UzZSNJwtXdnTNGqWyEPGoXZABFLIZkD09Jx9DNmhAc
+
+https://jitok.emrah.com/
+
+SELECT * FROM "public"."emp_master" WHERE designation_master_id	=7 AND 	unit_master_id = 1984131;
+
+=======================================================================================================
+MP-1940
+/hrms_webservices/api/get_jitsi_token.php
+/frontend/controllers/IgrmsMasterController.php
+/frontend/views/igrms-master/online-statement.php
+==================================================================================================
+16-08-2025
+7887400733
+
+MP-1940 -> Working on this tiken. working progress...
+
+=============================================================================
+18-08-2025
+MP-2054 -> Done both dev and prod - move prod
+
+MP-680
+MP-846
+MP-1375
+MP-660 -> Done both dev and prod -move prod
+MP-432
+RAK-1510 -> Done both dev and prod - move prod
+RAK-1512 -> Done both dev and prod - move prod
+
+RAK-1330 -> Done both dev and prod - Move prod
+./accused-details/accused-vehical-info-table.php
+
+RAK-1398 -> Done dev and prod
+./accused-details/accused-social-media-table.php
+/frontend/views/accused-details/update.php
+/frontend/controllers/AccusedDetailsController.php
+/frontend/models/AccusedSocialMediaDetails.php
+
+RAK-1397 -> Done dev and prod
+Table : accused_contact_info - created column 'status'
+
+/frontend/models/AccusedDigitalDetails.php
+/frontend/models/AccusedContactInfo.php
+
+ /frontend/controllers/AccusedDetailsController.php
+
+ views/accused-details/digital_details_table.php
+ /frontend/views/accused-details/update.php
+ ========================================================================================
+ 18-08-2025
+ Rak-1521
+
+
+ https://sanpri.co.in/HRMSDEV/ems-evidence-form/form
+
+ EMS-10 done
+ Table: evidence_details -> Added new column 'type' character
+ /frontend/views/ems-evidence-form/update.php
+ /frontend/views/ems-evidence-form/form_new.php
+ /frontend/views/ems-evidence-form/form_index.php
+ ntend/controllers/EmsEvidenceFormController.php
+ /frontend/controllers/EmsController.php
+
+ INSERT INTO public.generic_master
+(type, value_eng, status, created_date)
+VALUES
+('ems', 'CR', 1, NOW()),
+('ems', 'ADR', 1, NOW());
+
+EMS-11 done
+/frontend/views/ems-evidence-form/form_view.php
+ws/ems-evidence-status-update/evidence-list.php
+.ntrollers/EmsEvidenceStatusUpdateController.php
+
+
+https://sanpri.co.in/HRMSDEV/ems-outward/out-ward
+
+======================================================================
+20-08-2025
+EMS-13
+ /frontend/views/e-m-s/ems_warehouse_print.php
+ /frontend/controllers/EMSController.php
+==============================================================
+21-08-2025
+EMS-14 working process..
+/frontend/controllers/EmsController.php
+...rse-transaction/evidence_inward_transaction.php
+
+
+https://sanpri.co.in/HRMSDEV/extplorer/index.php
+
+https://sanpri.co.in/Yatharth1/evidence/index
+https://sanpri.co.in/Yatharth1/fb-process-transaction-rk/dashboard/
+
+=======================================================================================
+22-08-2025
+
+SELECT * FROM "public"."menu_categories" WHERE yatharth =1 AND action IN('device-dashboard/index','evidence/index','online-statement/index',
+'igrms-statement/index','panchnama-form/crime-detail','panchnama-form/details-index','reports-copy/yatharth-report','reports-copy/yatharth-summary-report');
+
+SELECT * FROM "public"."menu_categories" WHERE yatharth =1 AND action IN('device-dashboard/index','yatharth-case-transactions/index','online-statement/index',
+'igrms-statement/index','panchnama-form/details-index','reports-copy/yatharth-report','reports-copy/yatharth-summary-report');
+
+SELECT * FROM "public"."menu_categories" WHERE menu_name_english IN('Summary Reports','Statistic Reports','Reports','Dashboard');
+
+
+panchnama-form/crime-detail 
+
+CREATE TABLE breath_analyzer_transactions (
+    id SERIAL PRIMARY KEY,
+    recordid VARCHAR(50),
+    recordtype VARCHAR(20),
+    deviceno VARCHAR(50),
+    devicemacorimei VARCHAR(100),
+    testtype VARCHAR(50),
+    testdata VARCHAR(20),
+    testunit INTEGER,
+    testtime TIMESTAMP WITHOUT TIME ZONE,
+    b2time TIMESTAMP WITHOUT TIME ZONE,
+    b10time TIMESTAMP WITHOUT TIME ZONE,
+    checktime TIMESTAMP WITHOUT TIME ZONE,
+    validnum INTEGER,
+    validinfo1 TEXT,
+    validinfo2 TEXT,
+    validinfo3 TEXT,
+    validinfo4 TEXT,
+    validinfo5 TEXT,
+    validinfo6 TEXT,
+    picflag BOOLEAN,
+    sinfo VARCHAR(10),
+    ewinfo VARCHAR(20),
+    lng VARCHAR(20),
+    lat VARCHAR(20),
+    pok BOOLEAN,
+    conformitynum VARCHAR(50),
+    componentlos TEXT,
+    photo_path VARCHAR(255),
+    created_at TIMESTAMP WITHOUT TIME ZONE DEFAULT now()
+);
+
+
+https://yatharth.in.net/documents/yatharth_logo/yatharth_logo.png
+
+SELECT * FROM "public"."menu_categories" WHERE menu_id = '14';
+SELECT * FROM "public"."menu_categories" WHERE menu_id = '193';
+SELECT * FROM "public"."menu_categories" WHERE menu_id = '180';
+SELECT * FROM "public"."menu_categories" WHERE menu_parent_no = '180';
+
+550,49,3,277,1,101,254,365,424,430,573,574,575,576,577,578,572
+
+SELECT * FROM "public"."menu_categories" WHERE menu_id in('550','49','3','277','1','101','254','365','424','430','573','574','575','576','577','578','572','14');
+=========================================================================================
+23-08-2025
+UPDATE "public"."yatharth_license" SET total_counts = 1 WHERE unit_cd = 19841
+UPDATE "public"."yatharth_license" SET total_counts = 60, used=10, valid_from = '2025-08-22',valid_to='2025-08-30' WHERE unit_cd = 19841
+
+19841 -> Navi mumbai
+199072316 -> It cell nave mumbai
+
+DGPAPJF9202
+=============================================================================================
+25-08-2025
+
+Workedon Yatharth responsive page
+
+======================================================================
+26-08-2025
+
+in ('PROF4_ROLE52','PROF4_ROLE4')
+PROF4_ROLE52
+PROF4_ROLE4
+
+SELECT * FROM "public"."unit_wise_module_allocation" WHERE unit_id = 19841;
+SELECT * FROM "public"."menu_categories" WHERE menu_parent_no = '14';
+14, 178, 316, 
+
+INSERT INTO unit_wise_module_allocation 
+(unit_id, menu_no, module_seq, status, created_by, created_date, modified_by, modified_date, mpolice, sid, ciu, yatharth, daily_bulletin)
+VALUES 
+(19841, 186, 3, 1, 20007698, '2025-03-27 00:00:00', NULL, NULL, NULL, NULL, NULL, 1, NULL);
+
+UPDATE "public"."menu_access" SET yatharth = 1 WHERE sub_profile_code = 'PROF4_ROLE52' AND menu_no = 186
+
+INSERT INTO "public"."menu_access" (sub_profile_code, menu_no)
+VALUES 
+('PROF4_ROLE52', 186);
+
+UPDATE "public"."unit_wise_module_allocation" SET module_seq = 4 WHERE unit_id = 19841 AND menu_no = 186
+
+=============================================================
+28-08-2025
+
+DGPMHPM7302
+
+dbdae8 old
+fdf9db even
+
+sanpri.co.in
+
+==========================================================================================
+29-08-2025
+
+Worked on UI design of unit master page, view page, edit page and Fixed the issue related functionality
+=============================================================================================
+30-08-2025
+Leave
+===========================================================================================

@@ -1,0 +1,31 @@
+http://sanpri.co.in/HRMSDEV/
+DGPPMGM9301 
+290799
+admin@
+
+----
+NMADMIN0001
+admin@123
+290799
+
+http://bi.sanpri.in/login/
+http://localhost:8090/superset/dashboard/p/mPG0NnzNJ97/
+https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-iframe
+
+ssh root@your-server-ip
+
+sudo apt update
+sudo apt install docker.io docker-compose -y
+
+git clone https://github.com/apache/superset.git
+cd superset
+
+docker compose -f docker-compose-non-dev.yml up
+
+sudo systemctl restart nginx
+
+sudo apt install certbot python3-certbot-nginx -y
+
+sudo certbot --nginx -d superset.my-domain.com
+
+get_schedule_calendar_list.php

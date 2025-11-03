@@ -1,0 +1,12 @@
+https://sanpri.co.in/HRMSDEV/vc-consent/grievance-list
+https://sanpri.co.in/HRMSDEV/vc-consent/access-grievance
+
+9881656143
+7887400733 - DGPMHPM7302
+
+$slink = "sanpri.co.in/HRMSDEV/vc-consent/index?id=" . $token . "&module_name=" . base64_encode(urlencode($module_type));
+
+https://sanpri.co.in/HRMSDEV/vc-consent/register-grievance-application
+https://sanpri.co.in/HRMSDEV/vc-consent/grievance-register-page?d=ODY1NTYxNTgwOQ==
+https://mpolice.in/nm-website/register-grievance-application
+https://sanpri.co.in/HRMSDEV/nm-website/register-grievance-application

@@ -1,0 +1,22 @@
+
+http://103.205.141.103/redirect.php?subject=schema&server=%3A5432%3Aallow&database=mpolice_dev_db&schema=public&
+
+https://sanpri.co.in/HRMSDEV/vc-consent/index?id=2d29e4b16916863c14b7c97897687a23
+http://103.205.141.103/
+
+=================================
+https://sanpri.co.in/HRMSDEV/extplorer/
+User:krishnap
+krishnap@123987
+
+=======
+
+https://sanpri.co.in/Rakshak/extplorer/
+User ID krishnap
+krishnap@123987
+
+-----
+
+
+
+Accused Related Information

@@ -1,0 +1,1220 @@
+ =================================================================================
+01-10-2025
+AlcoSync
+.fb-process-transaction-rk/dashboard_preview.php
+views/breath-analyzer/breath_geo_location.php
+Controllers/FbProcessTransactionRkController.php
+frontend/controllers/BreathAnalyzerController.php
+YatharthBA/common/components/MessageComponent.php
+
+Old 
+SELECT * FROM "public"."city_master_codes" WHERE city_id = 19393;
+id - 8
+city_id	- 19393
+city_code - PN	
+sms_auth_key - 123123	
+sms_sender_id - MAHAPOL	
+username - punepoli	
+user_code - CPPUNE
+ 
+ New
+ Array
+(
+    [0] => Array
+        (
+            [user_code] => CPPUNE
+            [sms_auth_key] => 123123
+            [sms_sender_id] => MAHAPOL
+            [username] => webpune
+            [status] => 1
+        )
+
+)
+
+
+http://web.smsgw.in/smsapi/httpapi.jsp?username=webpune&password=123123&to=8655615809&from=MAHAPOL&text=+Dear+DGPVABF7101%2C+Please+find+the+link+for+the+last+week%E2%80%99s+Breath+Analyzer+Test+Report+tinyurl.com%2F5aw74spsmPOLICE&coding=0
+
+webpune-bec7c78d9ea811f0909ee0071b8ac873webpune-20251001145644094480918655615809,918655615809
+
+---
+
+http://web.smsgw.in/smsapi/httpapi.jsp?username=webpune&password=123123&to=8655615809&from=MAHPOL&template_id=1607100000000096655&pe_id=1601100000000004090&text=DGPVABF7101+Your+login+OTP+is%3A+tinyurl.com%2Fyuhtz69d+Valid+Till%3A+16%3A55%3A31.+mPOLICE&coding=0
+webpune-113d988f9ea911f0a004e0071b8ac873webpune-20251001145902439725918655615809,918655615809
+
+====================================================================================
+02-10-2024 - Dassahara holiday
+===================================================================================
+03-10-2025
+
+mysql -u root -p sarthi_nmc_dms < "C:\Users\Abc\Downloads\sarthi_nmc_dms.sql
+mysql -u root -p --force sarthi_nmc_dms < "C:\Users\Abc\Downloads\sarthi_nmc_dms.sql
+-----
+DMS
+
+SELECT 
+    d.id AS document_id,
+    d.title,
+    d.file_path,
+    d.original_filename,
+    dc1.name AS branch,
+    dc2.name AS sub_branch,
+    d.year,
+    d.tags,
+    d.created_at,
+    d.updated_at,
+    f.field_name,
+    f.field_label,
+    dm.field_value,
+    f.sort_order
+FROM documents d
+LEFT JOIN document_categories dc1 
+       ON d.category_id = dc1.id
+LEFT JOIN document_categories dc2 
+       ON d.sub_branch = dc2.id
+-- All metadata fields for this category
+LEFT JOIN document_metadata_fields f
+       ON f.category_id = d.category_id
+-- Document’s metadata values
+LEFT JOIN document_metadata dm
+       ON d.id = dm.document_id
+      AND dm.field_name = f.field_name
+WHERE d.id = 162
+ORDER BY f.sort_order, f.id
+LIMIT 0, 25;
+
+==========================================================================
+04-10-2025
+DMS
+C:\xampp\htdocs\sarthiNMC\includes\constants.php
+C:\xampp\htdocs\sarthiNMC\config\config.php
+C:\xampp\htdocs\sarthiNMC\config\database.php
+C:\xampp\htdocs\sarthiNMC\public\quick_setup.php
+C:\xampp\htdocs\sarthiNMC\db_config.php
+C:\xampp\htdocs\sarthiNMC\config\universal_db.php
+C:\xampp\htdocs\sarthiNMC\public\robust_metadata_endpoint.php
+C:\xampp\htdocs\sarthiNMC\.env
+C:\xampp\htdocs\sarthiNMC\public\view_document.php
+
+
+padding: 0.30rem 1.0rem;
+
+
+SELECT dmv.field_name, 
+dmf.field_label,
+dmf.field_type,
+dmv.field_value
+FROM document_metadata dmv
+JOIN document_metadata_fields dmf ON dmv.field_name = dmf.field_name
+WHERE dmv.document_id = 162
+ORDER BY dmf.sort_order
+
+
+C:\xampp\htdocs\sarthiNMC\CategoryMetadataHandler.php
+C:\xampp\htdocs\sarthiNMC\public\view_document.php
+
+
+name="tags_input"
+
+keywords_input
+
+
+
+WHERE d.deleted_at IS NULL AND (d.data_source IN ('upload', 'csv_import') OR d.data_source IS NULL) AND (d.category_id = ? OR d.category_id = ?) AND (d.tags LIKE ? OR d.tags LIKE ? OR d.tags LIKE ?) AND d.station_id IS NULL
+
+
+
+SELECT d.*
+	,ps.NAME AS station_name
+	,ps.district
+	,dc.NAME AS category_name
+	,dc.color AS category_color
+	,u.full_name AS uploaded_by_name
+FROM documents d
+LEFT JOIN police_stations ps ON d.station_id = ps.id
+LEFT JOIN document_categories dc ON d.category_id = dc.id
+LEFT JOIN users u ON d.uploaded_by = u.id
+WHERE d.deleted_at IS NULL
+	AND (
+		d.data_source IN (
+			'upload'
+			,'csv_import'
+			)
+		OR d.data_source IS NULL
+		)
+	AND (
+		d.title LIKE ?
+		OR d.description LIKE ?
+		OR d.filename LIKE ?
+		OR d.original_filename LIKE ?
+		OR d.tags LIKE ?
+		OR d.crime_no LIKE ?
+		OR d.victim LIKE ?
+		OR d.accused LIKE ?
+		OR d.file_path LIKE ?
+		OR d.metadata LIKE ?
+		OR d.ocr_text LIKE ?
+		OR d.ocr_text2 LIKE ?
+		OR d.subject LIKE ?
+		OR d.title LIKE ?
+		OR d.description LIKE ?
+		OR d.filename LIKE ?
+		OR d.original_filename LIKE ?
+		OR d.tags LIKE ?
+		OR d.crime_no LIKE ?
+		OR d.victim LIKE ?
+		OR d.accused LIKE ?
+		OR d.file_path LIKE ?
+		OR d.metadata LIKE ?
+		OR d.ocr_text LIKE ?
+		OR d.ocr_text2 LIKE ?
+		OR d.subject LIKE ?
+		OR d.title LIKE ?
+		OR d.description LIKE ?
+		OR d.filename LIKE ?
+		OR d.original_filename LIKE ?
+		OR d.tags LIKE ?
+		OR d.crime_no LIKE ?
+		OR d.victim LIKE ?
+		OR d.accused LIKE ?
+		OR d.file_path LIKE ?
+		OR d.metadata LIKE ?
+		OR d.ocr_text LIKE ?
+		OR d.ocr_text2 LIKE ?
+		OR d.subject LIKE ?
+		OR d.title LIKE ?
+		OR d.description LIKE ?
+		OR d.filename LIKE ?
+		OR d.original_filename LIKE ?
+		OR d.tags LIKE ?
+		OR d.crime_no LIKE ?
+		OR d.victim LIKE ?
+		OR d.accused LIKE ?
+		OR d.file_path LIKE ?
+		OR d.metadata LIKE ?
+		OR d.ocr_text LIKE ?
+		OR d.ocr_text2 LIKE ?
+		OR d.subject LIKE ?
+		OR d.title LIKE ?
+		OR d.description LIKE ?
+		OR d.filename LIKE ?
+		OR d.original_filename LIKE ?
+		OR d.tags LIKE ?
+		OR d.crime_no LIKE ?
+		OR d.victim LIKE ?
+		OR d.accused LIKE ?
+		OR d.file_path LIKE ?
+		OR d.metadata LIKE ?
+		OR d.ocr_text LIKE ?
+		OR d.ocr_text2 LIKE ?
+		OR d.subject LIKE ?
+		)
+	AND (
+		EXISTS (
+			SELECT 1
+			FROM document_metadata dm
+			WHERE dm.document_id = d.id
+				AND dm.field_value LIKE ?
+			)
+		OR EXISTS (
+			SELECT 1
+			FROM document_metadata dm
+			WHERE dm.document_id = d.id
+				AND dm.field_value LIKE ?
+			)
+		OR EXISTS (
+			SELECT 1
+			FROM document_metadata dm
+			WHERE dm.document_id = d.id
+				AND dm.field_value LIKE ?
+			)
+		)
+	AND (
+		d.category_id = ?
+		OR d.category_id = ?
+		)
+	AND (
+		d.tags LIKE ?
+		OR d.tags LIKE ?
+		OR d.tags LIKE ?
+		)
+	AND d.station_id IS NULL
+ORDER BY d.uploaded_at DESC LIMIT 10 OFFSET 0
+
+====================================================================================
+06-10-2025
+http://sevarth.in.net/api/
+http://www.sanpri.co.in/phpInfo.php
+
+
+Deployed on production this superset dashboard 
+
+https://sanpri.co.in/HRMSDEV/site/dashboard-page?p=vms_dashboard
+https://sanpri.co.in/HRMSDEV/site/dashboard-page?p=duty_dashboard
+https://sanpri.co.in/HRMSDEV/site/dashboard-page?p=ems_dashboard
+https://sanpri.co.in/HRMSDEV/site/dashboard-page?p=reward
+https://sanpri.co.in/HRMSDEV/site/dashboard-page?p=gazettes
+https://sanpri.co.in/HRMSDEV/site/dashboard-page?p=event_calender
+https://sanpri.co.in/HRMSDEV/site/dashboard-page?p=daily_bulletin
+https://sanpri.co.in/HRMSDEV/site/dashboard-page?p=welfare
+https://sanpri.co.in/HRMSDEV/site/dashboard-page?p=samadhan
+https://sanpri.co.in/HRMSDEV/site/dashboard-page?p=acr_dashboard
+https://sanpri.co.in/HRMSDEV/site/dashboard-page?p=sagar_rakshak
+https://sanpri.co.in/HRMSDEV/site/dashboard-page?p=ems_application_status
+https://sanpri.co.in/HRMSDEV/site/dashboard-page?p=ems_document_status
+https://sanpri.co.in/HRMSDEV/site/dashboard-page?p=consolidated_overview
+https://sanpri.co.in/HRMSDEV/site/dashboard-page?p=igrms_dashboard
+https://sanpri.co.in/HRMSDEV/site/dashboard-page?p=service_sheet_dashboard
+https://sanpri.co.in/HRMSDEV/site/dashboard-page?p=leave_dashboard
+https://sanpri.co.in/HRMSDEV/site/dashboard-page?p=payslip
+https://sanpri.co.in/HRMSDEV/site/dashboard-page?p=training_modual
+https://sanpri.co.in/HRMSDEV/site/dashboard-page?p=summons
+https://sanpri.co.in/HRMSDEV/site/dashboard-page?p=ims_activity
+
+SELECT * FROM "public"."dashboard_master";
+
+header : IMS Activity
+dashboard_name : ims_activity
+token : 4f8c85c1-e4df-4948-8033-7ff0c9fea002
+
+header : Summons
+dashboard_name : summons
+token : c69c3872-c662-4725-8423-0afe0a8e065a
+
+ Deployed on production in mpolice - Done
+Table : dashboard_master - created new
+ /HRMSDEV/frontend/controllers/SiteController.php
+ /HRMSDEV/frontend/views/site/dashboard-page.php
+ ----
+
+INSERT INTO "public"."menu_categories"
+(menu_id, menu_parent_no, menu_name_english, action, menu_include, menu_sequence, menu_level, class, menu_name_marathi, params, params_value, mpolice, sid, ciu, yatharth, daily_bulletin)
+VALUES
+(717, '11', 'VMS Dashboard', 'site/dashboard-page?p=vms_dashboard', 'Y', 1, 2, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL),
+(718, '11', 'Duty Dashboard', 'site/dashboard-page?p=duty_dashboard', 'Y', 2, 2, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL),
+(719, '11', 'EMS Dashboard', 'site/dashboard-page?p=ems_dashboard', 'Y', 3, 2, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL),
+(720, '11', 'Reward', 'site/dashboard-page?p=reward', 'Y', 4, 2, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL),
+(721, '11', 'Gazettes', 'site/dashboard-page?p=gazettes', 'Y', 5, 2, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL),
+(722, '11', 'Event Calender', 'site/dashboard-page?p=event_calender', 'Y', 6, 2, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL),
+(723, '11', 'Daily Bulletin', 'site/dashboard-page?p=daily_bulletin', 'Y', 7, 2, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL),
+(724, '11', 'Welfare', 'site/dashboard-page?p=welfare', 'Y', 8, 2, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL),
+(725, '11', 'Samadhan', 'site/dashboard-page?p=samadhan', 'Y', 9, 2, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL),
+(726, '11', 'ACR Dashboard', 'site/dashboard-page?p=acr_dashboard', 'Y', 10, 2, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL),
+(727, '11', 'Sagar Rakshak', 'site/dashboard-page?p=sagar_rakshak', 'Y', 11, 2, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL),
+(728, '11', 'EMS Application Status', 'site/dashboard-page?p=ems_application_status', 'Y', 12, 2, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL),
+(729, '11', 'EMS Document Status', 'site/dashboard-page?p=ems_document_status', 'Y', 13, 2, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL),
+(730, '11', 'Consolidated Overview', 'site/dashboard-page?p=consolidated_overview', 'Y', 14, 2, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL),
+(731, '11', 'IGRMS Dashboard', 'site/dashboard-page?p=igrms_dashboard', 'Y', 15, 2, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL),
+(732, '11', 'Service Sheet Dashboard', 'site/dashboard-page?p=service_sheet_dashboard', 'Y', 16, 2, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL),
+(733, '11', 'Leave Dashboard (Last 1 Year Data)', 'site/dashboard-page?p=leave_dashboard', 'Y', 17, 2, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL),
+(734, '11', 'Payslip', 'site/dashboard-page?p=payslip', 'Y', 18, 2, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL),
+(735, '11', 'Training Modual', 'site/dashboard-page?p=training_modual', 'Y', 19, 2, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL),
+(736, '11', 'Summons', 'site/dashboard-page?p=summons', 'Y', 20, 2, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL),
+(737, '11', 'IMS Activity', 'site/dashboard-page?p=ims_activity', 'Y', 21, 2, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL);
+
+http://sevarth.in.net/api/site/userconfirm
+
+====================================================================================================================
+07-10-2025
+
+INSERT INTO dashboard_master 
+(dashboard_name, token, header, status, created_dt, updated_dt)
+VALUES
+('accused_monitoring_dashboard', 'b2597485-141a-479f-be8a-184e5b590b68', 'Accused Monitoring', 1, NOW(), NOW());
+
+UPDATE dashboard_master SET token = 'ee8d9b97-152d-423c-8a57-16f80463973e' WHERE dashboard_name = 'accused_monitoring_dashboard';
+
+
+Rakshak  -> Deployed on prodution
+Table : dashboard_master - created new
+/Rakshak/frontend/views/site/dashboard-page.php
+/Rakshak/frontend/controllers/SiteController.php
+
+INSERT INTO "public"."menu_categories"
+(menu_id, menu_parent_no, menu_name_english, action, menu_include, menu_sequence, menu_level, class, menu_name_marathi, params, params_value, mpolice, sid, ciu, yatharth, daily_bulletin)
+VALUES
+(585, '11', 'Accused Monitoring', 'site/dashboard-page?p=accused_monitoring_dashboard', 'Y', 3, 2, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL);
+
+https://sanpri.co.in/Rakshak/site/dashboard-page?p=accused_monitoring_dashboard
+
+----
+
+Yatharth AlcoSync
+Table : dashboard_master - created new
+/YatharthBA/frontend/views/site/dashboard-page.php
+/YatharthBA/frontend/controllers/SiteController.php
+
+INSERT INTO dashboard_master 
+(dashboard_name, token, header, status, created_dt, updated_dt)
+VALUES
+('breathalyzer_insights', '1fc5d3ee-0ac9-481b-bd5b-1cc2ec0e41ae', 'Breathalyzer Insights', 1, NOW(), NOW());
+
+https://sanpri.co.in/YatharthBA/site/dashboard-page?p=breathalyzer_insights
+
+-----
+Code commented in alcoSync
+https://sanpri.co.in/YatharthBA/fb-process-transaction-rk/live-dashboard
+
+
+
+
+---
+
+AND (EXISTS (SELECT 1 FROM document_metadata dm WHERE dm.document_id = d.id AND dm.field_value LIKE ?)
+
+
+
+
+SELECT d.*, ps.name as station_name, ps.district, dc.name as category_name, dc.color as category_color, u.full_name as uploaded_by_name FROM documents d 
+LEFT JOIN police_stations ps ON d.station_id = ps.id 
+LEFT JOIN document_categories dc ON d.category_id = dc.id 
+LEFT JOIN users u ON d.uploaded_by = u.id 
+WHERE d.deleted_at IS NULL 
+AND (d.data_source IN ('upload', 'csv_import') OR d.data_source IS NULL) 
+AND (d.title LIKE '%LEKHASHAKHA%' 
+OR d.description LIKE '%LEKHASHAKHA%'
+OR d.filename LIKE '%LEKHASHAKHA%'
+OR d.original_filename LIKE '%LEKHASHAKHA%'
+OR d.tags LIKE '%LEKHASHAKHA%'
+OR d.crime_no LIKE '%LEKHASHAKHA%'
+OR d.victim LIKE '%LEKHASHAKHA%'
+OR d.accused LIKE '%LEKHASHAKHA%'
+OR d.file_path LIKE '%LEKHASHAKHA%' 
+OR d.metadata LIKE '%LEKHASHAKHA%'
+OR d.ocr_text LIKE '%LEKHASHAKHA%'
+OR d.ocr_text2 LIKE '%LEKHASHAKHA%' 
+OR d.subject LIKE '%LEKHASHAKHA%') 
+AND (EXISTS (SELECT 1 FROM document_metadata dm WHERE dm.document_id = d.id AND dm.field_value LIKE '%LEKHASHAKHA%'))
+AND d.station_id IS NULL 
+ORDER BY d.uploaded_at DESC LIMIT 10 OFFSET 0; 
+
+
+--
+SELECT d.*, 
+                          ps.name as station_name, ps.district,
+                          dc.name as category_name, dc.color as category_color,
+                          u.full_name as uploaded_by_name
+                          FROM documents d
+                          LEFT JOIN police_stations ps ON d.station_id = ps.id
+                          LEFT JOIN document_categories dc ON d.category_id = dc.id
+                          LEFT JOIN users u ON d.uploaded_by = u.id
+                          WHERE d.deleted_at IS NULL AND (d.data_source IN ('upload', 'csv_import') OR d.data_source IS NULL) AND (d.title LIKE ? OR d.description LIKE ? OR d.filename LIKE ? OR d.original_filename LIKE ? OR d.tags LIKE ? OR d.crime_no LIKE ? OR d.victim LIKE ? OR d.accused LIKE ? OR d.file_path LIKE ? OR d.metadata LIKE ? 
+						  OR d.ocr_text LIKE ? 
+						  OR d.ocr_text2 LIKE ? 
+						  OR d.subject LIKE ?) 
+						  AND (EXISTS (SELECT 1 FROM document_metadata dm WHERE dm.document_id = d.id AND dm.field_value LIKE ?)) 
+						  AND d.station_id IS NULL
+                          ORDER BY d.uploaded_at DESC
+                          LIMIT 10 OFFSET 0
+
+
+
+SELECT d.*, 
+ps.name as station_name, ps.district,
+dc.name as category_name, dc.color as category_color,
+u.full_name as uploaded_by_name
+FROM documents d
+LEFT JOIN police_stations ps ON d.station_id = ps.id
+LEFT JOIN document_categories dc ON d.category_id = dc.id
+LEFT JOIN users u ON d.uploaded_by = u.id
+WHERE d.deleted_at IS NULL 
+AND (d.data_source IN ('upload', 'csv_import') OR d.data_source IS NULL) 
+AND (d.title LIKE ? 
+OR d.description LIKE ? 
+OR d.filename LIKE ? 
+OR d.original_filename LIKE ? 
+OR d.tags LIKE ? 
+OR d.crime_no LIKE ? 
+OR d.victim LIKE ? 
+OR d.accused LIKE ? 
+OR d.file_path LIKE ? 
+OR d.metadata LIKE ? 
+OR d.ocr_text LIKE ? 
+OR d.ocr_text2 LIKE ? 
+OR d.subject LIKE ? 
+OR d.title LIKE ? 
+OR d.description LIKE ? 
+OR d.filename LIKE ? 
+OR d.original_filename LIKE ? 
+OR d.tags LIKE ? 
+OR d.crime_no LIKE ? 
+OR d.victim LIKE ? 
+OR d.accused LIKE ? 
+OR d.file_path LIKE ? 
+OR d.metadata LIKE ? 
+OR d.ocr_text LIKE ? 
+OR d.ocr_text2 LIKE ? 
+OR d.subject LIKE ? 
+OR d.title LIKE ? 
+OR d.description LIKE ? 
+OR d.filename LIKE ? 
+OR d.original_filename LIKE ? 
+OR d.tags LIKE ? 
+OR d.crime_no LIKE ? 
+OR d.victim LIKE ? 
+OR d.accused LIKE ? 
+OR d.file_path LIKE ? 
+OR d.metadata LIKE ? 
+OR d.ocr_text LIKE ? 
+OR d.ocr_text2 LIKE ? 
+OR d.subject LIKE ? 
+OR d.title LIKE ? 
+OR d.description LIKE ? 
+OR d.filename LIKE ? 
+OR d.original_filename LIKE ? 
+OR d.tags LIKE ? 
+OR d.crime_no LIKE ? 
+OR d.victim LIKE ? 
+OR d.accused LIKE ? 
+OR d.file_path LIKE ? 
+OR d.metadata LIKE ? 
+OR d.ocr_text LIKE ? 
+OR d.ocr_text2 LIKE ? 
+OR d.subject LIKE ?) 
+AND (
+	EXISTS (SELECT 1 FROM document_metadata dm WHERE dm.document_id = d.id AND dm.field_value LIKE ?) OR EXISTS (SELECT 1 FROM document_metadata dm WHERE dm.document_id = d.id AND dm.field_value LIKE ?)
+	) 
+	AND (d.category_id = ? OR d.category_id = ?) AND (d.tags LIKE ?) 
+	AND d.station_id IS NULL 
+	AND (d.subject LIKE ? 
+	OR d.subject LIKE ? 
+	OR d.subject LIKE ? 
+	OR d.subject LIKE ? 
+	OR d.subject LIKE ? 
+	OR d.subject LIKE ? 
+	OR d.subject LIKE ?) 
+	AND d.year = ?
+ORDER BY d.uploaded_at DESC
+LIMIT 10 OFFSET 0
+
+
+
+SELECT d.*, ps.name as station_name, ps.district, dc.name as category_name, dc.color as category_color, u.full_name as uploaded_by_name FROM documents d 
+LEFT JOIN police_stations ps ON d.station_id = ps.id 
+LEFT JOIN document_categories dc ON d.category_id = dc.id 
+LEFT JOIN users u ON d.uploaded_by = u.id 
+WHERE d.deleted_at IS NULL 
+AND (d.data_source IN ('upload', 'csv_import') OR d.data_source IS NULL) 
+AND (d.title LIKE '%LEKHASHAKHA%' 
+OR d.description LIKE '%LEKHASHAKHA%'
+OR d.filename LIKE '%LEKHASHAKHA%'
+OR d.original_filename LIKE '%LEKHASHAKHA%'
+OR d.tags LIKE '%LEKHASHAKHA%'
+OR d.crime_no LIKE '%LEKHASHAKHA%'
+OR d.victim LIKE '%LEKHASHAKHA%'
+OR d.accused LIKE '%LEKHASHAKHA%'
+OR d.file_path LIKE '%LEKHASHAKHA%' 
+OR d.metadata LIKE '%LEKHASHAKHA%'
+OR d.ocr_text LIKE '%LEKHASHAKHA%'
+OR d.ocr_text2 LIKE '%LEKHASHAKHA%' 
+OR d.subject LIKE '%LEKHASHAKHA%') 
+AND (EXISTS (SELECT 1 FROM document_metadata dm WHERE dm.document_id = d.id AND dm.field_value LIKE '%LEKHASHAKHA%') OR EXISTS (SELECT 1 FROM document_metadata dm WHERE dm.document_id=d.id AND dm.field_value LIKE '%LEKHASHAKHA%'))
+AND d.station_id IS NULL 
+ORDER BY d.uploaded_at DESC LIMIT 10 OFFSET 0;
+
+	  
+
+	  ----
+
+
+
+	  SELECT d.*, 
+                          ps.name as station_name, ps.district,
+                          dc.name as category_name, dc.color as category_color,
+                          u.full_name as uploaded_by_name
+                          FROM documents d
+                          LEFT JOIN police_stations ps ON d.station_id = ps.id
+                          LEFT JOIN document_categories dc ON d.category_id = dc.id
+                          LEFT JOIN users u ON d.uploaded_by = u.id
+                          WHERE d.deleted_at IS NULL AND (d.data_source IN ('upload', 'csv_import') OR d.data_source IS NULL) 
+						  AND (d.title LIKE ? 
+						  OR d.description LIKE ? 
+						  OR d.filename LIKE ? 
+						  OR d.original_filename LIKE ? 
+						  OR d.tags LIKE ? 
+						  OR d.crime_no LIKE ? 
+						  OR d.victim LIKE ? 
+						  OR d.accused LIKE ? 
+						  OR d.file_path LIKE ? 
+						  OR d.metadata LIKE ? 
+						  OR d.ocr_text LIKE ? 
+						  OR d.ocr_text2 LIKE ? 
+						  OR d.subject LIKE ? 
+
+						  OR d.title LIKE ? 
+						  OR d.description LIKE ? 
+						  OR d.filename LIKE ? 
+						  OR d.original_filename LIKE ? 
+						  OR d.tags LIKE ? 
+						  OR d.crime_no LIKE ? 
+						  OR d.victim LIKE ? 
+						  OR d.accused LIKE ? 
+						  OR d.file_path LIKE ? 
+						  OR d.metadata LIKE ? 
+						  OR d.ocr_text LIKE ? 
+						  OR d.ocr_text2 LIKE ? 
+						  OR d.subject LIKE ?
+
+						  OR d.title LIKE ? 
+						  OR d.description LIKE ? 
+						  OR d.filename LIKE ? 
+						  OR d.original_filename LIKE ? 
+						  OR d.tags LIKE ? 
+						  OR d.crime_no LIKE ? 
+						  OR d.victim LIKE ? 
+						  OR d.accused LIKE ? 
+						  OR d.file_path LIKE ? 
+						  OR d.metadata LIKE ? 
+						  OR d.ocr_text LIKE ? 
+						  OR d.ocr_text2 LIKE ? 
+						  OR d.subject LIKE ? 
+
+						  OR d.title LIKE ? 
+						  OR d.description LIKE ? 
+						  OR d.filename LIKE ? 
+						  OR d.original_filename LIKE ? 
+						  OR d.tags LIKE ? 
+						  OR d.crime_no LIKE ? 
+						  OR d.victim LIKE ? 
+						  OR d.accused LIKE ? 
+						  OR d.file_path LIKE ? 
+						  OR d.metadata LIKE ? 
+						  OR d.ocr_text LIKE ? 
+						  OR d.ocr_text2 LIKE ? 
+						  OR d.subject LIKE ? ) AND d.category_id = ? AND d.station_id IS NULL AND d.year = ? 
+						  OR (EXISTS (SELECT 1 FROM document_metadata dm WHERE dm.document_id = d.id AND dm.field_value LIKE ?) OR EXISTS (SELECT 1 FROM document_metadata dm WHERE dm.document_id = d.id AND dm.field_value LIKE ?))
+                          ORDER BY d.uploaded_at DESC
+                          LIMIT 10 OFFSET 0
+
+
+http://dms.mpolice.in:8080/
+
+=======================================================================
+09-10-2025 WFH
+
+C:\xampp\htdocs\sarthiNMC\public\view_document.php
+C:\xampp\htdocs\sarthiNMC\public\process_approval.php
+C:\xampp\htdocs\sarthiNMC\public\advanced_search.php
+
+
+MCC Explains Controversial Pakistan Run-Out Call
+
+DETAILSPV Request ID
+
+id : 16
+
+विषयही यात सामावून घेतला बालकांमध्ये वय वर्ष आठपर्यंत एकाचवेळी अनेक भाषा
+
+LEKHASHAKHA KANITH SHARENI LIPICACHI NEMNUK HONEBABAT DABHADE YANCHA VINANTI ARAJ A-340-2012
+
+112880
+======================================================================================
+10-10-2025 WFH
+
+standard
+processing_mode
+
+
+================================================================
+11-10-2025
+19432
+19432
+
+actionShareDraft
+/var/www/webroot/ROOT/frontend/views/layouts/dashboard.php
+.page-div-wrapper{
+	padding: 0 0 2%; 
+	margin-top:10%;
+ }
+
+
+Fixed the UI responsive bugs
+HRMSDEV/frontend/views/layouts/dashboard.php
+/HRMSDEV/frontend/views/layouts/main.php
+/HRMSDEV/frontend/web/dashboard/css/style.css
+views/fb-process-transaction-rk/mpias_dashboard.php
+/HRMSDEV/frontend/views/site/dashboard-page.php
+
+
+ style="padding: 15px; min-height: 690px;position: top;margin-top:107px;"
+
+
+live
+19841
+ Array
+(
+    [0] => Array
+        (
+            [sms_auth_key] => 123123
+            [sms_sender_id] => MAHPOL
+            [username] => cpnmum
+            [status] => 1
+        )
+
+)
+
+dev
+19841
+<pre>Array
+(
+    [0] => Array
+        (
+            [sms_auth_key] => 456456
+            [sms_sender_id] => MAHPOL
+            [username] => espacee
+            [status] => 1
+        )
+
+)
+</pre>
+
+
+http://49.50.67.32/smsapi/httpapi.jsp?username=cpnmum&password=123123&to=8655615809&from=MAHPOL&template_id=101010&pe_id=1601100000000004090&text=This+is+a+gentle+reminder.+Application+No.12345+has+been+pending+with+you+for+1+daysmPOLICE&coding=2
+
+1607100000000120635
+
+
+====================================================================================
+12-10-2025
+
+Not using this
+Table : city_master_codes
+city_id	city_code	sms_auth_key	sms_sender_id	username	status	user_code	gateway_status
+19432   ENSPL	    456456	         MAHPOL	         espacee	  1      ESPACE        1
+19841   NMC     	456456	         MAHPOL	         espacee	  1      ESPACE        1
+
+
+Array
+(
+    [0] => Array
+        (
+            [user_code] => ESPACE
+            [sms_auth_key] => 456456
+            [sms_sender_id] => MAHPOL
+            [username] => espacee
+            [status] => 1
+        )
+)
+
+====================================================================================
+13-10-2025
+New Product of IGRMS
+https://sanpri.co.in/PGRS/site/login
+
+
+https://rakshak.in.net/Rakshak/site/dashboard-page?p=accused_monitoring_dashboard
+
+GRANT SELECT ON TABLE dashboard_master TO rakshak;
+GRANT INSERT, UPDATE, DELETE ON TABLE dashboard_master TO webadmin;
+
+GRANT SELECT, INSERT, UPDATE, DELETE ON TABLE dashboard_setting TO webadmin;
+
+
+https://sanpri.co.in/HRMSDEV/site/login
+http://sanpri.co.in/PGRS/site/login
+
+.d/views/fb-process-transaction-rk/dashboard.php
+UPDATE "public"."dashboard_setting" SET status = 0 WHERE id = 15;
+UPDATE "public"."dashboard_setting" SET status = 0 WHERE id = 17;
+UPDATE "public"."dashboard_setting" SET status = 0 WHERE id = 34;
+UPDATE "public"."dashboard_setting" SET status = 0 WHERE id = 16;
+UPDATE "public"."dashboard_setting" SET status = 0 WHERE id IN(23,14,13,19);
+UPDATE "public"."dashboard_setting" SET status = 0 WHERE id IN(29,28,27,26,30);
+UPDATE "public"."dashboard_setting" SET status = 0 WHERE id IN(25,24,22);
+UPDATE "public"."dashboard_setting" SET status = 0 WHERE id = 31
+UPDATE "public"."dashboard_setting" SET status = 0 WHERE id IN (3,5,6,7,8,10,18,20)
+
+PGRS Website color
+#b29629
+
+
+UPDATE "public"."dashboard_setting" SET url = '../igrms-master/date-wise-report' WHERE id = 39 AND menu_id = 119
+
+UPDATE "public"."dashboard_setting" SET status = 0 WHERE id = 35 menu_id = 718;
+
+	
+UPDATE "public"."dashboard_setting" SET icon_url = '../frontend/web/images/dashboard_icons/Dashboard.png' WHERE id = 39 AND menu_id = 120
+
+UPDATE "public"."dashboard_setting" SET icon_url = '../frontend/web/images/dashboard_icons/Open_Grievance.png' WHERE id = 34 AND menu_id = 597
+
+UPDATE "public"."dashboard_setting" SET icon_url = '../frontend/web/images/dashboard_icons/In_progress.png' WHERE id = 36 AND menu_id = 111
+
+UPDATE "public"."dashboard_setting" SET icon_url = '../frontend/web/images/dashboard_icons/Calender_VC.png' WHERE id = 38 AND menu_id = 121
+
+UPDATE "public"."dashboard_setting" SET icon_url = '../frontend/web/images/dashboard_icons/Assigned.png' WHERE id = 35 AND menu_id = 553
+
+UPDATE "public"."dashboard_setting" SET icon_url = '../frontend/web/images/dashboard_icons/Online_vc.png' WHERE id = 37 AND menu_id = 123
+
+UPDATE "public"."dashboard_setting" SET icon_url = '../frontend/web/images/dashboard_icons/Reportss.jpeg' WHERE id = 40 AND menu_id = 119
+
+
+
+
+UPDATE "public"."dashboard_setting" SET url = '../site/dashboard-page?p=igrms_dashboard' WHERE id = 39 AND menu_id = 120
+
+
+
+
+UPDATE "public"."dashboard_setting" SET 
+	icon_english_name = 'Grievance Video Statement',
+	icon_marathi_name ='शिकायत वीडियो बयान'
+	 WHERE id = 37 AND menu_id = 123
+
+
+UPDATE "public"."dashboard_setting" SET 
+	icon_english_name = 'Grievance Statement Calendar',
+	icon_marathi_name ='शिकायत विवरण कैलेंडर'
+	 WHERE id = 38 AND menu_id = 121
+
+	 
+UPDATE "public"."dashboard_setting" SET 
+	icon_english_name = 'Add Grievance',
+	icon_marathi_name ='शिकायत जोड़ें'
+	 WHERE id = 34 AND menu_id = 597
+
+
+
+==========================================================================
+14-10-2025
+
+SELECT * FROM "public"."menu_categories"  WHERE menu_name_english= 'Service Details';
+
+
+
+UPDATE "public"."dashboard_setting" SET icon_marathi_name = 'डैशबोर्ड' WHERE id = 39  AND menu_id = 120;
+
+UPDATE "public"."dashboard_setting" SET icon_marathi_name = 'ऑनलाइन बैठक' WHERE id = 37 AND menu_id = 123;
+
+UPDATE "public"."dashboard_setting" SET icon_marathi_name = 'ऑनलाइन बैठक का कैलेंडर' WHERE id = 38 AND menu_id = 121;
+
+KRIWER12343
+
+------------------------------------------
+15-10-2025
+
+acknowledStmnt
+
+btn-class-center
+
+==============================================================================
+17-10-2025
+
+class= table table-bordered table-striped table-hover table-container
+ /PGRS/frontend/views/igrms-master/view.php
+
+
+ #f5f7fa
+ #ffffff
+
+  background-color: var(--nav-bg);  #b29629 
+
+ http://web.smsgw.in/smsapi/httpapi.jsp?username=cpnmum&password=123123&to=8655615809&from=CPNMUM&template_id=1607100000000099854&pe_id=1601100000000017246&text=Hello+krishnaww%2C+We+have+received+an+application+19950+where+your+statement+is+required.+You+can+contact+NAVI+MUMBAI+ADMIN%2C+IT+CELL+NAVI+MUMBAI%2C+8655615809+to+record+your+statement+in+person.%0AYou+can+also+record+your+statement+online.+Click+the+link+below+to+provide+your+consent+and+record+your+statement.%0Asanpri.co.in%2FPGRS%2Fvc-consent%2Findex%3Fid%3Dc65148786381f221e7cccb2f7c9a0997%26module_name%3DSUdSTVM%3D+.+Commissioner+of+Police+Navi+Mumbai&coding=2
+
+
+ ===================================
+ 23-10-2025
+
+ https://mpolice.in/igrms-master/view?id=44840
+
+ https://182.48.206.30/mnt/nas_igrmsvc/recordings/nmadmin0001_44840_05052025_152037/nmadmin0001_44840_05052025_152037.mp4
+
+
+
+ /var/www/webroot/ROOT/frontend/models/IgrmsMaster.php
+ myModal_video
+
+ SELECT * FROM "public"."igrms_grievence_doc" WHERE grievence_hdr_id = 44840;
+
+ https://jitsi-recordings-tridev.s3.ap-south-1.amazonaws.com/recordings/test_case_5001/test_case_5001_2025-10-21-18-30-00.mp4
+
+ https://182.48.206.30/mnt/nas_igrmsvc/recordings/test_case_5001/test_case_5001_2025-10-21-18-30-00.mp4
+
+ https://sanpri.co.in/HRMSDEV/igrms-master/video-token
+
+https://mpolice.in/igrms-master/video-token
+
+https://sanpri.co.in/HRMSDEV/igrms-master/watch-video?file=test_case_5001_2025-10-21-18-30-00.mp4
+
+https://sanpri.co.in/HRMSDEV/igrms-master/watch-video?file=nmadmin0001_44840_05052025_152037.mp4
+ 
+ actionWatchVideo
+
+ SELECT * 
+FROM public.igrms_grievence_doc
+WHERE document_path_nas IS NOT NULL 
+  AND document_name LIKE '%mp4%';
+
+  SELECT *
+FROM public.igrms_grievence_doc
+WHERE document_path_nas IS NOT NULL
+  AND document_name ILIKE '%mp4%';
+  =================================================
+  24-10-2025 - WFH
+
+
+  =============================================================
+  25-10-2025 - WFH
+
+  https://mpolice.in/igrms-master/view?id=45448
+  https://mpolice.in/igrms-master/view?id=44849
+
+  https://mpolice.in/igrms-master/view?id=43415
+
+
+  https://mpolice.in/igrms-master/view?id=43415   -- Not found Recording
+
+
+  openVideo('https://mpolice.in/igrms-master/watch-video?file=
+  
+  https://182.48.206.30/mnt/nas_igrmsvc/recordings/dgplgmf9501_43415_10042025_120110/dgplgmf9501_43415_10042025_120110.mp4
+  ');
+
+
+  document_path_nas	
+
+use common\components\AppSettingHelper;
+  <?= AppSettingHelper::setting('favicon_url'); ?>
+
+  =================================================================
+  27-10-2025 - WFM - Half- day
+
+  https://app.cloudjiffy.com/
+
+  /HRMSDEV/frontend/views/adr/view.php
+  frontend/views/characterverification/view.php
+   /HRMSDEV/frontend/views/crime/view.php
+   /HRMSDEV/frontend/views/eventpermission/view.php
+   /HRMSDEV/frontend/views/missing/view.php
+   /frontend/views/passportverification/view.php
+
+
+   ==========================================================
+   28-10-2025
+
+   UPDATE dashboard_master SET token = 'ca82e76b-68b8-4ed4-bf75-55a706307796' WHERE id = 15;
+   https://mpolice.in/default/view?id=63&type=adr
+
+
+   http://mpolice.in/igrms-master/watch-video?file=/mnt/nas_igrmsvc/recordings/nmadmin0001_0025_28102025_121510/nmadmin0001_0025_28102025_121510_2025-10-28-06-45-44.mp4
+
+
+
+ui_translation?
+
+use common\components\LangHelper;
+Yii::t('app', LangHelper::langTrans('header_add', 'header_text'));
+Yii::$app->view->params['page-code'] = 'device_master'
+
+
+
+INSERT INTO public.ui_translation
+(page, category, message_key, language, lang_text, created_at, updated_at)
+VALUES
+('profile_master', 'header_profile', 'header_text', 'en', 'Profile Assignment', NOW(), NOW()),
+('profile_master', 'header_profile', 'header_text', 'ma', 'प्रोफाइल नियुक्ती', NOW(), NOW());
+
+----
+
+INSERT INTO public.ui_translation
+(page, category, message_key, language, lang_text, created_at, updated_at)
+VALUES
+('profile_master', 'label_unit', 'label_text', 'en', 'Unit', NOW(), NOW()),
+('profile_master', 'label_unit', 'label_text', 'ma', 'युनिट', NOW(), NOW());
+
+INSERT INTO public.ui_translation
+(page, category, message_key, language, lang_text, created_at, updated_at)
+VALUES
+('profile_master', 'label_subunit', 'label_text', 'en', 'Sub Unit', NOW(), NOW()),
+('profile_master', 'label_subunit', 'label_text', 'ma', 'उप युनिट', NOW(), NOW());
+
+
+INSERT INTO public.ui_translation
+(page, category, message_key, language, lang_text, created_at, updated_at)
+VALUES
+('profile_master', 'button_search', 'button_text', 'en', 'Search', NOW(), NOW()),
+('profile_master', 'button_search', 'button_text', 'ma', 'शोधा', NOW(), NOW());
+
+INSERT INTO public.ui_translation
+(page, category, message_key, language, lang_text, created_at, updated_at)
+VALUES
+('profile_master', 'button_reset', 'button_text', 'en', 'Reset', NOW(), NOW()),
+('profile_master', 'button_reset', 'button_text', 'ma', 'पुन्हा सुरू करा', NOW(), NOW());
+
+
+INSERT INTO public.ui_translation
+(page, category, message_key, language, lang_text, created_at, updated_at)
+VALUES
+('profile_master', 'label_sevarth_number', 'label_text', 'en', 'Sevarth Number', NOW(), NOW()),
+('profile_master', 'label_sevarth_number', 'label_text', 'ma', 'सेवार्थ क्रमांक', NOW(), NOW());
+
+
+INSERT INTO public.ui_translation
+(page, category, message_key, language, lang_text, created_at, updated_at)
+VALUES
+('profile_master', 'label_buckle_no', 'label_text', 'en', 'Buckle Number', NOW(), NOW()),
+('profile_master', 'label_buckle_no', 'label_text', 'ma', 'बकल क्रमांक', NOW(), NOW());
+
+INSERT INTO public.ui_translation
+(page, category, message_key, language, lang_text, created_at, updated_at)
+VALUES
+('profile_master', 'label_employee_name', 'label_text', 'en', 'Employee Name', NOW(), NOW()),
+('profile_master', 'label_employee_name', 'label_text', 'ma', 'कर्मचारी नाव', NOW(), NOW());
+
+INSERT INTO public.ui_translation
+(page, category, message_key, language, lang_text, created_at, updated_at)
+VALUES
+('profile_master', 'label_designation', 'label_text', 'en', 'Designation', NOW(), NOW()),
+('profile_master', 'label_designation', 'label_text', 'ma', 'पद', NOW(), NOW());
+
+INSERT INTO public.ui_translation
+(page, category, message_key, language, lang_text, created_at, updated_at)
+VALUES
+('profile_master', 'label_sub_unit_name', 'label_text', 'en', 'Sub Unit Name', NOW(), NOW()),
+('profile_master', 'label_sub_unit_name', 'label_text', 'ma', 'उपयुनिटचे नाव', NOW(), NOW());
+
+https://mpolice.in/igrms-master/watch-video?file=/mnt/nas_igrmsvc/recordings/nmadmin0001_0025_29102025_112322/nmadmin0001_0025_29102025_112322_2025-10-29-05-54-03.mp4
+
+/mnt/nas_igrmsvc/recordings/nmadmin0001_0025_29102025_112322_2025-10-29-05-54-03/nmadmin0001_0025_29102025_112322_2025-10-29-05-54-03.mp4
+
+https://mpolice.in/igrms-master/watch-video?file=/mnt/nas_igrmsvc/recordings/nmadmin0001_0025_29102025_112322_2025-10-29-05-54-03/nmadmin0001_0025_29102025_112322_2025-10-29-05-54-03.mp4
+
+https://mpolice.in/igrms-master/watch-video?file=recordings/nmadmin0001_0025_29102025_112322_2025-10-29-05-54-03/nmadmin0001_0025_29102025_112322_2025-10-29-05-54-03.mp4
+
+https://182.48.206.30/mnt/nas_igrmsvc/recordings/nmadmin0001_0025_29102025_112322_2025-10-29-05-54-03/nmadmin0001_0025_29102025_112322_2025-10-29-05-54-03.mp4
+
+
+
+
+====================================================================================================
+30-10-2025
+https://mpolice.in/igrms-master/view?id=43464
+IGRMS master
+Adr
+Missing
+Crime
+Character Verification
+Event Permission
+Passport Verification
+
+INSERT INTO public.ui_translation
+(page, category, message_key, language, lang_text, created_at, updated_at)
+VALUES
+('profile_master', 'header_profile_rol', 'header_text', 'en', 'User Role', NOW(), NOW()),
+('profile_master', 'header_profile_rol', 'header_text', 'ma', 'वापरकर्त्यांची भूमिका', NOW(), NOW());
+--
+
+INSERT INTO public.ui_translation
+(page, category, message_key, language, lang_text, created_at, updated_at)
+VALUES
+('profile_master', 'label_present_desig', 'label_text', 'en', 'Present Designation', NOW(), NOW()),
+('profile_master', 'label_present_desig', 'label_text', 'ma', 'सध्याचे पद', NOW(), NOW());
+
+
+INSERT INTO public.ui_translation
+(page, category, message_key, language, lang_text, created_at, updated_at)
+VALUES
+('profile_master', 'label_dateofJoining', 'label_text', 'en', 'Date of Joining', NOW(), NOW()),
+('profile_master', 'label_dateofJoining', 'label_text', 'ma', 'नोकरी सुरू झाल्याची तारीख', NOW(), NOW());
+
+
+INSERT INTO public.ui_translation
+(page, category, message_key, language, lang_text, created_at, updated_at)
+VALUES
+('profile_master', 'label_profile_name', 'label_text', 'en', 'Profile Name', NOW(), NOW()),
+('profile_master', 'label_profile_name', 'label_text', 'ma', 'प्रोफाइलचे नाव', NOW(), NOW());
+
+
+Sub Profile Name
+Status
+Action
+
+ Yii::$app->view->params['page-code'] = 'reports';
+
+
+ INSERT INTO public.ui_translation
+(page, category, message_key, language, lang_text, created_at, updated_at)
+VALUES
+('reports', 'header_application_dtl', 'header_text', 'en', 'Application Details', NOW(), NOW()),
+('reports', 'header_application_dtl', 'header_text', 'ma', 'अर्जाचे तपशील', NOW(), NOW());
+
+
+ INSERT INTO public.ui_translation
+(page, category, message_key, language, lang_text, created_at, updated_at)
+VALUES
+('reports', 'label_grievance_no', 'label_text', 'en', 'Grievance No.', NOW(), NOW()),
+('reports', 'label_grievance_no', 'label_text', 'ma', 'तक्रार क्रमांक', NOW(), NOW());
+
+INSERT INTO public.ui_translation
+(page, category, message_key, language, lang_text, created_at, updated_at)
+VALUES
+('reports', 'label_date', 'label_text', 'en', 'Date', NOW(), NOW()),
+('reports', 'label_date', 'label_text', 'ma', 'तारीख', NOW(), NOW());
+
+INSERT INTO public.ui_translation
+(page, category, message_key, language, lang_text, created_at, updated_at)
+VALUES
+('reports', 'label_application_addr', 'label_text', 'en', 'Applicant Address', NOW(), NOW()),
+('reports', 'label_application_addr', 'label_text', 'ma', 'अर्जदाराचा पत्ता', NOW(), NOW());
+--
+
+INSERT INTO public.ui_translation
+(page, category, message_key, language, lang_text, created_at, updated_at)
+VALUES
+('reports', 'label_police_station', 'label_text', 'en', 'Police Station', NOW(), NOW()),
+('reports', 'label_police_station', 'label_text', 'ma', 'पोलीस स्टेशन', NOW(), NOW());
+
+INSERT INTO public.ui_translation
+(page, category, message_key, language, lang_text, created_at, updated_at)
+VALUES
+('reports', 'label_non_app_name', 'label_text', 'en', 'Non Applicant Name', NOW(), NOW()),
+('reports', 'label_non_app_name', 'label_text', 'ma', 'अनर्जदाराचे नाव', NOW(), NOW());
+
+
+
+INSERT INTO public.ui_translation
+(page, category, message_key, language, lang_text, created_at, updated_at)
+VALUES
+('reports', 'label_non_app_addr', 'label_text', 'en', 'Non Applicant Address', NOW(), NOW()),
+('reports', 'label_non_app_addr', 'label_text', 'ma', 'गैर अर्जदाराचा पत्ता', NOW(), NOW());
+
+INSERT INTO public.ui_translation
+(page, category, message_key, language, lang_text, created_at, updated_at)
+VALUES
+('reports', 'label_attachment', 'label_text', 'en', 'Attachment', NOW(), NOW()),
+('reports', 'label_attachment', 'label_text', 'ma', 'संलग्नक', NOW(), NOW());
+
+INSERT INTO public.ui_translation
+(page, category, message_key, language, lang_text, created_at, updated_at)
+VALUES
+('reports', 'label_description', 'label_text', 'en', 'Description', NOW(), NOW()),
+('reports', 'label_description', 'label_text', 'ma', 'वर्णन', NOW(), NOW());
+
+
+
+INSERT INTO public.ui_translation
+(page, category, message_key, language, lang_text, created_at, updated_at)
+VALUES
+('reports', 'label_non_app_contact', 'label_text', 'en', 'Non Applicant Contact', NOW(), NOW()),
+('reports', 'label_non_app_contact', 'label_text', 'ma', 'गैर अर्जदार संपर्क', NOW(), NOW());
+
+
+
+
+ INSERT INTO public.ui_translation
+(page, category, message_key, language, lang_text, created_at, updated_at)
+VALUES
+('reports', 'header_track_dtl', 'header_text', 'en', 'Track Details', NOW(), NOW()),
+('reports', 'header_track_dtl', 'header_text', 'ma', 'स्थिती तपशील', NOW(), NOW());
+
+
+INSERT INTO public.ui_translation
+(page, category, message_key, language, lang_text, created_at, updated_at)
+VALUES
+('reports', 'btn_print', 'btn_text', 'en', 'Print', NOW(), NOW()),
+('reports', 'btn_print', 'btn_text', 'ma', 'छापा', NOW(), NOW());
+
+
+ INSERT INTO public.ui_translation
+(page, category, message_key, language, lang_text, created_at, updated_at)
+VALUES
+('reports', 'header_date_wise', 'header_text', 'en', 'Date Wise Report', NOW(), NOW()),
+('reports', 'header_date_wise', 'header_text', 'ma', 'तारखेनुसार अहवाल', NOW(), NOW());
+
+ INSERT INTO public.ui_translation
+(page, category, message_key, language, lang_text, created_at, updated_at)
+VALUES
+('reports', 'header_incidence_wise', 'header_text', 'en', 'Incidence Wise Report', NOW(), NOW()),
+('reports', 'header_incidence_wise', 'header_text', 'ma', 'घटनानुसार अहवाल', NOW(), NOW());
+
+
+
+Caller Name
+Contact No
+Grievance Date
+Grievance Sources
+
+
+
+ INSERT INTO public.ui_translation
+(page, category, message_key, language, lang_text, created_at, updated_at)
+VALUES
+('grievance', 'header_grievance_master', 'header_text', 'en', 'Grievance Master', NOW(), NOW()),
+('grievance', 'header_grievance_master', 'header_text', 'ma', 'तक्रार मास्टर', NOW(), NOW());
+
+Yii::$app->view->params['page-code'] = 'grievance';
+
+
+
+
+INSERT INTO public.ui_translation
+(page, category, message_key, language, lang_text, created_at, updated_at)
+VALUES
+('grievance', 'label_search', 'label_text', 'en', 'Search', NOW(), NOW()),
+('grievance', 'label_search', 'label_text', 'ma', 'शोधा', NOW(), NOW());
+
+INSERT INTO public.ui_translation
+(page, category, message_key, language, lang_text, created_at, updated_at)
+VALUES
+('grievance', 'btn_merge', 'btn_text', 'en', 'Merge', NOW(), NOW()),
+('grievance', 'btn_merge', 'btn_text', 'ma', 'एकत्र करा', NOW(), NOW());
+
+INSERT INTO public.ui_translation
+(page, category, message_key, language, lang_text, created_at, updated_at)
+VALUES
+('grievance', 'btn_add_grie', 'btn_text', 'en', 'Add Grievance', NOW(), NOW()),
+('grievance', 'btn_add_grie', 'btn_text', 'ma', 'तक्रार जोडा', NOW(), NOW());
+
+
+===========================================================
+31-10-2025
+
+INSERT INTO public.ui_translation
+(page, category, message_key, language, lang_text, created_at, updated_at)
+VALUES
+('grievance', 'label_total_applications', 'label_text', 'en', 'Total Applications', NOW(), NOW()),
+('grievance', 'label_total_applications', 'label_text', 'ma', 'एकूण अर्ज', NOW(), NOW());
+
+INSERT INTO public.ui_translation
+(page, category, message_key, language, lang_text, created_at, updated_at)
+VALUES
+('grievance', 'label_emergency', 'label_text', 'en', 'Emergency', NOW(), NOW()),
+('grievance', 'label_emergency', 'label_text', 'ma', 'आपत्कालीन', NOW(), NOW());
+
+
+
+INSERT INTO public.ui_translation
+(page, category, message_key, language, lang_text, created_at, updated_at)
+VALUES
+('grievance', 'note_discr', 'discr', 'en', '<strong>Note*: </strong>Records are initially grouped based on <b>Applicant Mobile Number, Applicant Name, Non Applicant Name, Application Type, Incident Type</b>. The first entry (by created date) is assigned as the Parent ID, which is then linked to similar records as Child Records. Users can use the "Demerge" option to remove a child record from the group and later re-merge by selecting records to merge. The first record (by created date) from the selected records will be set as the Parent Record.', NOW(), NOW()),
+('grievance', 'note_discr', 'discr', 'ma', '<strong>टीप*:</strong> नोंदी सुरुवातीला खालील माहितीच्या आधारे गटबद्ध केल्या जातात: <b>अर्जदाराचा मोबाईल क्रमांक, अर्जदाराचे नाव, गैर-अर्जदाराचे नाव, अर्जाचा प्रकार, घटना प्रकार</b>. निर्मिती दिनांकानुसार आलेली पहिली नोंद ही Parent ID म्हणून सेट केली जाते, आणि इतर समान नोंदी Child Records म्हणून जोडल्या जातात. वापरकर्ते "Demerge" पर्याय वापरून एखादी Child Record गटातून वेगळी करू शकतात. नंतर आवश्यक नोंदी निवडून पुन्हा Merge करून त्या एकत्र करू शकतात. निवडलेल्या नोंदींपैकी निर्मिती दिनांकानुसार पहिली नोंद Parent Record म्हणून सेट केली जाईल.', NOW(), NOW());
+
+
+ INSERT INTO public.ui_translation
+(page, category, message_key, language, lang_text, created_at, updated_at)
+VALUES
+('grievance', 'header_application', 'header_text', 'en', 'Application', NOW(), NOW()),
+('grievance', 'header_application', 'header_text', 'ma', 'अर्ज', NOW(), NOW());
+
+
+
+INSERT INTO public.ui_translation
+(page, category, message_key, language, lang_text, created_at, updated_at)
+VALUES
+('grievance', 'note_discr_create', 'discr', 'en', '<strong>Note*: </strong>When entering application details, the system will check for existing records based on <b>Applicant Mobile Number, Applicant Name, Non Applicant Name, Application Type, Incident Type, and Non-Applicant Mobile Number.</b> If a similar entry is found, it will be displayed in a grid format.', NOW(), NOW()),
+('grievance', 'note_discr_create', 'discr', 'ma', '<strong>टीप*:</strong> अर्जाची माहिती भरताना, प्रणाली खालील आधारांवर अस्तित्वात असलेल्या नोंदी तपासेल: 
+<b>अर्जदाराचा मोबाईल क्रमांक, अर्जदाराचे नाव, गैर-अर्जदाराचे नाव, अर्जाचा प्रकार, घटना प्रकार आणि गैर-अर्जदाराचा मोबाईल क्रमांक.</b> 
+जर तत्सम नोंद आढळली तर ती ग्रिड स्वरूपात दर्शवली जाईल.
+', NOW(), NOW());
+
+
+
+INSERT INTO public.ui_translation
+(page, category, message_key, language, lang_text, created_at, updated_at)
+VALUES
+('grievance', 'header_track_dtl', 'header_text', 'en', 'Track Details', NOW(), NOW()),
+('grievance', 'header_track_dtl', 'header_text', 'ma', 'स्थिती तपशील', NOW(), NOW());
+
+
+Comment
+Online Statement
+Close
+

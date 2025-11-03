@@ -1,0 +1,694 @@
+01-09-2025
+
+SELECT * FROM "public"."menu_categories" WHERE menu_name_english = 'Breath Geo Location';
+
+INSERT INTO "public"."menu_access" (sub_profile_code, menu_no)
+VALUES 
+('PROF4_ROLE52', 4);
+
+INSERT INTO unit_wise_module_allocation 
+(unit_id, menu_no, module_seq, status, created_by, created_date, modified_by, modified_date, mpolice, sid, ciu, yatharth, daily_bulletin)
+VALUES 
+(19841, 177, 1, 1, 20007698, '2025-03-27 00:00:00', NULL, NULL, NULL, NULL, NULL, 1, NULL);
+
+
+UPDATE "public"."unit_wise_module_allocation" SET module_seq = 4 WHERE unit_id = 19841 AND menu_no = 177;
+UPDATE "public"."unit_wise_module_allocation" SET module_seq = 3 WHERE unit_id = 19841 AND menu_no = 177;
+
+breath-analyzer/breath-geo-location
+
+latitude
+: 
+"19.1972699"
+longitude
+: 
+"72.9618524"
+====
+
+
+latitude
+: 
+"19.1972806"
+longitude
+: 
+"72.9618414"
+
+==
+
+latitude
+: 
+"19.1952772"
+longitude
+: 
+"72.9549196"
+===
+
+latitude
+: 
+"19.1952967"
+longitude
+: 
+"72.9549266"
+===
+
+latitude
+: 
+"19.1972651"
+longitude
+: 
+"72.9618488"
+
+==================================================================
+03-09-2025
+
+breath_analyzer_transactions
+
+ALTER TABLE breath_analyzer_transactions
+    ADD COLUMN model VARCHAR(225),
+    ADD COLUMN test_mode VARCHAR(225),
+    ADD COLUMN test_no VARCHAR(50),
+    ADD COLUMN blank_test_result VARCHAR(225),
+    ADD COLUMN coordinate_position VARCHAR(225),
+    ADD COLUMN certified_single_number VARCHAR(225),
+    ADD COLUMN sensor_element_number VARCHAR(225),
+    ADD COLUMN officer_name VARCHAR(225),
+    ADD COLUMN officer_badge_no VARCHAR(225),
+    ADD COLUMN remarks_notes TEXT,
+    ADD COLUMN driver_name VARCHAR(225),
+    ADD COLUMN license_no VARCHAR(225),
+    ADD COLUMN vehicle_number VARCHAR(225),
+    ADD COLUMN verification_date DATE,
+    ADD COLUMN calibration_date1 DATE,
+    ADD COLUMN calibration_date2 DATE,
+    ADD COLUMN calibration_date10 DATE,
+    ADD COLUMN driver_signature TEXT,
+    ADD COLUMN police_signature TEXT,
+    ADD COLUMN ps_name VARCHAR(225);
+
+    ALTER TABLE breath_analyzer_transactions
+    ADD COLUMN officer_designation VARCHAR(225),
+    ADD COLUMN officer_mobile_no VARCHAR(20);
+
+    ALTER TABLE breath_analyzer_transactions
+    ADD COLUMN address TEXT,
+    ADD COLUMN sevarth_number VARCHAR(100);
+
+    ===================================================================
+    04-09-2025
+    https://app.cloudjiffy.com/
+    https://winter-trinity-38088-1.postman.co/workspace/My-Workspace~ce5ed66a-5233-4975-8a89-20a18429ce04/request/3863852-751e1c9f-6f10-471a-8876-789d4ccfaf97?tab=body
+    https://sanpri.co.in/Rakshak/extplorer/index.php
+
+    https://bi.sanpri.in/login/?next=https://bi.sanpri.in/dashboard/list/?pageIndex=0&sortColumn=changed_on_delta_humanized&sortOrder=desc&viewMode=table
+    
+    https://sanpri.co.in/HRMSDEV/extplorer/index.php
+    http://103.205.141.103/redirect.php?subject=schema&server=%3A5432%3Aallow&database=mpolice_dev_db&schema=public&
+
+    http://103.205.141.103/redirect.php?subject=schema&server=%3A5432%3Aallow&database=yatharth_dev_db&schema=public&
+
+    https://sanpri.atlassian.net/plugins/servlet/ac/clockwork-cloud/clockwork-timesheet?project.key=RAK&project.id=10005#!reportName=Clockwork%20Timesheet&scope%5BstartingAt%5D=2025-09-01&scope%5BendingAt%5D=2025-09-30&selectedBreakdowns%5B%5D=users&selectedBreakdowns%5B%5D=issues&period=PERIOD_DAY&highlightOutlierReports=false&additionalColumn=&activeColumnFormat=time
+    https://sanpri.atlassian.net/jira/dashboards/10007?maximized=10059
+
+    https://sanpri.atlassian.net/jira/software/c/projects/YAT/boards/7
+    https://sanpri.atlassian.net/browse/YAT-425
+
+
+
+    https://outlook.office.com/mail/inbox/id/AAQkAGJlNjA0NWVlLTUxOGItNGU2MS04ZTZlLTEzMjc1Y2YzNWYxNAAQAENRq7NjbKJPuHsGMuFayWQ%3D
+    https://webmail.sanpri.net/cpsess7831416272/3rdparty/roundcube/?_task=mail&_mbox=INBOX
+
+    https://sanpri.co.in/HRMSDEV/reports/duty-type-datewise
+
+    ----
+    =============================================================================
+    04-09-2025
+    Worked on AlcoSync API 
+    =========================================================================
+    05-09-2025
+
+    SELECT * FROM "public"."user" WHERE user_login_first IS NOT NULL;
+    SELECT * FROM "public"."user" WHERE username = 'KRIS3454334';
+
+============================================================================================
+06-09-2025
+user/index
+
+KRIPDEV1993
+
+mst_unit
+
+SELECT * FROM "public"."user" WHERE username = 'KRIPDEV1993';
+
+SELECT * FROM "public"."sub_profile_master" WHERE desig_master_id = 87;
+
+DELETE FROM public.employee_profiles WHERE id = 95;
+
+PROF104_ROLE250
+
+KRIPDEV1993
+krishna@12345678
+
+actionChangepassword
+
+
+356966716b6978796f335775, NMADMIN0001, 1607100000000096655, 0, 8655615809, NMADMIN0001 Your login OTP is: 577619. Valid Till: 17:16:09.
+3569667171734d41674a7a50, NMADMIN0001, 1607100000000096655, 0, 8655615809, KRIPDEV1993 Your login OTP is: 949485. Valid Till: 17:22:19.
+
+19393 = Array
+(
+    [0] => Array
+        (
+            [user_code] => CPPUNE
+            [sms_auth_key] => 123123
+            [sms_sender_id] => MAHAPOL
+            [username] => punepoli
+            [status] => 1
+        )
+
+)
+
+19841 =Array
+(
+    [0] => Array
+        (
+            [user_code] => NMC
+            [sms_auth_key] => 456456
+            [sms_sender_id] => MAHPOL
+            [username] => espacee
+            [status] => 1
+        )
+
+)
+
+
+NEWUSER0002
+
+$opt = Yii::$app->MessageComponent->send_message($mobile,$message, $username,$login, 1607100000000096655); 
+admin@123456789
+
+=========================================================================
+08-09-2025
+https://sanpri.co.in/Yatharth1/breath-analyzer/breath-analyzer-record?lic=MH12AB23
+
+09-09-2025
+
+License No:MH12AB100
+Device No : 25031385
+
+License No:MH12AB92
+Device No:25031385
+
+KRIPG1234
+ PUNEKRIS009
+
+ ROHULRT4566
+
+ KRIPDIVD3900
+
+ SELECT * FROM city_master_codes WHERE city_id IN ('19841','19393');
+
+ ========================================================================================
+
+ 10-09-2025
+
+ Superset Portal
+ https://devbi.sanpri.in/superset/dashboard/p/57yj2ZljYVg/
+ https://sanpri.co.in/HRMSDEV/site/ems-dashboard
+
+MP-2482
+/HRMSDEV/frontend/controllers/SiteController.php
+/HRMSDEV/frontend/views/site/ems_dashboard.php
+
+SELECT * FROM "public"."menu_categories" WHERE action = 'track-request/index';
+
+INSERT INTO "public"."menu_categories" 
+(menu_id,menu_parent_no, menu_name_english, action, menu_include, menu_sequence, menu_level, class, menu_name_marathi, params, params_value, mpolice, sid, ciu, yatharth, daily_bulletin) 
+VALUES 
+(726,11, 'EMS Dashboard', 'site/ems-dashboard', 'Y', 8, 2, NULL, 'EMS Dashboard', NULL, NULL, 1, NULL, NULL, NULL, NULL);
+
+SELECT * FROM "public"."menu_categories" WHERE menu_id = 726;
+
+<i class='fa fa-arrow-left' aria-hidden='true'></i>
+MNFRT8945321
+9552714100
+9604348548
+19372
+
+SELECT * FROM "public"."api_sms" WHERE 	mobile_number='9604348548';
+
+=========================================================================================
+11-09-2025
+
+https://sanpri.co.in/Yatharth1/breath-analyzer/breath-analyzer-record?mob=9800000096&lic=&vn=
+
+BNDD9E456755
+
+SELECT * FROM "public"."user" WHERE username = 'BNDD9E456755';
+========================================================================================
+12-09-2025
+
+SELECT * FROM "public"."breath_analyzer_transactions" WHERE deviceno = '25031385';
+
+======================================================================================
+13-09-2025
+
+KMADMIN0001 -> ADMIN
+admin@123
+
+PUNEPCUSER001
+pcuser@123
+
+  $params = ['city_id'=>$_SESSION['login_unit_id'],'unit_id'=>$_SESSION['login_subunit_id']];
+
+  access_level
+
+  Rule Nam : dashboard
+
+
+  $emp_name=$_SESSION['login_user_id'];
+	$command1 = $connection->createCommand("select emp_firstname,emp_middlename,emp_lastname from emp_master where id='$emp_name'");
+
+     $unit_id = $_SESSION['login_unit_id'];
+    $sub_unit_id = $_SESSION['login_subunit_id'];
+
+    officer_id = {{ current_user.officer_id }}
+
+     /*"rls" => [
+           [
+	    "clause"=> "officer_id =".$result['id'] 
+	   ]
+        ], // row-level security if required
+        "roles" => ["Gamma"], 
+        "user" => [
+            "username" => $result['sevarth_number'],
+            "first_name" => $result['emp_firstname'].' '.$result['emp_middlename'],
+            "last_name" => $result['emp_lastname'],
+            "id" => $result['id']
+        ]*/
+    
+    ===============================================================================================
+    15-09-2025
+
+    CREATE TABLE translations (
+    id SERIAL PRIMARY KEY,             
+    category VARCHAR(100) NOT NULL,    
+    message_key VARCHAR(150) NOT NULL, 
+    language VARCHAR(10) NOT NULL,      
+    message TEXT NOT NULL               
+   );
+
+
+id	category	message_key	language	message
+1	label	welcome_text	en	Welcome to my website
+2	label	welcome_text	hi	मेरी वेबसाइट पर आपका स्वागत है
+3	button	login_button	en	Login
+4	button	login_button	hi	लॉगिन
+
+
+CREATE TABLE translations (
+    id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    page VARCHAR(100) NOT NULL,         -- e.g., "login", "dashboard"
+    category VARCHAR(100) NOT NULL,     -- e.g., "label", "button", "error"
+    message_key VARCHAR(150) NOT NULL,  -- e.g., "welcome_text"
+    language VARCHAR(10) NOT NULL,      -- e.g., "en", "hi"
+    lang_text TEXT NOT NULL,            -- translated text
+    CONSTRAINT unique_translation UNIQUE (page, category, message_key, language)
+);
+
+
+Original query
+CREATE TABLE translations (
+    id SERIAL PRIMARY KEY,  
+    page VARCHAR(255) NULL,            
+    category VARCHAR(255) NULL,    
+    message_key VARCHAR(255) NULL,  
+    language VARCHAR(10) NULL,      
+    lang_text TEXT NULL,   
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP           
+);
+
+ALTER TABLE translations RENAME TO ui_translation;
+
+
+emp_master_add
+
+
+================================================================
+16-09-2025
+
+UPDATE "public"."ui_translation" SET page = 'emp_master' WHERE page = 'emp_master_add'
+Yii::$app->view->params['page-code'] = 'emp_master';
+
+INSERT INTO ui_translation (page, category, message_key, language, lang_text, created_at, updated_at)
+VALUES ('unit_master', 'header_unit', 'header_text', 'ma', 'युनिट मास्टर', NOW(), NOW());
+
+INSERT INTO ui_translation (page, category, message_key, language, lang_text, created_at, updated_at)
+VALUES ('unit_master', 'header_unit', 'header_text', 'en', 'Unit Master', NOW(), NOW());
+
+
+https://sanpri.co.in/Yatharth1/breath-analyzer/breath-geo-location
+https://sanpri.co.in/Yatharth1/breath-analyzer/breath-analyzer-details
+
+==========================================================================================
+17-09-2025
+
+https://sanpri.co.in/YatharthBA/new-mast-employee-details/employee-master
+
+KRDEVDE0002
+
+/YatharthBA/frontend/views/layouts/dashboard.php
+
+...iews/breath-analyzer/breath_analyzer_detail.php
+
+.harthBA/frontend/controllers/SiteController.php
+/YatharthBA/frontend/config/main.php
+ /YatharthBA/common/config/main-local.php
+
+ /YatharthBA/frontend/views/layouts/dashboard.php
+  /YatharthBA/frontend/views/user/_form.php
+
+  /var/www/webroot/ROOT/YatharthBA/frontend/models/MenuCategories.php
+
+===========================================================================
+18-09-2025
+
+PROF4 
+
+PROF4_ROLE4
+
+PUNEADMIN01 = 132579
+NMADMIN0001 = 131514
+KMADMIN0001 = 132583
+
+Profile Master 182
+Profile Assignement 181
+Sub Profile Master 179
+
+
+SELECT * FROM "public"."menu_categories" WHERE menu_name_english = 'Breath Geo Location';
+
+INSERT INTO "public"."menu_access" (sub_profile_code, menu_no)
+VALUES 
+('PROF4_ROLE52', 181);
+
+INSERT INTO "public"."menu_access" (sub_profile_code, menu_no)
+VALUES 
+('PROF4_ROLE4', 181);
+
+INSERT INTO unit_wise_module_allocation 
+(unit_id, menu_no, module_seq, status, created_by, created_date, modified_by, modified_date, mpolice, sid, ciu, yatharth, daily_bulletin)
+VALUES 
+(19841, 181, 1, 1, 20007698, '2025-03-27 00:00:00', NULL, NULL, NULL, NULL, NULL, 1, NULL);
+
+
+UPDATE "public"."unit_wise_module_allocation" SET module_seq = 4 WHERE unit_id = 19841 AND menu_no = 177;
+UPDATE "public"."unit_wise_module_allocation" SET module_seq = 3 WHERE unit_id = 19841 AND menu_no = 177;
+
+
+SELECT * FROM "public"."unit_wise_module_allocation" WHERE unit_id = 19841;
+------
+UPDATE "public"."employee_profiles" SET role_code = 'PROF4_ROLE52' WHERE emp_id = 132583; 
+
+INSERT INTO public.unit_wise_module_allocation
+(unit_id, menu_no, module_seq, status, created_by, created_date, modified_by, modified_date, mpolice, sid, ciu, yatharth, daily_bulletin)
+VALUES
+(19393, 4, 11, 1, 20007698, '2020-10-17 00:00:00', NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+
+INSERT INTO public.unit_wise_module_allocation
+(unit_id, menu_no, module_seq, status, created_by, created_date, modified_by, modified_date, mpolice, sid, ciu, yatharth, daily_bulletin)
+VALUES
+(19393, 187, 11, 1, 20007698, '2020-10-17 00:00:00', NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+
+/var/www/webroot/ROOT/YatharthBA/common/config/main-local.php
+/var/www/webroot/ROOT/YatharthBA/frontend/views/profile-assignment/empProfiles.php
+/var/www/webroot/ROOT/YatharthBA/frontend/views/profile-assignment/empProfiles.php
+/var/www/webroot/ROOT/YatharthBA/frontend/controllers/ProfileAssignmentController.php
+
+==================================================================================================
+19-09-2025
+/var/www/webroot/ROOT/YatharthBA/frontend/controllers/ProfileMasterController.php
+/var/www/webroot/ROOT/YatharthBA/frontend/views/profile-master/deactivate.php
+/var/www/webroot/ROOT/YatharthBA/frontend/views/profile-master/index.php
+/var/www/webroot/ROOT/YatharthBA/frontend/controllers/ProfileRoleMasterController.php
+/var/www/webroot/ROOT/YatharthBA/frontend/views/profile-role-master/deactivate.php
+/var/www/webroot/ROOT/YatharthBA/frontend/views/profile-role-master/index.php
+/var/www/webroot/ROOT/YatharthBA/frontend/views/profile-role-master/deactivate.php
+
+
+   $csrfParam = Yii::$app->request->csrfParam;
+  $csrfToken = Yii::$app->request->getCsrfToken();
+
+   var data = {};
+   data["' . $csrfParam . '"] = "' . $csrfToken . '";
+
+'buttons' => [
+                      'deactivate' => function ($url, $model) {
+                      $csrfParam = Yii::$app->request->csrfParam;
+                      $csrfToken = Yii::$app->request->getCsrfToken();
+                      
+                        return Html::a('<span class="glyphicon glyphicon-ban-circle"></span>', '#', [
+                                    'title' => Yii::t('app', 'Deactivate'),
+                                    //'data-confirm'=>'Are you sure you want to deactivate this item?',
+                                    //'data-method'=>'POST'
+                                    'onclick' => 'var c=confirm("Are you sure you want to deactivate this record?"); 
+                                                  if(c){ 
+                                                   var data = {};
+                                                   data["' . $csrfParam . '"] = "' . $csrfToken . '";
+                                                    $.post("' . $url . '",data);    
+                                                    }else{ window.location.reload(); }',
+                            ]);
+                        }
+                    ],
+
+
+ SELECT lctn_key AS id,
+    description AS state_name,
+    3262 AS country_master_id
+   FROM mst_lctn
+  WHERE lctn_type = 1::numeric;
+
+
+  frontend/views/location-management/index.php
+  frontend/views/location-management/rakshak_map.php
+
+  =================================================================================================
+  20-09-2025
+  BA-343 Deployed on prod
+  BA/frontend/views/profile-role-master/_form.php
+
+==================================================================================================
+22-09-2025
+
+https://devbi.sanpri.in/api/v1/dashboard/2/thumbnail/62da69711ac3dfa76410f922f022228c/
+
+GET
+/api/v1/dashboard/{pk}/screenshot/{digest}/
+Get a computed screenshot from cache
+
+SELECT * FROM "public"."mst_unit" WHERE unit_cd = 1990728156;
+
+--
+BA-348 ->Deployed on prod
+...thBA/frontend/models/NewMastEmployeeDetails.php
+
+BA-322 -> Deployed on prod
+/YatharthBA/frontend/models/MstUnitSearch.php
+
+
+
+
+ $message = "$username Your login OTP is: $otp. Valid Till: $otpTime. ";
+	           // echo "<pre>";print_r($message); 
+	             // echo $vsat_otp;die;
+	                        if($MobileNo!="")
+	                        {
+	                            $login=0;
+	                         $d = Yii::$app->MessageComponent->send_message($MobileNo,$message, $username,$login, 1607100000000096655);  //renuka Anil commented on 02.04.2022
+	                        }
+
+  FEATURE_FLAGS = {
+    "EMBEDDED_SUPERSET": True,
+    "ALLOW_FULL_EMBEDDING": True,
+    "PUBLIC_DASHBOARDS": True,
+    "PUBLIC_CHARTS": True,
+    "ENABLE_DASHBOARD_PUBLIC_SHARING": True,
+    "DASHBOARD_RBAC": False,
+    "ENABLE_DATA_UPLOAD": True,
+    "DASHBOARD_NATIVE_FILTERS": True,
+    "ENABLE_DASHBOARD_EXPORT": True,
+    "ENABLE_DASHBOARD_SCREENSHOT_ENDPOINTS": True,
+    "THUMBNAILS": True,
+    "ENABLE_DASHBOARD_DOWNLOAD_WEBDRIVER_SCREENSHOT": True,
+    "DASHBOARD_FILTERS_EXPERIMENTAL": True,  
+  }                         
+
+  
+        "thumbnail_url": "/api/v1/dashboard/2/thumbnail/93d56cde88e52204c7ec9adeedbe2294/",
+                         "/api/v1/dashboard/2/thumbnail/93d56cde88e52204c7ec9adeedbe2294/",
+
+
+ In your superset_config.py, add:
+
+# Tell Superset what the external domain is
+SUPERSET_WEBSERVER_ADDRESS = "devbi.sanpri.in"
+SUPERSET_WEBSERVER_PORT = 443
+SUPERSET_WEBSERVER_PROTOCOL = "https"
+
+# (newer Superset also supports this)
+SUPERSET_EXTERNAL_URL = "https://devbi.sanpri.in"
+
+=====================================
+
+/usr/local/bin/chromedriver
+/usr/bin/chromium-browser
+
+
+
+celery -A superset.celery.app.celery worker --loglevel=info
+celery -A superset.tasks.celery_app worker --loglevel=info
+
+celery -A superset.tasks.celery_app worker --loglevel=info
+
+ls ~/superset-env/lib64/python3.9/site-packages/superset/tasks
+
+__init__.py  
+__pycache__  async_queries.py
+cache.py
+celery_app.py
+cron_util.py
+exceptions.py
+scheduler.py
+thumbnails.py
+types.py
+utils.py
+
+cd ~/superset-env/lib64/python3.9/site-packages/superset/tasks/
+
+# from superset.commands.logs.prune import LogPruneCommand
+# from superset.commands.logs.prune import LogPruneCommand
+
+source ~/superset-env/bin/activate
+celery -A superset.tasks.celery_app worker --loglevel=info
+
+source ~/superset-env/bin/activate
+pip install pillow
+
+
+"thumbnail_url": "/api/v1/dashboard/2/thumbnail/93d56cde88e52204c7ec9adeedbe2294/",
+
+https://devbi.sanpri.in/api/v1/dashboard/2/screenshot/ea692381203fc19aeb8c569c74acfa50/?download_format=pdf
+
+
+https://ap-south-1.console.aws.amazon.com/ec2/home?region=ap-south-1#InstanceDetails:instanceId=i-0e8761f96a28ce206
+
+=======================================================================
+25-09-2025
+
+Google map download
+https://chatgpt.com/c/68d522ce-aa84-8328-90d4-61f375c11b4d
+
+<button id="downloadMapBtn" class="btn btn-primary" style="float:right;"> <i class="fa fa-download" aria-hidden="true"></i> </button>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+document.getElementById('downloadMapBtn').addEventListener('click', function() {
+    const mapElement = document.getElementById('map');
+
+    html2canvas(mapElement, {
+        useCORS: true, // important if tiles come from a different domain
+        allowTaint: true
+    }).then(canvas => {
+        // Convert canvas to image
+        const link = document.createElement('a');
+        link.download = `map_${new Date().toISOString().slice(0,19).replace(/:/g,'-')}.png`;
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+    }).catch(err => {
+        console.error("Error capturing map:", err);
+    });
+});
+
+alcosync
+...b-process-transaction-rk/dashboard_superset.php
+ontrollers/FbProcessTransactionRkController.php
+/views/breath-analyzer/breath_geo_location.php
+
+===============================================================================================
+26-09-2025
+
+mpolice -> Deployed on prod -> done
+/HRMSDEV/frontend/views/adr/index.php
+/HRMSDEV/frontend/views/adr/_form.php
+ /HRMSDEV/frontend/views/layouts/dashboard.php
+ /HRMSDEV/frontend/web/dashboard/css/style.css
+ HRMSDEV/frontend/views/adr/view.php
+/HRMSDEV/frontend/views/vc/online-statement.php
+
+
+ mob-font
+===========================================================
+27-09-2025
+mpolice  Deployed on prod -> done
+/frontend/views/characterverification/index.php
+/frontend/views/characterverification/_form.php
+.V/frontend/views/characterverification/view.php
+
+/HRMSDEV/frontend/views/crime/index.php
+/HRMSDEV/frontend/views/crime/_form.php
+HRMSDEV/frontend/views/crime/view.php
+
+/HRMSDEV/frontend/views/eventpermission/index.php
+/HRMSDEV/frontend/views/eventpermission/_form.php
+/HRMSDEV/frontend/views/eventpermission/view.php
+
+ /HRMSDEV/frontend/views/missing/index.php
+ /HRMSDEV/frontend/views/missing/_form.php
+ /HRMSDEV/frontend/views/missing/view.php
+
+ /frontend/views/passportverification/index.php
+ /frontend/views/passportverification/_form.php
+ frontend/views/passportverification/view.php
+
+  mpolice  Deployed on prod -> done
+ /HRMSDEV/frontend/views/vc/voice-statement.php
+ frontend/views/igrms-master/voice-statement.php
+  /HRMSDEV/frontend/views/default/index.php
+  ============================================================================
+  29-09-2025
+
+  https://sanpri.co.in/YatharthBA/fb-process-transaction-rk/dashboard-preview
+
+  vw_ds_ba_trxn
+  vw_ds_ba_trxn
+
+  https://sanpri.co.in/YatharthBA/fb-process-transaction-rk/dashboard-preview
+
+  alcosync
+  /YatharthBA/frontend/config/main.php
+  YatharthBA/controllers/FbProcessTransactionRkController.php
+  fontend/view/fb-process-transaction-rk/dashboard_preview.php
+  fontend/views/layouts/withoutlogin_dashboard.php
+
+
+  https://sanpri.co.in/YatharthBA/fb-process-transaction-rk/send-dashboard-chart
+
+  https://sanpri.co.in/YatharthBA/fb-process-transaction-rk/dashboard-preview
+
+  SELECT * FROM "public"."emp_master" WHERE designation_master_id = 31;
+  SELECT * FROM "public"."designation_master" WHERE designation_name = 'DCP';
+
+  1990726449 - status active - 0
+
+  =========================================================================================
+  30-09-2025
+  Alcosync
+  .b-process-transaction-rk/dashboard_superset.php
+  /YatharthBA/frontend/config/main.php
+  /views/breath-analyzer/breath_geo_location.php
+
+
+   mpolice
+   .frontend/views/igrms-master/voice-statement.php
+   /HRMSDEV/frontend/views/vc/online-statement.php
+    .../frontend/controllers/IgrmsMasterController.php
+    .rontend/views/igrms-master/online-statement.php
+

@@ -1,0 +1,34 @@
+myDetails
+
+https://webmail.sanpri.net/cpsess7831416272/3rdparty/roundcube/?_task=mail&_mbox=INBOX
+
+-------
+Jira 
+https://sanpri.atlassian.net/jira/software/projects/DP/boards/1
+krishnamurari.prajapati@sanpri.net
+Krishna@2025
+
+----
+Microsoft Team
+https://teams.microsoft.com/v2/
+krishnamurari.prajapati@sanpri.net
+Password: KrishnaPm@sanpri2025
+
+----
+URL                                                              | User ID   | Pass
+-----------------------------------------------------------------------------------------
+https://node218211-env-2942541.cloudjiffy.net                   | webadmin  | LTGalo88591
+https://node94724-env-8010374-clone677029.cloudjiffy.net        | webadmin  | nocqem-xoDbun-6jijbu   
+
+
+Development DB IP : http://103.205.141.103
+ 
+
+https://devbi.sanpri.in/superset/dashboard/p/57yj2ZljYVg/
+https://devbi.sanpri.in/login/
+username : admin
+password : admin@123987
+---
+https://bi.sanpri.in/
+krishna.prajapati@sanpri.net	
+Admin@123

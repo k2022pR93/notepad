@@ -1,0 +1,20 @@
+save_accused_address_info - Payload API
+
+
+3eGMHil9buc27/KrroL8u7dHaoGw7i6Ebgd7lxl6DCAH9dqaglpqCD0CP7PNo1ai8knzgR+ycbiRwT8kZfao+TugACBQfD+f5KG2dWQbC8pECQ2W91zNTG83G0XL49nMuPDkXdfSfIWRZotYMd2ieX/hFAHy3lz/Vcck891aQGBpTX2lWGnWbCNUuZ7XJtDqHW9hP5gW917VmcHxOsQVLA+bSfF6If7TTnr93kEM+xK4nc3F95yMcsl/jrjAXrH4qn568b3joaHLsR8Uz1koR+BKn/teoGokA1tpsJwwi0yI37Z9mASEkNUZipqZRSa+kSSkh9CZXslyN1JkD8eOpMtZhntMCkmUu3WObI+uD2HxaVcJeEY9raV0KwJZCWx6104Ym3hNhi1OmsqW+7r0f2cu/GTnp43f2tQ4Z738WVQ=
+
+
+{
+  "id": "14100",
+  "fk_accused_id": 466,
+  "add_1": "House No. 123, Some Street",
+  "taluka": "Some Taluka",
+  "pincode": "123456",
+  "remark": "Moved to new address",
+  "state": 1,
+  "district": 10,
+  "reason_type": 2,
+  "address_type": 1,
+  "user_id": 101,
+  "residential_sub_unit": 1984147
+}
