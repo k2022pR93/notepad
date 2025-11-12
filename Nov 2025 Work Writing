@@ -76,3 +76,269 @@ Complainant Contact
 Complainant Relation to Case
 
 =======================================================================
+03-11-2025
+SELECT * FROM "public"."ui_translation" WHERE lang_text ilike '%Application%';
+SELECT * FROM "public"."ui_translation" WHERE lang_text ilike '%Application%' OR lang_text ilike '%Number%' OR lang_text ilike '%Event%';
+
+
+Event Name
+From Date
+To Date
+From Time
+To Time
+
+
+Person Name
+Place
+Alias Name
+Current Address
+Permanent Address
+Complexion
+Height
+Build
+Face Type
+Eye Type
+Eye Color
+Nose Type
+Moustache
+Beard
+Hair Type
+Hair Color
+Special Marks
+
+Complainant Address
+Complainant Father’s Name
+Complainant Relation
+
+
+Full Name
+Date of Birth
+Nationality
+Marital Status
+Occupation
+Email ID
+Village 
+Town 
+City
+Taluka 
+Tehsil
+Date of Visit
+Time of Visit
+
+
+
+Victim Details
+Accused Details
+Crime Details
+
+
+Address Details
+Physical Identification
+
+
+Residential Address
+Identification 
+
+===================================================
+04-11-2025
+
+http://www.yatharth.in.net/api/device/uploadrecord
+http://www.yatharth.net:8069/api/device/uploadfile?deviceno=DEVICE124&testtime=2025-07-28T08:30:00
+
+
+ALC-000400
+2025-11-04T08:30:00
+
+
+http://www.yatharth.in.net/api/photos/Screenshot%202025-07-25%20164845.png
+http://www.yatharth.in.net/YatharthBA/site/login
+
+
+http://www.yatharth.in.net:8069/api/device/uploadrecord
+http://www.yatharth.in.net:8069/api/device/uploadfile?deviceno=Device_id_01&testtime=2025-11-04T08:30:00
+
+
+[file] => Array
+        (
+            [name] => Screenshot 2025-02-12 183208.png
+            [full_path] => Screenshot 2025-02-12 183208.png
+            [type] => image/png
+            [tmp_name] => /tmp/php7oxQUG
+            [error] => 0
+            [size] => 54172
+        )
+
+
+        [file] => Array
+        (
+            [name] => 20251105115607.jpg
+            [full_path] => 20251105115607.jpg
+            [type] => 
+            [tmp_name] => 
+            [error] => 3
+            [size] => 0
+        )
+===================================================
+06-11-2025
+
+https://sanpri.co.in/HRMSDEV/igrms-master/online-meeting-activity?tok=eyJtZWV0aW5nVXJsIjoidmMuc2FucHJpLmluXC9OTUFETUlOMDAwMV8xOTgwMl8wNjExMjAyNV8xNTI5MzY_and0PWV5SmhiR2NpT2lKSVV6STFOaUlzSW5SNWNDSTZJa3BYVkNKOS5leUpoZFdRaU9pSjBjbWxrWlhaaGNIQWlMQ0pwYzNNaU9pSjBjbWxrWlhaaGNIQWlMQ0p6ZFdJaU9pSjJZeTV6WVc1d2Nta3VhVzRpTENKeWIyOXRJam9pVGsxQlJFMUpUakF3TURGZk1UazRNREpmTURZeE1USXdNalZmTVRVeU9UTTJJaXdpYVdGMElqb3hOell5TkRJek1UYzNMQ0p1WW1ZaU9qRTNOakkwTWpNeE56Y3NJbVY0Y0NJNk16VXlORGcwTnpJMU15d2lZMjl1ZEdWNGRDSTZleUoxYzJWeUlqcDdJbWxrSWpvaWRYTmxjaTAxTVRBeUlpd2lZV1ptYVd4cFlYUnBiMjRpT2lKdFpXMWlaWElpTENKc2IySmllVjlpZVhCaGMzTWlPbVpoYkhObExDSnpaV04xY21sMGVWOWllWEJoYzNNaU9tWmhiSE5sZlgxOS4yVHVPd0RNdXRRZGZDRmlGU1l0YVRFUjkyNUQ1ckdUQjI4QzhvQnM1VC1NI2NvbmZpZy5zdGFydFdpdGhBdWRpb011dGVkPWZhbHNlJmNvbmZpZy5zdGFydFdpdGhWaWRlb011dGVkPWZhbHNlJnVzZXJJbmZvLmRpc3BsYXlOYW1lPSUyMlB1YmxpYyUyMiZjb25maWcuZGlzYWJsZURpc3BsYXlOYW1lQ2hhbmdlPXRydWUiLCJleHAiOjE3NjI0MjQwNzd9.yZod1a-pTbQWwi2wPRuFX0K6OGzeGEA5tqNqPJ9osAc
+
+
+ /HRMSDEV/frontend/controllers/VcController.php
+ /HRMSDEV/frontend/config/main.php
+ frontend/controllers/IgrmsMasterController.php
+
+ ===============================================================
+ 07-11-2025
+ EMS-34
+ frontend/views/ems-evidence-form/form_new.php
+ ..ntend/controllers/EmsEvidenceFormController.php
+
+EMS-24 deplyed 
+ $path='hrms_webservices/ems/evidence'; prod- already created
+ Creating folder for upload image
+/frontend/views/ems-evidence-form/form_view.php  -> uploaded on prod
+/frontend/views/ems-evidence-form/form_new.php
+.ntend/controllers/EmsEvidenceFormController.php
+
+
+ https://sanpri.co.in/HRMSDEV/hrms_webservices/ems/evidence/896_2024_evidence_15042025_123024.mp4
+
+https://sanpri.co.in/HRMSDEV/ems-evidence-form/form-view?crime=4538&panchnama=8317
+<style>
+     .dropdown-menu {
+    z-index: 1000 !important;
+    }
+</style>
+
+https://sanpri.co.in/HRMSDEV/ems-outward/out-ward
+
+https://sanpri.co.in/HRMSDEV/e-m-s/ems-warehouse-print?warehouse=1&evidence_id=%5B%22431%22%2C%22950%22%5D&receipt_type=outward&name=NITIN+BARKU+JAWARE
+https://sanpri.co.in/HRMSDEV/e-m-s/ems-warehouse-print?warehouse=2&evidence_id=%5B%22430%22%2C%22431%22%2C%22456%22%5D&receipt_type=Inward
+
+==================================================================================
+08-11-2025
+
+<input type="text" id="qrevID" name="qrevID"> <!-- onchange="getqrEvidence($(this).val())"-->
+		    <button type="button" class="btn btn-primary btn-sm" onclick="getqrEvidence($('#qrevID').val())">Go</button>
+
+
+ if(eid=="" || eid == null || eid == undefined){
+         return false;
+        }
+EMS-13 deployed on prod
+EV/frontend/views/e-m-s/ems_warehouse_print.php
+
+EMS-45 deplyeed on prod
+https://sanpri.co.in/HRMSDEV/ems-evidence-warehourse-transaction/create-inward
+view/ems-evidence-warehourse-transaction/evidence_inward_transaction.php
+/HRMSDEV/frontend/controllers/EmsController.php  -- function actionGetevidencerecordqr()
+
+https://sanpri.co.in/HRMSDEV/ems-evidence-warehourse-transaction-new/create-document-inward
+view/ems-evidence-warehourse-transaction-new/evidence_document_inward_transaction.php
+/HRMSDEV/frontend/controllers/EmsController.php  -- function actionGetdocumentrecordqr() - no changes
+
+https://sanpri.co.in/HRMSDEV/ems-application/application-inward
+views/ems-application/application_inward.php
+
+https://sanpri.co.in/HRMSDEV/ems-outward/out-ward
+views/ems-outward/evidence_out_form.php
+
+https://sanpri.co.in/HRMSDEV/ems-document/document-outward
+views/ems-document/document_outward.php
+
+ https://sanpri.co.in/HRMSDEV/ems-application/application-outward
+ views/ems-application/application_outward.php
+ 
+
+EMS-10 Deployed done
+frontend/controllers/EmsEvidenceFormController.php
+frontend/views/ems-evidence-form/form_index.php
+view/ems-evidence-warehourse-transaction/evidence_inward_view.php
+
+/HRMSDEV/frontend/views/layouts/main.php
+ /HRMSDEV/frontend/views/layouts/dashboard.php
+
+MP-2626 deployed on prod
+ frontend/models/EmsWarehouseDocumentTransaction.php
+
+
+
+
+SELECT * FROM "public"."emp_master" WHERE sevarth_number='NMADMIN0001';
+UPDATE "public"."emp_master" SET mobile_number = '8655615809' WHERE sevarth_number='NMADMIN0001';
+ https://sanpri.co.in/HRMSDEV/ems-evidence-form/update?crime=4541&panchnama=8320
+ 977898
+https://sanpri.co.in/HRMSDEV/ems-evidence-status-update/evidence-list
+
+ https://sanpri.co.in/HRMSDEV/e-m-s/ems-warehouse-print?warehouse=2&evidence_id=%5B%22474%22%5D&receipt_type=Inward
+
+ https://sanpri.co.in/HRMSDEV/e-m-s/ems-warehouse-print?warehouse=2&evidence_id=%5B%22961%22%2C%225374%22%2C%225375%22%5D&receipt_type=outward&name=NITIN+BARKU+JAWARE
+
+ ================================
+ 10-11-2025
+
+ EMS-11 ->deployed on producition
+ views/ems-evidence-status-update/evidence-list.php
+ controllers/EmsEvidenceStatusUpdateController.php -> actionEvidenceList(){ ->   $data=Yii::$app->db->createCommand("select distinct evidence_id,ed.*,et.name,ump.unit_name,wt.type,wt.warehouse_id
+
+ Added this column -wt.warehouse_id
+
+ /HRMSDEV/frontend/controllers/EMSController.php -> actionEmsWarehousePrint(
+
+ if(strpos($evidence_id, '"') ) {    
+			$evidenceIdsArray = json_decode($evidence_id, true);
+  			$commaSeparatedValues = implode(',', $evidenceIdsArray);
+  		}else{
+  			//$commaSeparatedValues=$evidence_id;
+  			 $evidenceIdsArray = json_decode($evidence_id, true);
+  			 
+  			$commaSeparatedValues = implode(',', $evidenceIdsArray);
+  			//$commaSeparatedValues =$evidenceIdsArray;  -> Commnted this
+  		}
+
+EMS-9 deployed on prod
+frontend/views/ems-outward/evidence_out_form.php  	
+frontend/views/ems-evidence-warehourse-transaction/evidence_inward_transaction.php	
+ems-evidence-warehourse-transaction/evidence_inward_view.php
+ems-evidence-warehourse-transaction/evidence_document_inward_transaction.php
+
+/views/ems-application/application_inward.php
+/views/ems-application/application_outward.php
+
+/ems-evidence-warehourse-transaction-new/evidence_document_inward_transaction.php
+
+frontend/views/ems-document/document_inward.php
+rontend/views/ems-document/document_outward.php
+
+
+
+19901-----DGPSRBM7901
+==================================================================
+11-11-2025
+BAHIRJI
+
+
+SELECT 
+    id, 
+    act_type, 
+    short_name,
+    equivalent_act,
+    equivalent_section,
+    CONCAT_WS(' | ', short_name, equivalent_act, equivalent_section) AS act_section_mapped
+FROM 
+    ems_act_sections WHERE id = 1;
+ 
+---
+
+SELECT 
+    id, 
+    act_type, 
+    short_name,
+    equivalent_act,
+    equivalent_section,
+    CONCAT_WS(' | ', short_name, equivalent_act, equivalent_section) AS act_section_mapped
+FROM 
+    ems_act_sections;
+ 
+SPKRRRM1900
