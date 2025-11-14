@@ -342,3 +342,97 @@ FROM
     ems_act_sections;
  
 SPKRRRM1900
+
+======================================================================
+12-11-2025
+
+https://sanpri.co.in/HRMSDEV/ems-evidence-form/update?crime=4529&panchnama=8331
+
+EMS-7
+V/frontend/views/ems-evidence-form/form_new.php
+/HRMSDEV/frontend/controllers/EMSController.php
+
+MP-2629
+ems-evidence-warehourse-transaction/evidence_inward_transaction.php
+ems-evidence-warehourse-transaction/evidence_inward_view.php
+ems-evidence-warehourse-transaction-new/evidence_document_inward_transaction.php
+ems-application/application_inward.php
+ems-outward/evidence_out_form.php
+ems-document/document_outward.php
+ems-application/application_outward.php
+
+EMS-9
+frontend/views/ems-evidence-form/update.php
+frontend/views/ems-evidence-form/form_view.php
+
+----
+
+SELECT evidence_details.*,ems_evidence_types.name,designation_master.designation_name as designation,unit_master.unit_name as posting,emp_master.emp_firstname ||' '||emp_master.emp_middlename ||' '||emp_master.emp_lastname as io_fname,evidence_details.type
+						        from evidence_details
+						        inner join ems_evidence_types on ems_evidence_types.id=evidence_type
+						        inner join designation_master on designation_master.desig_master_id=io_designation
+						        inner join unit_master on unit_master.id=io_ps
+						        inner join emp_master on emp_master.id=cast(io_name as integer)
+						        where fk_ems_case_id=13426 and fk_ems_panchnama_id=19655 and evidence_details.status=1
+
+
+SELECT * FROM "public"."evidence_details" WHERE fk_ems_case_id=13501 and fk_ems_panchnama_id=19784;
+
+=======================================================
+13-11-2025
+
+MP-2640
+frontend/views/e-m-s/ems_enventary_report.php  -- Added line 'evidence_id' => json_encode([$data[$i]['evidence_id']])
+
+MP-2644
+frontend/views/ems-evidence-form/form_new.php
+frontend/views/ems-evidence-form/update.php
+
+MP-2645
+frontend/views/ems-evidence-form/form_new.php
+frontend/views/ems-evidence-form/update.php
+
+MP-2648
+/frontend/views/e-m-s/ems_enventary_report.php
+frontend/controllers/EMSController.php  - actionWarehouseEvidenceInventory(){
+
+MP-2649
+views/ems-outward/evidence_out_form.php
+
+
+MP-2652
+ems-evidence-warehourse-transaction/evidence_inward_transaction.php
+added line -  document.getElementById('act_sec').value = getdata[getdata.length - 1].act_section_names;
+
+MP-2653
+frontend/views/ems-evidence-form/form_view.php
+frontend/views/ems-evidence-form/update.php
+ 
+ Added line - class="btn btn-primary"
+
+MP-2658,MP-2625
+Not file
+
+MP-2667 ---------- copy past fixing
+ /views/ems-evidence-form/form_new.php
+/views/ems-evidence-form/update.php
+
+MP-2679
+ems-evidence-warehourse-transaction/release_print.php
+
+EMS-62
+ems-outward/evidence_out_form.php
+
+commented this line
+//Webcam.attach('#my_camera');
+        //Webcam.attach('#my_camera2');
+        //Webcam.attach('#my_camera4');
+
+031/2025
+'onpaste' => 'return false;','oncopy' => 'return false;','oncut'  => 'return false;'
+
+=============================================================
+14-11-2025
+
+EMS-63
+ems-outward/evidence_out_form.php
