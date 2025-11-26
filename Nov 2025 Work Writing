@@ -190,7 +190,7 @@ https://sanpri.co.in/HRMSDEV/igrms-master/online-meeting-activity?tok=eyJtZWV0aW
 
  ===============================================================
  07-11-2025
- EMS-34
+ EMS-34 Not Required
  frontend/views/ems-evidence-form/form_new.php
  ..ntend/controllers/EmsEvidenceFormController.php
 
@@ -352,16 +352,19 @@ EMS-7
 V/frontend/views/ems-evidence-form/form_new.php
 /HRMSDEV/frontend/controllers/EMSController.php
 
-MP-2629
+MP-2629 ->deployed
 ems-evidence-warehourse-transaction/evidence_inward_transaction.php
 ems-evidence-warehourse-transaction/evidence_inward_view.php
 ems-evidence-warehourse-transaction-new/evidence_document_inward_transaction.php
+
 ems-application/application_inward.php
-ems-outward/evidence_out_form.php
-ems-document/document_outward.php
 ems-application/application_outward.php
 
-EMS-9
+ems-outward/evidence_out_form.php
+ems-document/document_outward.php
+
+
+EMS-9 ->deployed
 frontend/views/ems-evidence-form/update.php
 frontend/views/ems-evidence-form/form_view.php
 
@@ -381,30 +384,30 @@ SELECT * FROM "public"."evidence_details" WHERE fk_ems_case_id=13501 and fk_ems_
 =======================================================
 13-11-2025
 
-MP-2640
-frontend/views/e-m-s/ems_enventary_report.php  -- Added line 'evidence_id' => json_encode([$data[$i]['evidence_id']])
+MP-2640 ->deployed
+frontend/views/e-m-s/ems_enventary_report.php  -> Added line 'evidence_id' => json_encode([$data[$i]['evidence_id']])
 
-MP-2644
+MP-2644 ->deployed
 frontend/views/ems-evidence-form/form_new.php
 frontend/views/ems-evidence-form/update.php
 
-MP-2645
+MP-2645 ->deployed
 frontend/views/ems-evidence-form/form_new.php
 frontend/views/ems-evidence-form/update.php
 
-MP-2648
+MP-2648 ->deployed
 /frontend/views/e-m-s/ems_enventary_report.php
 frontend/controllers/EMSController.php  - actionWarehouseEvidenceInventory(){
 
-MP-2649
+MP-2649 ->deployed
 views/ems-outward/evidence_out_form.php
 
 
-MP-2652
+MP-2652 ->deployed
 ems-evidence-warehourse-transaction/evidence_inward_transaction.php
 added line -  document.getElementById('act_sec').value = getdata[getdata.length - 1].act_section_names;
 
-MP-2653
+MP-2653 ->deployed
 frontend/views/ems-evidence-form/form_view.php
 frontend/views/ems-evidence-form/update.php
  
@@ -413,14 +416,14 @@ frontend/views/ems-evidence-form/update.php
 MP-2658,MP-2625
 Not file
 
-MP-2667 ---------- copy past fixing
+MP-2667 ---------- copy past fixing -> Not required this
  /views/ems-evidence-form/form_new.php
 /views/ems-evidence-form/update.php
 
-MP-2679
+MP-2679 ->deployed
 ems-evidence-warehourse-transaction/release_print.php
 
-EMS-62
+EMS-62 ->deployed
 ems-outward/evidence_out_form.php
 
 commented this line
@@ -434,5 +437,148 @@ commented this line
 =============================================================
 14-11-2025
 
-EMS-63
+EMS-63 ->deployee
+ems-evidence-warehourse-transaction-new/evidence_document_inward_transaction.php
+
+ems-evidence-warehourse-transaction/evidence_inward_view.php
+ems-evidence-warehourse-transaction/evidence_inward_transaction.php
+
+ems-application/application_inward.php
+ems-application/application_outward.php
+
 ems-outward/evidence_out_form.php
+ems-document/document_outward.php
+
+================================================================
+15-11-2025
+
+
+SELECT emp_master.emp_firstname ||' '||emp_master.emp_middlename ||' '||emp_master.emp_lastname as io_fname,ems_crime_master.case_number as cr_no,panchanama_date,evidence_details.*,ems_evidence_types.name,designation_master.designation_name as designation,
+        	unit_master.unit_name as posting from evidence_details
+	        inner join ems_evidence_types on ems_evidence_types.id=evidence_type
+	        inner join designation_master on designation_master.desig_master_id=io_designation
+	        inner join unit_master on unit_master.id=io_ps
+	        inner join ems_crime_master on ems_crime_master.id=evidence_details.fk_ems_case_id
+	        inner join ems_panchanama on ems_panchanama.id=fk_ems_panchnama_id
+	       -- inner join emp_master on emp_master.id=cast(evidence_details.io_name as integer)
+            LEFT JOIN emp_master ON emp_master.id = NULLIF(regexp_replace(evidence_details.io_name, '[^0-9]', '', 'g'), '')::integer
+	        where evidence_details.fk_ems_case_id=34278 and evidence_details.fk_ems_panchnama_id=48072 and evidence_details.status=1
+
+=============================================================================
+
+17-11-2025
+
+EMS-67 Deployed on prod
+
+controllers/EmsEvidenceWarehourseTransactionController.php
+controllers/EmsEvidenceFormController.php
+controllers/EmsOutwardController.php
+
+ems-evidence-warehourse-transaction/evidence_inward_transaction.php
+ems-outward/evidence_out_form.php
+
+ems-evidence-form/form_view.php
+views/ems-evidence-form/form_new.php
+/views/ems-evidence-form/update.php
+views/ems-evidence-form/form_index.php
+
+=============================================================================
+18-11-2026
+
+[{"module_type":"ems","evidence_id":"5464","case_number":"551","document_name":"2024_18_11_2025_9:35:23.jpg","document_path":"hrms_webservices\/ems\/evidence\/new_25_11_18_093555_2024_18_11_2025_9:35:23.jpg","document_type":"jpg","created_by":"131514","created_at":"2025-11-18 09:35:55","image_type":"snapshot","type":"inward"},{"module_type":"ems","evidence_id":"5464","case_number":"551","document_name":"2024_18_11_2025_9:35:24.jpg","document_path":"hrms_webservices\/ems\/evidence\/new_25_11_18_093555_2024_18_11_2025_9:35:24.jpg","document_type":"jpg","created_by":"131514","created_at":"2025-11-18 09:35:55","image_type":"snapshot","type":"inward"},{"module_type":"ems","evidence_id":"5464","case_number":"551","document_name":"2024_18_11_2025_9:35:28.jpg","document_path":"hrms_webservices\/ems\/evidence\/new_25_11_18_093555_2024_18_11_2025_9:35:28.jpg","document_type":"jpg","created_by":"131514","created_at":"2025-11-18 09:35:55","image_type":"snapshot","type":"inward"}]
+
+
+show-grid
+
+
+created_at
+
+[{"module_type":"ems","evidence_id":"943","case_number":"483","document_name":"Screenshot 2025-05-03 172956.png","document_path":"hrms_webservices\/ems\/evidence\/new_25_11_18_165754_Screenshot 2025-05-03 172956.png","document_type":"png","created_by":"131514","created_at":"2025-11-18 16:57:54","image_type":"attach","type":"inward"}]||[{"module_type":"ems","evidence_id":"944","case_number":"483","document_name":"Screenshot 2025-05-05 155940.png","document_path":"hrms_webservices\/ems\/evidence\/new_25_11_18_165831_Screenshot 2025-05-05 155940.png","document_type":"png","created_by":"131514","created_at":"2025-11-18 16:58:31","image_type":"attach","type":"inward"}]
+
+======================================
+19-11-2025
+inward
+$sql1 ="SELECT distinct(evidence_id), evidence_details.*,evidence_title,evidence_details.id as eid,ems_evidence_types.name as evidence_name,evidence_description,ware.evidence_id as warehourse_evidence,ware.type
+	FROM evidence_details
+	left join ems_evidence_types on ems_evidence_types.id=evidence_type
+	left join ems_warehouse_evidence_transaction ware on ware.evidence_id=evidence_details.id and ware.type='inward' and ware.status=1
+	where  evidence_details.id in ($evidence)    order by evidence_details.id ";
+
+
+    UPDATE "public"."emp_master" SET mobile_number = '8655615809' WHERE sevarth_number = 'DGPMHPM7302';
+UPDATE "public"."emp_master" SET mobile_number = '8655615809' WHERE sevarth_number = 'DGPGSGM7001';
+
+return $this->redirect(['update', 'crime' => $crime,'panchnama'=>$panchnama]);
+
+
+https://sanpri.co.in/HRMSDEV/ems-evidence-form/update?crime=6537&panchnama=10789&a=newAdd
+https://sanpri.co.in/HRMSDEV/ems-evidence-form/update?crime=6537&panchnama=10789
+
+===============================================================================================
+
+22-11-2025
+
+DGPMHPM7302 admin@123,  MUDDEMAL KARKOON ( EVIDENCE ENTRY) -> Nerul PS(IO)
+ 
+DGPGSGM7001(admin@123) inwared or outwared(wharehouse profile) - CBD belapur
+
+
+
+get_evidence_me_crime_id_for_inward
+
+
+=================================================================================================
+24-11-2025 deployed on production
+
+ /views/ems-outward/evidence_out_form.php
+views/ems-evidence-form/form_view.php
+frontend/views/ems-evidence-form/update.php
+
+controllers/EmsOutwardController.php
+controllers/EMSController.php
+/e-m-s/ems_warehouse_print.php
+
+===============================================================================
+25-11-2025
+47595
+
+SELECT * FROM "public"."ems_warehouse_evidence_transaction" WHERE evidence_id = 47605;
+
+EmsEvidenceWarehourseTransactionController.php
+tend/controllers/EmsEvidenceFormController.php
+rse-transaction/evidence_inward_transaction.php
+RMSDEV/frontend/controllers/EmsController.php
+rontend/views/ems-outward/evidence_out_form.php
+/frontend/controllers/EmsOutwardController.php
+ 
+views/ems-document/document_outward.php
+views/ems-application/application_outward.php
+=======================================================
+26-11-2025
+
+MP-2863
+ontend/views/ems-evidence-form/update.php
+frontend/views/ems-evidence-form/form_view.php
+RMSDEV/common/components/EvidenceComponent.php
+/HRMSDEV/common/config/main.php
+EmsEvidenceWarehourseTransactionNewController.php
+.frontend/views/ems-evidence-form/form_index.php
+
+MP-2865
+RMSDEV/frontend/controllers/EmsController.php
+ems-evidence-warehourse-transaction-new/evidence_document_inward_transaction.php
+EmsEvidenceWarehourseTransactionNewController.php
+
+MP-2873
+views/ems-document/document_outward.php
+/views/ems-application/application_outward.php
+ems-evidence-warehourse-transaction-new/evidence_document_inward_transaction.php
+views/ems-application/application_inward.php
+
+Yii::$app->EvidenceComponent->
+
+https://sanpri.co.in/HRMSDEV/e-m-s/ems-warehouse-document-print?document_id=18228&receipt_type=inward
+
+
+
+
