@@ -579,6 +579,57 @@ Yii::$app->EvidenceComponent->
 
 https://sanpri.co.in/HRMSDEV/e-m-s/ems-warehouse-document-print?document_id=18228&receipt_type=inward
 
+============================================================================
+27-11-2025
 
 
+SELECT * FROM "public"."ems_evidence_transactions" WHERE evidence_id IN(47629,47628);
+SELECT * FROM "public"."ems_warehouse_evidence_transaction" WHERE evidence_id IN(47629,47628);
 
+https://sanpri.co.in/HRMSDEV/ems-evidence-form/form-view?crime=6571&panchnama=10825
+
+SELECT * FROM "public"."ems_evidence_transactions" WHERE evidence_id IN(47629,47628);
+SELECT * FROM "public"."ems_evidence_transactions" WHERE evidence_id in (47630);
+
+
+MP-2919,MP-2937
+d/controllers/EmsEvidenceFormController.php
+frontend/controllers/EmsOutwardController.php
+/controllers/EmsEvidenceFormController.php
+EmsEvidenceWarehourseTransactionController.php
+
+MP-2867
+controllers/EvidenceUploadController.php
+
+MP-2868
+views/evidence-upload/application_upload.php
+hrms_webservices/ems/application-upload.csv
+
+MP-2869
+/controllers/EvidenceUploadController.php
+frontend/views/evidence-upload/index.php
+hrms_webservices/ems/excel_upload_document.xlsx
+
+MP-2871 -> done
+MP-2864 -> Pending confirm by sir
+MP-2912 -> done
+MP-2874 -> Pending
+MP-2875 -> Pending
+MP-2876 -> Pending
+MP-2877 -> Pedning
+MP-2878 -> Done
+MP-2879 -> Done
+MP-2882 -> Pending
+MP-2881 -> Pending
+MP-2870 -> Pending
+MP-2949 -> Pending
+
+MP-2872
+frontend/views/evidence-upload/index.php
+views/evidence-upload/application_upload.php
+
+
+MP-2880
+Changes in menu_categoies table
+642 -> Excel Upload- Document
+646 -> Excel Application Upload
