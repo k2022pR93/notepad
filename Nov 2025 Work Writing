@@ -611,18 +611,34 @@ frontend/views/evidence-upload/index.php
 hrms_webservices/ems/excel_upload_document.xlsx
 
 MP-2871 -> done
-MP-2864 -> Pending confirm by sir
+MP-2864 -> Pending confirm by sir not issue
 MP-2912 -> done
-MP-2874 -> Pending
-MP-2875 -> Pending
-MP-2876 -> Pending
-MP-2877 -> Pedning
+MP-2874 
+frontend/controllers/EmsDocumentController.php
+/frontend/controllers/EMSController.php
+e-m-s/ems_warehouse_document_print.php
+
+MP-2875
+controllers/EmsApplicationController.php
+/e-m-s/ems_warehouse_application_print.php
+/HRMSDEV/frontend/controllers/EMSController.php
+
+MP-2876 
+views/ems-document/document_outward.php
+
+MP-2877 
+views/ems-application/application_outward.php
+
 MP-2878 -> Done
 MP-2879 -> Done
-MP-2882 -> Pending
-MP-2881 -> Pending
+
+MP-2882 -> done
+
+MP-2881 -> Pending this error comming from prod but gokul will check again
+
+
 MP-2870 -> Pending
-MP-2949 -> Pending
+MP-2949 -> Pending -> discussion with rakesh and gokul
 
 MP-2872
 frontend/views/evidence-upload/index.php
@@ -633,3 +649,16 @@ MP-2880
 Changes in menu_categoies table
 642 -> Excel Upload- Document
 646 -> Excel Application Upload
+
+=========================================================
+28-11-2025
+emp_history_reward
+rewards_recommed
+SAN/REWRD/25/006362
+
+MP-2864
+frontend/views/evidence-upload/index.php
+/views/ems-outward/evidence_out_form.php  ----this is different tickt
+/controllers/EvidenceUploadController.php
+views/evidence-upload/application_upload.php
+
