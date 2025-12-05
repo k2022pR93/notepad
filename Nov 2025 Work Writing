@@ -544,6 +544,7 @@ controllers/EMSController.php
 
 SELECT * FROM "public"."ems_warehouse_evidence_transaction" WHERE evidence_id = 47605;
 
+Production deployed
 EmsEvidenceWarehourseTransactionController.php
 tend/controllers/EmsEvidenceFormController.php
 rse-transaction/evidence_inward_transaction.php
@@ -556,7 +557,7 @@ views/ems-application/application_outward.php
 =======================================================
 26-11-2025
 
-MP-2863
+MP-2863 ->Production deployed
 ontend/views/ems-evidence-form/update.php
 frontend/views/ems-evidence-form/form_view.php
 RMSDEV/common/components/EvidenceComponent.php
@@ -564,12 +565,12 @@ RMSDEV/common/components/EvidenceComponent.php
 EmsEvidenceWarehourseTransactionNewController.php
 .frontend/views/ems-evidence-form/form_index.php
 
-MP-2865
+MP-2865 ->Production deployed
 RMSDEV/frontend/controllers/EmsController.php
 ems-evidence-warehourse-transaction-new/evidence_document_inward_transaction.php
 EmsEvidenceWarehourseTransactionNewController.php
 
-MP-2873
+MP-2873 ->Production deployed
 views/ems-document/document_outward.php
 /views/ems-application/application_outward.php
 ems-evidence-warehourse-transaction-new/evidence_document_inward_transaction.php
@@ -592,60 +593,60 @@ SELECT * FROM "public"."ems_evidence_transactions" WHERE evidence_id IN(47629,47
 SELECT * FROM "public"."ems_evidence_transactions" WHERE evidence_id in (47630);
 
 
-MP-2919,MP-2937
+MP-2919,MP-2937 ->Production deployed
 d/controllers/EmsEvidenceFormController.php
 frontend/controllers/EmsOutwardController.php
 /controllers/EmsEvidenceFormController.php
 EmsEvidenceWarehourseTransactionController.php
 
-MP-2867
+MP-2867 ->Production deployed
 controllers/EvidenceUploadController.php
 
-MP-2868
+MP-2868 ->Production deployed
 views/evidence-upload/application_upload.php
 hrms_webservices/ems/application-upload.csv
 
-MP-2869
+MP-2869 ->Production deployed
 /controllers/EvidenceUploadController.php
 frontend/views/evidence-upload/index.php
 hrms_webservices/ems/excel_upload_document.xlsx
 
-MP-2871 -> done
+MP-2871 -> done ->Production deployed
 MP-2864 -> Pending confirm by sir not issue
-MP-2912 -> done
-MP-2874 
+MP-2912 -> done ->Production deployed
+MP-2874  ->Production deployed
 frontend/controllers/EmsDocumentController.php
 /frontend/controllers/EMSController.php
 e-m-s/ems_warehouse_document_print.php
 
-MP-2875
+MP-2875 ->Production deployed
 controllers/EmsApplicationController.php
 /e-m-s/ems_warehouse_application_print.php
 /HRMSDEV/frontend/controllers/EMSController.php
 
-MP-2876 
+MP-2876  ->Production deployed
 views/ems-document/document_outward.php
 
-MP-2877 
+MP-2877  ->Production deployed
 views/ems-application/application_outward.php
 
-MP-2878 -> Done
-MP-2879 -> Done
+MP-2878 -> Done ->Production deployed
+MP-2879 -> Done ->Production deployed
 
-MP-2882 -> done
+MP-2882 -> done ->Production deployed
 
 MP-2881 -> Pending this error comming from prod but gokul will check again
 
 
-MP-2870 -> Pending
+MP-2870 -> Pending 
 MP-2949 -> Pending -> discussion with rakesh and gokul
 
-MP-2872
+MP-2872 ->Production deployed
 frontend/views/evidence-upload/index.php
 views/evidence-upload/application_upload.php
 
 
-MP-2880
+MP-2880 ->Production deployed
 Changes in menu_categoies table
 642 -> Excel Upload- Document
 646 -> Excel Application Upload
@@ -656,7 +657,7 @@ emp_history_reward
 rewards_recommed
 SAN/REWRD/25/006362
 
-MP-2864
+MP-2864 ->Production deployed
 frontend/views/evidence-upload/index.php
 /views/ems-outward/evidence_out_form.php  ----this is different tickt
 /controllers/EvidenceUploadController.php
