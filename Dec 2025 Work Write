@@ -89,3 +89,62 @@ MP-2773
 /views/ems-evidence-form/form_new.php
 
 MP-2866 - done on dev menu name changes
+
+MP-3089
+models/EmsWarehouseEvidenceTransaction.php
+
+
+================================
+05-12-2025
+
+MP-2865
+frontend/controllers/EmsController.php
+ems-evidence-warehourse-transaction-new/evidence_document_inward_transaction.php
+EmsEvidenceWarehourseTransactionNewController.php
+
+
+==========================================================
+06-12-2025
+
+MP-3109
+rontend/controllers/EMSController.php
+/models/EmsWarehouseEvidenceTransaction.php
+/frontend/views/e-m-s/ems_enventary_report.php
+
+MP-2632
+ems-evidence-warehourse-transaction/evidence_inward_transaction.php
+controllers/EmsEvidenceFormController.php
+
+MP-3075
+views/e-m-s/ems_warehouse_print.php
+views/e-m-s/ems_enventary_report.php
+EmsEvidenceWarehourseTransactionController.php
+ems-evidence-warehourse-transaction/evidence_inward_transaction.php
+
+MP-2639, MP-2638
+/views/e-m-s/ems_warehouse_print.php
+
+
+select ed.id as evidence_id, -- wt.subunit_id, ed.io_ps, um.unit_name,wt.type as status,eet.name as evidence_type,wt.warehouse_id, ed.case_number as cr_no,ed.other_evidence_type,ed.evidence_description,wt.creation_dt from ems_warehouse_evidence_transaction as wt inner join evidence_details as ed on ed.id = wt.evidence_id -- left join unit_master as um on wt.subunit_id=um.id LEFT JOIN unit_master AS um ON ed.io_ps = um.id left join ems_evidence_types as eet on eet.id = ed.evidence_type where wt.type = 'inward' OR wt.type = 'outward' and wt.status=1 and cast(wt.creation_dt as date) between '2025-01-01' and '2025-01-31'
+select ed.id as evidence_id, ed.io_ps, um.unit_name,wt.type as status,eet.name as evidence_type,wt.warehouse_id, ed.case_number as cr_no,ed.other_evidence_type,ed.evidence_description,wt.creation_dt from ems_warehouse_evidence_transaction as wt inner join evidence_details as ed on ed.id = wt.evidence_id LEFT JOIN unit_master AS um ON ed.io_ps = um.id left join ems_evidence_types as eet on eet.id = ed.evidence_type where wt.type = 'inward' OR wt.type = 'outward' and wt.status=1 and cast(wt.creation_dt as date) between '2025-01-01' and '2025-01-31'
+
+
+inward पोच पावती
+https://sanpri.co.in/HRMSDEV/e-m-s/ems-warehouse-print?warehouse=1&evidence_id=%5B%2247696%22%5D&receipt_type=Inward
+https://sanpri.co.in/HRMSDEV/e-m-s/ems-warehouse-print?warehouse=1&evidence_id=%5B47696%5D&receipt_type=inward&name=GIRIDHAR+SITARAM+GORE&mob=8655615809
+
+outward जावक पावती
+https://sanpri.co.in/HRMSDEV/e-m-s/ems-warehouse-print?warehouse=1&evidence_id=%5B%2247694%22%5D&receipt_type=outward&name=ANITA+SANDEEP+PATIL&desig=PN+%2F+APN&mob=7887400733
+https://sanpri.co.in/HRMSDEV/e-m-s/ems-warehouse-print?warehouse=2&evidence_id=%5B47679%5D&receipt_type=outward&name=SAVITA+PRAMOD+MOHITE&desig=API&mob=7887400733
+
+
+MP-3065
+MP-2998
+MP-2995
+MP-2984
+MP-2865
+MP-2679
+MP-2663
+MP-2662
+MP-2663
+
