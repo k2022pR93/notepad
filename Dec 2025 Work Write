@@ -5,25 +5,25 @@
 
 DELETE FROM "public"."ems_crime_data";
 
-MP-2737
+MP-2737 ->  deployed
 /views/reward-process/groupRecommendPrint.php
 
 
-MP-2632
+MP-2632 -> deployed
 frontend/controllers/EmsController.php
 
-MP-2985
+MP-2985 -> deployed
 frontend/views/evidence-upload/index.php
 /controllers/EvidenceUploadController.php
 excel_upload_document updated xls file
 
-MP-2984
+MP-2984 -> deployed
 iews/evidence-upload/application_upload.php
 d/controllers/EvidenceUploadController.php
 
 MP-2995 -> Need to discuss with sir
 
-MP-2983
+MP-2983 -> deployed
 controllers/EvidenceUploadController.php
 /frontend/views/evidence-upload/index.php
 views/evidence-upload/application_upload.php
@@ -38,7 +38,7 @@ views/evidence-upload/application_upload.php
 ================================================================
 03-12-2025
 
-MP-2977
+MP-2977 -> deployed
 controllers/EmsEvidenceFormController.php
 views/ems-evidence-form/form_index.php
 views/ems-evidence-form/update.php
@@ -46,58 +46,59 @@ views/ems-evidence-form/form_view.php
 views/ems-evidence-form/form_new.php
 
 
-MP-2785 - done
+MP-2785 - done deplyed
 https://mpolice.in/ems-evidence-form/update?crime=34546&panchnama=48428
 https://sanpri.co.in/HRMSDEV/e-m-s/ems-warehouse-print?warehouse=1&evidence_id=%5B%2247683%22%5D&receipt_type=Inward
 
 
 this is related act and section Other enter in evidence
-MP-3076
-HRMSDEV/frontend/controllers/EmsController.php
-/evidence_inward_transaction.php
 
-MP-2995
+MP-3076 -> deployed
+HRMSDEV/frontend/controllers/EmsController.php
+ems-evidence-warehourse-transaction/evidence_inward_transaction.php
+
+MP-2995-> deployed
 /HRMSDEV/frontend/controllers/EmsController.php
 ems-application/application_inward.php
 frontend/controllers/EmsFloorController.php
 
-MP-2768
+MP-2768 -> deployed
 HRMSDEV/frontend/controllers/EMSController.php
 
-MP-2976
+MP-2976 -> deplyed
 controllers/EmsEvidenceFormController.php
 views/ems-evidence-form/form_index.php
 
-MP-3000
+MP-3000-> deployed
 ems-evidence-warehourse-transaction/evidence_inward_view.php
 
-MP-2998
+MP-2998 -> deployed
 views/e-m-s/view_crime_details.php
 views/e-m-s/view_documnet_details.php
 views/e-m-s/view_application_details.php
 
-MP-3075
+MP-3075-> deplyed
 models/EmsWarehouseEvidenceTransaction.php
 /views/e-m-s/ems_enventary_report.php
 
-MP-2783
+MP-2783 -> deplyed
 models/EmsWarehouseEvidenceTransaction.php
 HRMSDEV/frontend/controllers/EMSController.php
 
-MP-2773
+MP-2773 -> deplyed
 /views/ems-evidence-form/update.php
 /views/ems-evidence-form/form_new.php
 
-MP-2866 - done on dev menu name changes
+MP-2866 - done on dev menu name changes  -> deplyed
 
-MP-3089
+MP-3089 -> deplyed
 models/EmsWarehouseEvidenceTransaction.php
 
 
 ================================
 05-12-2025
 
-MP-2865
+MP-2865 -> deplyed
 frontend/controllers/EmsController.php
 ems-evidence-warehourse-transaction-new/evidence_document_inward_transaction.php
 EmsEvidenceWarehourseTransactionNewController.php
@@ -106,24 +107,23 @@ EmsEvidenceWarehourseTransactionNewController.php
 ==========================================================
 06-12-2025
 
-MP-3109
+MP-3109 -> deplyed
 rontend/controllers/EMSController.php
 /models/EmsWarehouseEvidenceTransaction.php
 /frontend/views/e-m-s/ems_enventary_report.php
 
-MP-2632
+MP-2632 -> deplyed
 ems-evidence-warehourse-transaction/evidence_inward_transaction.php
 controllers/EmsEvidenceFormController.php
 
-MP-3075
+MP-3075 -> deplyed
 views/e-m-s/ems_warehouse_print.php
 views/e-m-s/ems_enventary_report.php
 EmsEvidenceWarehourseTransactionController.php
 ems-evidence-warehourse-transaction/evidence_inward_transaction.php
 
-MP-2639, MP-2638
+MP-2639, MP-2638 -> deployed
 /views/e-m-s/ems_warehouse_print.php
-
 
 select ed.id as evidence_id, -- wt.subunit_id, ed.io_ps, um.unit_name,wt.type as status,eet.name as evidence_type,wt.warehouse_id, ed.case_number as cr_no,ed.other_evidence_type,ed.evidence_description,wt.creation_dt from ems_warehouse_evidence_transaction as wt inner join evidence_details as ed on ed.id = wt.evidence_id -- left join unit_master as um on wt.subunit_id=um.id LEFT JOIN unit_master AS um ON ed.io_ps = um.id left join ems_evidence_types as eet on eet.id = ed.evidence_type where wt.type = 'inward' OR wt.type = 'outward' and wt.status=1 and cast(wt.creation_dt as date) between '2025-01-01' and '2025-01-31'
 select ed.id as evidence_id, ed.io_ps, um.unit_name,wt.type as status,eet.name as evidence_type,wt.warehouse_id, ed.case_number as cr_no,ed.other_evidence_type,ed.evidence_description,wt.creation_dt from ems_warehouse_evidence_transaction as wt inner join evidence_details as ed on ed.id = wt.evidence_id LEFT JOIN unit_master AS um ON ed.io_ps = um.id left join ems_evidence_types as eet on eet.id = ed.evidence_type where wt.type = 'inward' OR wt.type = 'outward' and wt.status=1 and cast(wt.creation_dt as date) between '2025-01-01' and '2025-01-31'
@@ -138,13 +138,30 @@ https://sanpri.co.in/HRMSDEV/e-m-s/ems-warehouse-print?warehouse=1&evidence_id=%
 https://sanpri.co.in/HRMSDEV/e-m-s/ems-warehouse-print?warehouse=2&evidence_id=%5B47679%5D&receipt_type=outward&name=SAVITA+PRAMOD+MOHITE&desig=API&mob=7887400733
 
 
-MP-3065
-MP-2998
-MP-2995
+SELECT * FROM "public"."ems_crime_master" where id = 11027;
+
+MP-2737
+MP-2632
+MP-2985
 MP-2984
+MP-2983
+MP-2977
+MP-2785
+MP-3076
+MP-2995
+MP-2768
+MP-2976
+MP-3000
+MP-2998
+MP-2783
+MP-2773
+MP-2866
+MP-3089
 MP-2865
-MP-2679
-MP-2663
-MP-2662
-MP-2663
+MP-3109
+MP-2632
+MP-3075
+MP-2639
+MP-2638
+
 
