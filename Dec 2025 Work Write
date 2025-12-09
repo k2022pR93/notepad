@@ -165,3 +165,73 @@ MP-2639
 MP-2638
 
 
+===================================================
+
+09-12-2025
+
+SELECT a.status, COUNT(*)
+FROM (
+    SELECT 
+        id,
+        act_section,
+        other_act_section,
+ 
+        -- Extract char_part (non-numeric values)
+        (
+            SELECT string_agg(val, ', ')
+            FROM unnest(string_to_array(act_section, ',')) AS x(val)
+            WHERE trim(val) !~ '^[0-9]+$'
+        ) AS char_part,
+ 
+        CASE
+            WHEN (
+                -- char_part exists
+                (SELECT COUNT(*) 
+                 FROM unnest(string_to_array(act_section, ',')) AS x(val)
+                 WHERE trim(val) !~ '^[0-9]+$') > 0
+            )
+            AND 
+            (
+                -- other_act_section has data
+                other_act_section IS NOT NULL 
+                AND trim(other_act_section) <> ''
+            )
+            THEN 'Data available'
+            ELSE 'OK to update'
+        END AS status
+ 
+    FROM ems_crime_master
+) a
+GROUP BY a.status;
+
+
+UPDATE ems_crime_master
+SET other_act_section =
+    (
+        SELECT string_agg(val, ', ')
+        FROM unnest(string_to_array(act_section, ',')) AS x(val)
+        WHERE trim(val) !~ '^[0-9]+$'
+    )
+WHERE EXISTS (
+    SELECT 1
+    FROM unnest(string_to_array(act_section, ',')) AS x(val)
+    WHERE trim(val) !~ '^[0-9]+$'
+);
+
+
+MP-3146
+frontend/views/e-m-s/ems_enventary_report.php
+frontend/controllers/EMSController.php
+/frontend/views/e-m-s/view_crime_details.php
+
+MP-3129
+ems-evidence-warehourse-transaction/evidence_inward_transaction.php
+
+MP-3127
+views/e-m-s/ems_enventary_report.php
+frontend/controllers/EmsDocumentController.php
+models/EmsWarehouseEvidenceTransaction.php
+e-m-s/ems_warehouse_application_print.php
+HRMSDEV/frontend/controllers/EMSController.php
+
+https://sanpri.co.in/HRMSDEV/e-m-s/ems-warehouse-document-print?warehouse=1&document_id=17948&receipt_type=outward&name=RAMESH+KESHAV+SANGALE&desig=PSI&mob=9022965029
