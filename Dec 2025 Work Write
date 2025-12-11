@@ -219,15 +219,15 @@ WHERE EXISTS (
 );
 
 
-MP-3146
+MP-3146 -> deployed
 frontend/views/e-m-s/ems_enventary_report.php
 frontend/controllers/EMSController.php
 /frontend/views/e-m-s/view_crime_details.php
 
-MP-3129
+MP-3129 -> deployed
 ems-evidence-warehourse-transaction/evidence_inward_transaction.php
 
-MP-3127
+MP-3127 -> deployed
 views/e-m-s/ems_enventary_report.php
 frontend/controllers/EmsDocumentController.php
 models/EmsWarehouseEvidenceTransaction.php
@@ -237,8 +237,45 @@ HRMSDEV/frontend/controllers/EMSController.php
 ===============================================================
 10-12-2025
 
-MP-3166
+MP-3166 -> deployed
 controllers/EvidenceUploadController.php
 
-MP-3165
+MP-3165 -> deployed
 /frontend/controllers/EmsController.php
+
+
+
+http://localhost/copilot_tinyurl/s.php/?id=3dd705
+
+
+
+===========================================================
+11-12-2025
+
+
+https://jitsi-recordings-tridev.s3.ap-south-1.amazonaws.com/recordings/dgpmhpm7302_19950_21112025_155753/dgpmhpm7302_19950_21112025_155753_2025-11-21-10-28-30.mp4
+
+https://jitsi-recordings-tridev.s3.ap-south-1.amazonaws.com/recordings/dgpshpm8205_57723_08122025_193801/dgpshpm8205_57723_08122025_193801_2025-12-08-14-09-49.mp4
+
+
+https://sanpri.co.in/HRMSDEV/igrms-master/watch-video?file=recordings/dgpshpm8205_57723_08122025_193801/dgpshpm8205_57723_08122025_193801_2025-12-08-14-09-49.mp4
+
+
+
+https://mpolice.in/igrms-master/watch-video?file=recordings/dgpshpm8205_57723_08122025_193801/dgpshpm8205_57723_08122025_193801_2025-12-08-14-09-49.mp4/dgpshpm8205_57723_08122025_193801_2025-12-08-14-09-49.mp4;
+
+
+
+https://mpolice.in/igrms-master/watch-video?file=recordings/dgpshpm8205_57723_08122025_193801/dgpshpm8205_57723_08122025_193801_2025-12-08-14-09-49.mp4/dgpshpm8205_57723_08122025_193801_2025-12-08-14-09-49.mp4
+
+
+https://mpolice.in/igrms-master/watch-video?file=recordings/dgpshpm8205_57723_08122025_193801/dgpshpm8205_57723_08122025_193801_2025-12-08-14-09-49.mp4
+
+/mnt/nas_igrmsvc/recordings/dgpshpm8205_57723_08122025_193801/dgpshpm8205_57723_08122025_193801_2025-12-08-14-09-49.mp4
+
+
+
+
+MP-3004
+controllers/EmsOutwardController.php
+EmsEvidenceWarehourseTransactionController.php
