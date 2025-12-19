@@ -18,8 +18,8 @@ frontend/views/evidence-upload/index.php
 excel_upload_document updated xls file
 
 MP-2984 -> deployed
-iews/evidence-upload/application_upload.php
-d/controllers/EvidenceUploadController.php
+/views/evidence-upload/application_upload.php
+controllers/EvidenceUploadController.php
 
 MP-2995 -> Need to discuss with sir
 
@@ -274,8 +274,119 @@ https://mpolice.in/igrms-master/watch-video?file=recordings/dgpshpm8205_57723_08
 /mnt/nas_igrmsvc/recordings/dgpshpm8205_57723_08122025_193801/dgpshpm8205_57723_08122025_193801_2025-12-08-14-09-49.mp4
 
 
+========================================================
+12-12-2025
 
-
-MP-3004
+MP-3004 -> deployed
 controllers/EmsOutwardController.php
-EmsEvidenceWarehourseTransactionController.php
+controllers/EmsEvidenceWarehourseTransactionController.php
+
+MP-2666 -> deployed
+views/ems-evidence-form/form_new.php
+controllers/EmsEvidenceFormController.php
+views/ems-evidence-form/update.php
+views/ems-evidence-form/form_view.php
+
+MP-2998 -> deployed
+views/e-m-s/view_crime_details.php
+
+MP-3183 -> deployed 
+views/e-m-s/ems_warehouse_document_print.php
+
+MP-3202 -> deployed
+controllers/EmsController.php
+controllers/EmsDocumentController.php
+views/e-m-s/ems_warehouse_application_print.php
+
+MP-3217 -> deployed
+controllers/EvidenceUploadController.php
+
+MP-3201 -> Deployed
+controllers/EmsController.php
+
+MP-3177 -> deployed
+views/e-m-s/view_crime_details.php
+views/e-m-s/view_documnet_details.php
+views/e-m-s/view_application_details.php
+
+MP-3192 -> deployed
+controllers/VcController.php
+views/vc/online-statement.php
+
+MP-3218 -> deployed
+views/evidence-upload/index.php
+controllers/EvidenceUploadController.php
+views/evidence-upload/application_upload.php
+
+MP-3232 -> deployed
+views/ems-evidence-warehourse-transaction-new/evidence_document_inward_transaction.php
+controllers/EmsEvidenceWarehourseTransactionNewController.php
+controllers/EmsApplicationController.php
+views/ems-application/application_inward.php
+
+================================================================
+15-12-2025
+
+MP-3253 -> deployed
+views/ems-evidence-warehourse-transaction-new/evidence_document_inward_transaction.php
+controllers/EmsEvidenceWarehourseTransactionNewController.php
+models/EmsWarehouseDocumentTransaction.php
+models/EmsWarehouseApplicationTransaction.php
+controllers/EmsApplicationController.php
+views/ems-application/application_inward.php
+
+
+MP-3202 -> deployed
+frontend/controllers/EmsController.php
+
+MP-3170 -> deployed
+views/ems-application/application_inward.php
+frontend/controllers/EmsFloorController.php
+views/ems-evidence-warehourse-transaction-new/evidence_document_inward_transaction.php
+
+MP-3198 -> deployed
+frontend/controllers/EmsOutwardController.php
+
+===========================================================
+18-12-2025
+
+MP-3192 -> deployed
+controllers/VcController.php
+controllers/VcDefaultConsentController.php
+controllers/VcConsentController.php
+views/vc-default-consent/thank_you_page.php
+views/vc-consent/schedule-meeting-act.php
+views/vc-consent/thank_you_page_act.php
+
+MP-2982 -> deployed
+views/ems-evidence-form/form_index.php
+
+=================================================================================
+19-12-2025
+
+MP-2666
+controllers/EmsEvidenceFormController.php
+
+MP-3267
+controllers/EvidenceUploadController.php
+views/evidence-upload/application_upload.php
+
+MP-3113
+views/ems-evidence-status-update/evidence-list.php
+views/ems-evidence-status-update/application_list.php
+views/ems-evidence-status-update/document_list.php
+views/ems-evidence-warehourse-transaction/evidence_inward_view.php
+views/ems-application/application_outward.php
+
+MP-3266
+frontend/controllers/EmsController.php
+ems-application/application_inward.php  -> no changes
+controllers/EmsApplicationController.php -> No changes
+/ems-application/application_outward.php -> no changes
+
+MP-2999
+HRMSDEV/frontend/controllers/EmsController.php
+views/ems-evidence-warehourse-transaction/evidence_inward_transaction.php
+
+MP-3244
+views/ems-warehouse-evidence-transaction/ems_transaction_report.php
