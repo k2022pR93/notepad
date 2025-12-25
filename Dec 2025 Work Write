@@ -364,29 +364,143 @@ views/ems-evidence-form/form_index.php
 =================================================================================
 19-12-2025
 
-MP-2666
+MP-2666 -> Deployed
 controllers/EmsEvidenceFormController.php
 
-MP-3267
+MP-3267  -> Deployed
 controllers/EvidenceUploadController.php
-views/evidence-upload/application_upload.php
+views/evidence-upload/application_upload.php  
 
-MP-3113
-views/ems-evidence-status-update/evidence-list.php
-views/ems-evidence-status-update/application_list.php
-views/ems-evidence-status-update/document_list.php
-views/ems-evidence-warehourse-transaction/evidence_inward_view.php
+MP-3113  -> Deployed
+views/ems-evidence-status-update/evidence-list.php no 
+views/ems-evidence-status-update/application_list.php 
+views/ems-evidence-status-update/document_list.php  
+views/ems-evidence-warehourse-transaction/evidence_inward_view.php  
 views/ems-application/application_outward.php
 
-MP-3266
+MP-3266  -> Deployed
 frontend/controllers/EmsController.php
-ems-application/application_inward.php  -> no changes
-controllers/EmsApplicationController.php -> No changes
-/ems-application/application_outward.php -> no changes
+ems-application/application_inward.php  
+controllers/EmsApplicationController.php 
+/ems-application/application_outward.php 
+
+MP-2999  -> Deployed
+HRMSDEV/frontend/controllers/EmsController.php
+views/ems-evidence-warehourse-transaction/evidence_inward_transaction.php
+views/ems-outward/evidence_out_form.php
+
+MP-3244 -> Deployed
+views/ems-warehouse-evidence-transaction/ems_transaction_report.php 
+
+MP-2915 -> Deployed
+controllers/EmsController.php
+controllers/EmsOutwardController.php 
+views/ems-outward/evidence_out_form.php 
+
+MP-3322 -> Deployed
+controllers/EmsDocumentController.php
+controllers/EmsApplicationController.php
+
+===================================================================================
+22-12-2025
+
+actionGetevidencerecordqroutward
 
 MP-2999
 HRMSDEV/frontend/controllers/EmsController.php
-views/ems-evidence-warehourse-transaction/evidence_inward_transaction.php
+ems-outward/evidence_out_form.php
 
-MP-3244
-views/ems-warehouse-evidence-transaction/ems_transaction_report.php
+
+
+
+https://mpolice.in/igrms-master/watch-video?file=recordings/nmadmin0001_54691_22122025_144254/nmadmin0001_54691_22122025_144254_2025-12-22-09-13-20.mp4/nmadmin0001_54691_22122025_144254_2025-12-22-09-13-20.mp4
+
+/volume1/IGRMSVC/recordings/nmadmin0001_54691_22122025_144254/nmadmin0001_54691_22122025_144254_2025-12-22-09-13-20.mp4
+/mnt/nas_igrmsvc/recordings/nmadmin0001_54691_22122025_144254/nmadmin0001_54691_22122025_144254_2025-12-22-09-13-20.mp4
+
+SELECT * FROM "public"."igrms_grievence_dtl" WHERE grievance_master_id = 53506;
+SELECT * FROM "public"."igrms_grievence_doc" WHERE grievence_dtl_id = 53506;
+53506
+
+/var/www/webroot/ROOT/frontend/views/passportverification/view.php
+/var/www/webroot/ROOT/frontend/views/missing/view.php
+/var/www/webroot/ROOT/frontend/views/eventpermission/view.php
+/var/www/webroot/ROOT/frontend/views/crime/view.php
+/var/www/webroot/ROOT/frontend/views/characterverification/view.php
+/var/www/webroot/ROOT/frontend/views/adr/view.php
+/var/www/webroot/ROOT/frontend/views/igrms-master/update_view.php
+
+=====================================================
+23-12-2025
+MP-2999  -> Deployed
+views/ems-evidence-warehourse-transaction/evidence_inward_transaction.php
+HRMSDEV/frontend/controllers/EmsController.php
+views/ems-outward/evidence_out_form.php
+
+
+MP-1748
+ntrollers/EmsEvidenceStatusUpdateController.php
+ems-evidence-status-update/evidence-list.php
+
+
+
+Array
+(
+    [0] => Array
+        (
+            [user_code] => NMC
+            [sms_auth_key] => 123123
+            [sms_sender_id] => MAHPOL
+            [username] => cpnmum
+            [status] => 1
+        )
+
+)
+
+Array
+(
+    [0] => Array
+        (
+            [user_code] => NMC
+            [sms_auth_key] => 123123
+            [sms_sender_id] => MAHPOL
+            [username] => cpnmum
+            [status] => 1
+        )
+
+)
+
+login
+Array
+(
+    [0] => Array
+        (
+            [user_code] => NMC
+            [sms_auth_key] => 123123
+            [sms_sender_id] => MAHPOL
+            [username] => cpnmum
+            [status] => 1
+        )
+
+)
+
+
+https://sanpri.co.in/Rakshak/site/dashboard-page?p=accused_monitoring_dashboard
+
+
+https://sanpri.co.in/Rakshak/fb-process-transaction-rk/dashboard
+
+
+
+frontend/controllers/IgrmsMasterController.php
+frontend/views/igrms-master/index.php
+
+=====
+Invalid selection. Please try again
+==============================================================================
+25-12-2025
+
+MP-1973
+HRMSDEV/frontend/views/igrms-master/index.php
+HRMSDEV/frontend/views/igrms-master/_form.php
+frontend/controllers/IgrmsMasterController.php
