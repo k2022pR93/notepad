@@ -500,7 +500,485 @@ Invalid selection. Please try again
 ==============================================================================
 25-12-2025
 
-MP-1973
+MP-1973 -> Deployed
 HRMSDEV/frontend/views/igrms-master/index.php
 HRMSDEV/frontend/views/igrms-master/_form.php
 frontend/controllers/IgrmsMasterController.php
+
+
+MP-3370 -> Deployed
+/HRMSDEV/frontend/models/RewardProcess.php
+
+
+=====================
+26-12-2025
+
+MP-1761 -> Deployed
+HRMSDEV/frontend/views/missing/_form.php
+
+MP-1706 -> Deployed
+/frontend/models/MissingRecordDetails.php
+RMSDEV/frontend/views/missing/view.php
+HRMSDEV/frontend/views/missing/_form.php
+
+MP-1778 -> Deployed
+Table - adr_record_details_history 
+character_verification_details_history
+crime_details_history
+event_permission_details_history
+missing_record_details_history
+passport_details_history
+
+models/AdrRecordDetailsHistory.php
+models/CharacterVerificationDetailsHistory.php
+models/CrimeDetailsHistory.php
+models/EventPermissionDetailsHistory.php
+models/MissingRecordDetailsHistory.php
+models/PassportDetailsHistory.php
+models/AdrRecordDetails.php
+frontend/controllers/DefaultController.php
+
+MP-1616 -> Deployed
+API created
+TABLE: api_login_logs
+HRMSDEV/hrms_webservices/api/dms_app_login.php
+
+
+BA-369
+b-process-transaction-rk/dashboard_preview.php
+frontend/controllers/SiteController.php
+YatharthBA/frontend/config/main.php
+ontrollers/FbProcessTransactionRkController.php
+common/components/MessageComponent.php
+
+MP-680 -> Deplyed
+views/rakshak-dashboard/accusegeomap.php
+controllers/RakshakDashboardController.php
+/frontend/models/AccusedAddressDetails.php
+
+/var/www/webroot/ROOT/Rakshak/frontend/web/hrms_webservices/rakshak/get_location_on_map.php
+API : https://rakshak.in.net/Rakshak/hrms_webservices/rakshak/get_location_on_map.php
+
+
+
+Desiganation DCP - 22 
+DGPVABF7101
+admin@123
+
+admin@123
+ADMINPUNE01
+
+---
+SELECT * FROM "public"."emp_master" WHERE sevarth_number = 'DGPGSGM7001';
+SELECT * FROM "public"."employee_profiles" WHERE emp_id = 8043;
+SELECT * FROM "public"."profile_master" WHERE profile_code IN ('PROF337','PROF11','PROF322','PROF51','PROF17');
+SELECT * FROM "public"."sub_profile_master" WHERE profile_code IN ('PROF337','PROF11','PROF322','PROF51','PROF17');
+
+SELECT * FROM "public"."menu_access" WHERE sub_profile_code = 'PROF337_ROLE481'; //WAREHOUSE KARKUN
+
+PROF337_ROLE479 -> MUDDEMAL KARKUN
+
+
+PROF337_ROLE481 -> WAREHOUSE KARKUN
+SELECT * FROM "public"."menu_categories" WHERE menu_id IN (
+  630, 633, 644, 643, 645, 641, 634, 647, 648, 649,
+  635, 636, 637, 638, 650, 651, 652, 653, 654
+);
+
+PROF337_ROLE479 -> MUDDEMAL KARKUN - Evidence Data Entry Form -> 631
+SELECT * FROM "public"."menu_categories" WHERE menu_id IN (
+  622, 623, 624, 625, 621, 630, 631, 632, 642, 639,
+  646, 635, 636, 637, 638, 650, 651, 652, 653, 654, 656
+);
+
+PROF337_ROLE482 -> IO OFFICER
+
+PROF17_ROLE174 -> STATION INCHARGE
+
+https://sanpri.co.in/YatharthBA/fb-process-transaction-rk/dashboard-preview
+https://sanpri.co.in/YatharthBA/fb-process-transaction-rk/send-dashboard-chart
+
+https://yatharth.in.net/YatharthBA/fb-process-transaction-rk/dashboard-preview
+https://yatharth.in.net/YatharthBA/fb-process-transaction-rk/send-dashboard-chart
+
+
+
+http://web.smsgw.in/smsapi/httpapi.jsp?username=espacee&password=456456&to=8655615809&from=MAHPOL&text=+Dear+NMADMIN0001%2C+Please+find+the+link+tinyurl.com%2F5p2578yu+for+the+last+week+Breath+Analyzer+Test+Report.mPOLICE&coding=0
+
+
+
+19841
+Array
+(
+    [0] => Array
+        (
+            [user_code] => NMC
+            [sms_auth_key] => 456456
+            [sms_sender_id] => MAHPOL
+            [username] => espacee
+            [status] => 1
+        )
+
+)
+
+https://devbi.sanpri.in/superset/dashboard/p/Vaq0LqOXr7w/
+https://devbi.sanpri.in/superset/explore/p/AWQlnYrboqD/?standalone=1&height=400
+https://devbi.sanpri.in/superset/dashboard/p/Vaq0LqOXr7w/
+https://devbi.sanpri.in/superset/explore/?slice_id=12&standalone=1&height=250
+
+
+==============================================
+29-12-2025
+Adhaar CArd varification
+https://portal.signzy.app/#/my-apis/apis/digilocker-get-eaadhaar/docs
+
+
+/var/www/webroot/ROOT/frontend/web/hrms_webservices/dms_app_login.php
+
+
+
+SELECT 
+        e.id AS emp_id,
+        e.sevarth_number,
+        e.emp_firstname,
+        e.emp_lastname,
+        d.designation_name
+    FROM emp_master e
+    INNER JOIN designation_master d ON e.designation_master_id = d.id
+    INNER JOIN user u ON u.username = e.sevarth_number
+    WHERE 
+        e.designation_master_id = 31
+        AND e.active_status = 1
+        AND u.username = 'NMADMIN0001'
+        AND u.password = 'e6e061838856bf47e1de730719fb2609'
+
+=============================================================
+30-12-2025
+
+SELECT DISTINCT acd.id AS fk_accused_id, ad.major_head_id, ad.fir_no, ad.section, ad.date_of_crime, mjm.english_description AS major, ad.minor_head_id, mim.english_description AS minor, acd.login_sub_unit, um.unit_name AS unitname FROM accused_details AS acd LEFT JOIN ( SELECT ad1.fk_accused_id, ad1.major_head_id, ad1.fir_no, ad1.date_of_crime, ad1.minor_head_id, ad1.police_station, ad1.section FROM accused_crime_dtls AS ad1 INNER JOIN ( SELECT fk_accused_id, MAX(date_of_crime) AS latest_date FROM accused_crime_dtls GROUP BY fk_accused_id ) AS latest ON ad1.fk_accused_id = latest.fk_accused_id AND ad1.date_of_crime = latest.latest_date ) AS ad ON ad.fk_accused_id = acd.id LEFT JOIN major_head_master AS mjm ON mjm.id = ad.major_head_id LEFT JOIN minor_head_master AS mim ON mim.id = ad.minor_head_id LEFT JOIN unit_master AS um ON um.id = ad.police_station WHERE acd.id IN (726,727,728,816,817,818,822,848,980,1307,1472,1515,1516,1521,1522,1526,1529,1530,1531,1532,1545,1633,1635,1643,1644,1802,1815,1821,1823,1826,1831,1920,2004,2008,2345,2426,2464,3508,3548,3590,3702,3748,3750,3790,4093,4173,4446,4571,4576,4581,4736,4943,4949,4984,4985,4986,5004,5490,5543,5562,5646,5724,5760,5976,5979,6003,6006,6047,6051,6054,6057,6059,6448,6604,6862,6982,6996,7103,7106,7108,7208,7209,7710,7726,7925,7996,7999,8153,8156,8264,8283,8285,8286,8289,8291,8390,8395,8447,8606,8611,8718,8746,8922,8926,8929,9098,9100,9102,9104,9106,9109,9114,9122,9123,9126,9127,9129,9132,9137,9153,9156,9159,9163,9164,9168,9171,9313,9424,9694,9796,9826,9847,9936,9944,9958,10180,10240,10241,10354,10383,10433,10530,10564,10788,10790,10792,10820,10862,10864,10878,10895,10909,10958,11150,11185,11260,11310,11652,11657,11743,11771,11797,11885,12005,12052,12206,12207,12477,12479,13157,13199,13236,14431,14432,14449)
+
+{
+    "major":"",
+    "police_station":"",
+    "unit":"",
+    "minor":"",
+    "date_of_crime":"",
+    "arrested_date":""
+}
+
+
+http://rakshak.in.net/Rakshak/site/login
+
+
+MP-70 -> Deployed
+views/summons/editSummonsDetails.php
+
+MP-1918 -> Deployed
+views/igrms-master/online-statement.php
+frontend/views/vc/online-statement.php
+
+RAK-1564 -> Deployed
+/controllers/SiteController.php
+
+
+http://web.smsgw.in/smsapi/httpapi.jsp?username=cpnmum&password=123123&to=8655615809&from=MAHPOL&template_id=1607100000000096655&pe_id=1601100000000004090&text=%E0%A4%B8%E0%A4%AE%E0%A4%A8%E0%A5%8D%E0%A4%B8+%0A+AD+HOC+DISTRICT+JUDGE+4+AND+ASSISTANT+JUDGE+PANVEL+%E0%A4%AF%E0%A4%BE%E0%A4%82%E0%A4%9A%E0%A5%87+%E0%A4%A8%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%AF%E0%A4%BE%E0%A4%B2%E0%A4%AF++Court+No.+1234+%0A+%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%A5%E0%A4%AE%E0%A4%B5%E0%A4%B0%E0%A5%8D%E0%A4%97+%E0%A4%A8%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%AF%E0%A4%A6%E0%A4%82%E0%A4%A1%E0%A4%BE%E0%A4%A7%E0%A4%BF%E0%A4%95%E0%A4%BE%E0%A4%B0%E0%A5%80+IT+CELL+NAVI+MUMBAI+POLICE+STATION+%0A+SSC+NO+444+%0A+CR+NO+121%2F121+%0A+Gokul2++%E0%A4%B0%E0%A4%BE.+Thane+%E0%A4%86%E0%A4%AA%E0%A4%A3+%E0%A4%89%E0%A4%AA%E0%A4%B0%E0%A5%8B%E0%A4%95%E0%A5%8D%E0%A4%A4+%E0%A4%A8%E0%A4%AE%E0%A5%82%E0%A4%A6+%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%95%E0%A4%B0%E0%A4%A3%E0%A4%BE%E0%A4%A4+%E0%A4%B8%E0%A4%BE%E0%A4%95%E0%A5%8D%E0%A4%B7+%E0%A4%AA%E0%A5%81%E0%A4%B0%E0%A4%BE%E0%A4%B5%E0%A5%8D%E0%A4%AF%E0%A4%BE+%E0%A4%95%E0%A4%B0%E0%A5%80%E0%A4%A4%E0%A4%BE+%E0%A4%A6%E0%A4%BF.+31-12-2025+%E0%A4%B0%E0%A5%8B%E0%A4%9C%E0%A5%80+%E0%A4%B8%E0%A4%95%E0%A4%BE%E0%A4%B3%E0%A5%80+11%3A00+%E0%A4%B5%E0%A4%BE.+%E0%A4%B5%E0%A4%B0%E0%A5%80%E0%A4%B2+%E0%A4%95%E0%A5%8B%E0%A4%B0%E0%A5%8D%E0%A4%9F%E0%A4%BE%E0%A4%A4+%E0%A4%B9%E0%A4%9C%E0%A4%B0+%E0%A4%B0%E0%A4%B9%E0%A4%BE%E0%A4%B5%E0%A5%87.+%0A+%E0%A4%85%E0%A4%A7%E0%A4%BF%E0%A4%95+%E0%A4%AE%E0%A4%BE%E0%A4%B9%E0%A4%BF%E0%A4%A4%E0%A5%80%E0%A4%B8%E0%A4%BE%E0%A4%A0%E0%A5%80+%E0%A4%B5%E0%A4%B0%E0%A5%80%E0%A4%B2+%E0%A4%AE%E0%A5%87%E0%A4%B8%E0%A5%87%E0%A4%9C+%E0%A4%9A%E0%A4%BE+%E0%A4%B8%E0%A4%82%E0%A4%A6%E0%A4%B0%E0%A5%8D%E0%A4%AD+%E0%A4%A6%E0%A5%87%E0%A4%8A%E0%A4%A8+%E0%A4%96%E0%A4%BE%E0%A4%B2%E0%A5%80%E0%A4%B2+%E0%A4%A8%E0%A4%82%E0%A4%AC%E0%A4%B0+%E0%A4%B5%E0%A4%B0+%E0%A4%B8%E0%A4%82%E0%A4%AA%E0%A4%B0%E0%A5%8D%E0%A4%95+%E0%A4%95%E0%A4%B0%E0%A4%BE%E0%A4%B5%E0%A4%BE.+%0A+Contact+No.+7777777777++%0A+++%0A+Appearance+link+%3A-https%3A%2F%2Fsanpri.co.in%2FHRMSDEV%2Fsite%2Fwitness-page%3Fid%3DZ%252FZNnDY%253D+%0A+%E0%A4%95%E0%A5%83%E0%A4%AA%E0%A4%AF%E0%A4%BE+922-922-4424+%E0%A4%AF%E0%A4%BE+%E0%A4%A8%E0%A4%82%E0%A4%AC%E0%A4%B0+%E0%A4%B5%E0%A4%B0+%E0%A4%AA%E0%A5%81%E0%A4%A2%E0%A5%80%E0%A4%B2+%E0%A4%A6%E0%A4%BF%E0%A4%B2%E0%A5%87%E0%A4%B2%E0%A5%8D%E0%A4%AF%E0%A4%BE+%E0%A4%AB%E0%A5%89%E0%A4%B0%E0%A4%AE%E0%A5%85%E0%A4%9F+%E0%A4%AE%E0%A4%A7%E0%A5%8D%E0%A4%AF%E0%A5%87+%E0%A4%AE%E0%A5%87%E0%A4%B8%E0%A5%87%E0%A4%9C+%E0%A4%95%E0%A4%B0%E0%A4%BE%E0%A4%B5%E0%A4%BE.+%0A+%0A+%E0%A4%AB%E0%A5%89%E0%A4%B0%E0%A4%AE%E0%A5%85%E0%A4%9F+%3A-+ES+%3Cspace%3E+Yes+or+No.mPOLICE&coding=2
+---
+
+
+http://web.smsgw.in/smsapi/httpapi.jsp?username=espacee&password=456456&to=8655615809&from=MAHPOL&template_id=1607100000000120635&pe_id=1601100000000004090&text=%E0%A4%B8%E0%A4%AE%E0%A4%A8%E0%A5%8D%E0%A4%B8+%0A+ADDITIONAL+CHIEF+JUDICIAL+MAGISTRATE+BANDRA+%2C+MUMBAI+%E0%A4%AF%E0%A4%BE%E0%A4%82%E0%A4%9A%E0%A5%87+%E0%A4%A8%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%AF%E0%A4%BE%E0%A4%B2%E0%A4%AF++Court+No.+1234+%0A+%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%A5%E0%A4%AE%E0%A4%B5%E0%A4%B0%E0%A5%8D%E0%A4%97+%E0%A4%A8%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%AF%E0%A4%A6%E0%A4%82%E0%A4%A1%E0%A4%BE%E0%A4%A7%E0%A4%BF%E0%A4%95%E0%A4%BE%E0%A4%B0%E0%A5%80+IT+CELL+NAVI+MUMBAI+POLICE+STATION+%0A+SSC+NO+444+%0A+CR+NO+121%2F121+%0A+Gokul+Testing++%E0%A4%B0%E0%A4%BE.+Testing+%E0%A4%86%E0%A4%AA%E0%A4%A3+%E0%A4%89%E0%A4%AA%E0%A4%B0%E0%A5%8B%E0%A4%95%E0%A5%8D%E0%A4%A4+%E0%A4%A8%E0%A4%AE%E0%A5%82%E0%A4%A6+%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%95%E0%A4%B0%E0%A4%A3%E0%A4%BE%E0%A4%A4+%E0%A4%B8%E0%A4%BE%E0%A4%95%E0%A5%8D%E0%A4%B7+%E0%A4%AA%E0%A5%81%E0%A4%B0%E0%A4%BE%E0%A4%B5%E0%A5%8D%E0%A4%AF%E0%A4%BE+%E0%A4%95%E0%A4%B0%E0%A5%80%E0%A4%A4%E0%A4%BE+%E0%A4%A6%E0%A4%BF.+02-01-2026+%E0%A4%B0%E0%A5%8B%E0%A4%9C%E0%A5%80+%E0%A4%B8%E0%A4%95%E0%A4%BE%E0%A4%B3%E0%A5%80+11%3A00+%E0%A4%B5%E0%A4%BE.+%E0%A4%B5%E0%A4%B0%E0%A5%80%E0%A4%B2+%E0%A4%95%E0%A5%8B%E0%A4%B0%E0%A5%8D%E0%A4%9F%E0%A4%BE%E0%A4%A4+%E0%A4%B9%E0%A4%9C%E0%A4%B0+%E0%A4%B0%E0%A4%B9%E0%A4%BE%E0%A4%B5%E0%A5%87.+%0A+%E0%A4%85%E0%A4%A7%E0%A4%BF%E0%A4%95+%E0%A4%AE%E0%A4%BE%E0%A4%B9%E0%A4%BF%E0%A4%A4%E0%A5%80%E0%A4%B8%E0%A4%BE%E0%A4%A0%E0%A5%80+%E0%A4%B5%E0%A4%B0%E0%A5%80%E0%A4%B2+%E0%A4%AE%E0%A5%87%E0%A4%B8%E0%A5%87%E0%A4%9C+%E0%A4%9A%E0%A4%BE+%E0%A4%B8%E0%A4%82%E0%A4%A6%E0%A4%B0%E0%A5%8D%E0%A4%AD+%E0%A4%A6%E0%A5%87%E0%A4%8A%E0%A4%A8+%E0%A4%96%E0%A4%BE%E0%A4%B2%E0%A5%80%E0%A4%B2+%E0%A4%A8%E0%A4%82%E0%A4%AC%E0%A4%B0+%E0%A4%B5%E0%A4%B0+%E0%A4%B8%E0%A4%82%E0%A4%AA%E0%A4%B0%E0%A5%8D%E0%A4%95+%E0%A4%95%E0%A4%B0%E0%A4%BE%E0%A4%B5%E0%A4%BE.+%0A+Contact+No.+7777777777++%0A+++%0A+Appearance+link+%3A-https%3A%2F%2Fmpolice.in%2Fsite%2Fwitness-page%3Fid%3DbvVKnTqU+%0A+%E0%A4%95%E0%A5%83%E0%A4%AA%E0%A4%AF%E0%A4%BE+922-922-4424+%E0%A4%AF%E0%A4%BE+%E0%A4%A8%E0%A4%82%E0%A4%AC%E0%A4%B0+%E0%A4%B5%E0%A4%B0+%E0%A4%AA%E0%A5%81%E0%A4%A2%E0%A5%80%E0%A4%B2+%E0%A4%A6%E0%A4%BF%E0%A4%B2%E0%A5%87%E0%A4%B2%E0%A5%8D%E0%A4%AF%E0%A4%BE+%E0%A4%AB%E0%A5%89%E0%A4%B0%E0%A4%AE%E0%A5%85%E0%A4%9F+%E0%A4%AE%E0%A4%A7%E0%A5%8D%E0%A4%AF%E0%A5%87+%E0%A4%AE%E0%A5%87%E0%A4%B8%E0%A5%87%E0%A4%9C+%E0%A4%95%E0%A4%B0%E0%A4%BE%E0%A4%B5%E0%A4%BE.+%0A+%0A+%E0%A4%AB%E0%A5%89%E0%A4%B0%E0%A4%AE%E0%A5%85%E0%A4%9F+%3A-+ES+%3Cspace%3E+Yes+or+No.MAHPOL&coding=2
+http://web.smsgw.in/smsapi/httpapi.jsp?username=espacee&password=456456&to=8655615809&from=MAHPOL&template_id=1607100000000120635&pe_id=1601100000000004090&text=%E0%A4%B8%E0%A4%AE%E0%A4%A8%E0%A5%8D%E0%A4%B8+%0A+AD+HOC+DISTRICT+JUDGE+4+AND+ASSISTANT+JUDGE+PANVEL+%E0%A4%AF%E0%A4%BE%E0%A4%82%E0%A4%9A%E0%A5%87+%E0%A4%A8%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%AF%E0%A4%BE%E0%A4%B2%E0%A4%AF++Court+No.+1234+%0A+%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%A5%E0%A4%AE%E0%A4%B5%E0%A4%B0%E0%A5%8D%E0%A4%97+%E0%A4%A8%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%AF%E0%A4%A6%E0%A4%82%E0%A4%A1%E0%A4%BE%E0%A4%A7%E0%A4%BF%E0%A4%95%E0%A4%BE%E0%A4%B0%E0%A5%80+IT+CELL+NAVI+MUMBAI+POLICE+STATION+%0A+SSC+NO+444+%0A+CR+NO+121%2F121+%0A+Gokul2++%E0%A4%B0%E0%A4%BE.+Thane+%E0%A4%86%E0%A4%AA%E0%A4%A3+%E0%A4%89%E0%A4%AA%E0%A4%B0%E0%A5%8B%E0%A4%95%E0%A5%8D%E0%A4%A4+%E0%A4%A8%E0%A4%AE%E0%A5%82%E0%A4%A6+%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%95%E0%A4%B0%E0%A4%A3%E0%A4%BE%E0%A4%A4+%E0%A4%B8%E0%A4%BE%E0%A4%95%E0%A5%8D%E0%A4%B7+%E0%A4%AA%E0%A5%81%E0%A4%B0%E0%A4%BE%E0%A4%B5%E0%A5%8D%E0%A4%AF%E0%A4%BE+%E0%A4%95%E0%A4%B0%E0%A5%80%E0%A4%A4%E0%A4%BE+%E0%A4%A6%E0%A4%BF.+02-01-2026+%E0%A4%B0%E0%A5%8B%E0%A4%9C%E0%A5%80+%E0%A4%B8%E0%A4%95%E0%A4%BE%E0%A4%B3%E0%A5%80+11%3A00+%E0%A4%B5%E0%A4%BE.+%E0%A4%B5%E0%A4%B0%E0%A5%80%E0%A4%B2+%E0%A4%95%E0%A5%8B%E0%A4%B0%E0%A5%8D%E0%A4%9F%E0%A4%BE%E0%A4%A4+%E0%A4%B9%E0%A4%9C%E0%A4%B0+%E0%A4%B0%E0%A4%B9%E0%A4%BE%E0%A4%B5%E0%A5%87.+%0A+%E0%A4%85%E0%A4%A7%E0%A4%BF%E0%A4%95+%E0%A4%AE%E0%A4%BE%E0%A4%B9%E0%A4%BF%E0%A4%A4%E0%A5%80%E0%A4%B8%E0%A4%BE%E0%A4%A0%E0%A5%80+%E0%A4%B5%E0%A4%B0%E0%A5%80%E0%A4%B2+%E0%A4%AE%E0%A5%87%E0%A4%B8%E0%A5%87%E0%A4%9C+%E0%A4%9A%E0%A4%BE+%E0%A4%B8%E0%A4%82%E0%A4%A6%E0%A4%B0%E0%A5%8D%E0%A4%AD+%E0%A4%A6%E0%A5%87%E0%A4%8A%E0%A4%A8+%E0%A4%96%E0%A4%BE%E0%A4%B2%E0%A5%80%E0%A4%B2+%E0%A4%A8%E0%A4%82%E0%A4%AC%E0%A4%B0+%E0%A4%B5%E0%A4%B0+%E0%A4%B8%E0%A4%82%E0%A4%AA%E0%A4%B0%E0%A5%8D%E0%A4%95+%E0%A4%95%E0%A4%B0%E0%A4%BE%E0%A4%B5%E0%A4%BE.+%0A+Contact+No.+7777777777++%0A+++%0A+Appearance+link+%3A-https%3A%2F%2Fsanpri.co.in%2FHRMSDEV%2Fsite%2Fwitness-page%3Fid%3DZ%252FZNnTY%253D+%0A+%E0%A4%95%E0%A5%83%E0%A4%AA%E0%A4%AF%E0%A4%BE+922-922-4424+%E0%A4%AF%E0%A4%BE+%E0%A4%A8%E0%A4%82%E0%A4%AC%E0%A4%B0+%E0%A4%B5%E0%A4%B0+%E0%A4%AA%E0%A5%81%E0%A4%A2%E0%A5%80%E0%A4%B2+%E0%A4%A6%E0%A4%BF%E0%A4%B2%E0%A5%87%E0%A4%B2%E0%A5%8D%E0%A4%AF%E0%A4%BE+%E0%A4%AB%E0%A5%89%E0%A4%B0%E0%A4%AE%E0%A5%85%E0%A4%9F+%E0%A4%AE%E0%A4%A7%E0%A5%8D%E0%A4%AF%E0%A5%87+%E0%A4%AE%E0%A5%87%E0%A4%B8%E0%A5%87%E0%A4%9C+%E0%A4%95%E0%A4%B0%E0%A4%BE%E0%A4%B5%E0%A4%BE.+%0A+%0A+%E0%A4%AB%E0%A5%89%E0%A4%B0%E0%A4%AE%E0%A5%85%E0%A4%9F+%3A-+ES+%3Cspace%3E+Yes+or+No.MAHPOL&coding=2
+
+
+19841
+Array
+(
+    [0] => Array
+        (
+            [user_code] => CPNMUM
+            [sms_auth_key] => 123123
+            [sms_sender_id] => CPNMUM
+            [username] => cpnmum
+            [status] => 1
+        )
+
+)
+
+
+Array
+(
+    [0] => Array
+        (
+            [user_code] => CPPUNE
+            [sms_auth_key] => 123123
+            [sms_sender_id] => MAHAPOL
+            [username] => webpune
+            [status] => 1
+        )
+
+)
+
+================================================
+05-01-2026
+
+9604348548
+
+
+SUPERADMIN 
+UNIT ID : 19375
+Array
+(
+    [0] => Array
+        (
+            [user_code] => 
+            [sms_auth_key] => 123123
+            [sms_sender_id] => POLICE
+            [username] => spabad
+            [status] => 1
+        )
+
+)
+
+
+SELECT
+  *
+FROM alcosync_live_db.public.vw_ds_ba_trxn
+LIMIT 100
+
+vw_ds_ba_trxn
+
+vw_ds_ba_trxn
+
+SELECT
+  *
+FROM alcosync_live_db.public.vw_ds_ba_trxn
+LIMIT 100
+
+
+KRI5656644
+
+
+NMADMIN0001
+
+SELECT * FROM "public"."vw_unit_incharge_hierarchy" WHERE police_station_id = 199072316;  //19393120
+199072316
+
+SELECT * FROM "public"."emp_master" WHERE sevarth_number = 'KRI5656644';
+
+fb-process-transaction-rk/live-dashboard
+======================================
+06-01-2026
+
+
+SELECT * FROM "public"."city_master_codes" WHERE city_id IN('19841','19393');
+
+
+https://sanpri.co.in/HRMSDEV/nm-website/register-grievance-application
+
+
+e6e061838856bf47e1de730719fb2609
+e6e061838856bf47e1de730719fb2609
+
+
+
+====================================================
+07-01-2026
+
+SELECT * FROM "public"."unit_master" WHERE parent_cd = 199072241;
+
+WITH RECURSIVE unit_tree AS (
+    SELECT id
+    FROM unit_master
+    WHERE id = 199072241   -- example: ACP PANVEL
+ 
+    UNION ALL
+ 
+    SELECT um.id
+    FROM unit_master um
+    JOIN unit_tree ut
+      ON um.parent_cd = ut.id
+)
+SELECT ut.id
+FROM unit_tree ut
+LEFT JOIN unit_master child
+  ON child.parent_cd = ut.id
+WHERE child.id IS NULL;
+
+------
+
+
+
+
+SELECT 
+        e.id AS emp_id,
+        e.sevarth_number,
+        e.emp_firstname,
+        e.emp_lastname
+    FROM emp_master as e
+    INNER JOIN employee_profiles as ep ON e.id = ep.emp_id
+    INNER JOIN "public"."user" as u ON u.username = e.sevarth_number
+    WHERE 
+        ep.role_code = 'PROF337_ROLE437'
+        AND e.active_status = 1
+        AND u.username = 'KMADMIN0001'
+        AND u.password = 'e6e061838856bf47e1de730719fb2609'
+
+
+
+        SELECT 
+        e.id AS emp_id,
+        e.sevarth_number,
+        e.emp_firstname,
+        e.emp_lastname,
+        u.username,
+        u.password
+    FROM emp_master as e
+    INNER JOIN employee_profiles as ep ON e.id = ep.emp_id
+    INNER JOIN "public"."user" as u ON u.username = e.sevarth_number
+    WHERE 
+        ep.role_code = 'PROF337_ROLE437'
+        AND e.active_status = 1
+        AND u.username = 'TESTUSER456'
+        AND u.password = 'e6e061838856bf47e1de730719fb2609'
+
+
+
+        "SELECT  max(id) as wit_id,  max(id) as id, fg.summons_person_mobile as witness_mobile,
+                                fg.summons_person_name as witness_name,fg.summons_person_address
+                                from fb_gb_summons fg
+                                WHERE fg.summons_witness_id= 150723 group by 3,4,5 "
+
+
+SELECT 
+    fg.id AS wit_id,
+    fg.id,
+    fg.summons_person_mobile AS witness_mobile,
+    fg.summons_person_name AS witness_name,
+    fg.summons_person_address
+FROM fb_gb_summons fg
+WHERE fg.summons_witness_id = 150723
+ORDER BY fg.id DESC
+LIMIT 1
+
+
+
+SELECT * FROM "public"."unit_master" WHERE id = '199072176'; DG OFFICE
+SELECT * FROM "public"."unit_master" WHERE id = '1939345';   ADGP ADMIN OFFICE
+SELECT * FROM "public"."unit_master" WHERE id = '199072661'; PUNE COMMISIONERATE
+SELECT * FROM "public"."unit_master" WHERE id = '199071741'; JT.CP PUNE CITY
+SELECT * FROM "public"."unit_master" WHERE id = '199071742'; ADD. CP_ADMIN  PUNE CITY
+SELECT * FROM "public"."unit_master" WHERE id = '199071666'; DCP HQ PUNE CITY
+SELECT * FROM "public"."unit_master" WHERE id = '199071677'; ACP ADMIN
+SELECT * FROM "public"."unit_master" WHERE id = '199071714'; MPOLICE (IT CELL) PUNE CITY
+
+
+
+
+Array
+(
+    [id] => 132583
+    [emp_firstname] => PUNE
+    [emp_middlename] => CITY
+    [emp_lastname] => KMADMIN
+    [sevarth_number] => KMADMIN0001
+    [unit_master_id] => 199071714
+)
+{"guestToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoiS01BRE1JTjAwMDEiLCJmaXJzdF9uYW1lIjoiUFVORSBDSVRZIiwibGFzdF9uYW1lIjoiS01BRE1JTiJ9LCJyZXNvdXJjZXMiOlt7InR5cGUiOiJkY
+    XNoYm9hcmQiLCJpZCI6IjFmYzVkM2VlLTBhYzktNDgxYi1iZDViLTFjYzJlYzBlNDFhZSJ9XSwicmxzX3J1bGVzIjpbXSwiaWF0IjoxNzY3Nzc5NzEzLjUzOTg2NDMsImV4cCI6MTc2Nzc4MDAxMy41Mzk4NjQzLCJhdWQiOiJodHRwczo
+    vL2RldmJpLnNhbnByaS5pbi8iLCJ0eXBlIjoiZ3Vlc3QifQ.b-FVWbrgre4vfjEfa4X6Mq1cMQw9hZVvhIH34iM0U78"}
+
+
+
+
+  unit_master_id IN (
+    WITH RECURSIVE units AS (
+        SELECT um.unit_master_id
+        FROM unit_master um
+        JOIN user_unit_map uum
+            ON uum.unit_master_id = um.unit_master_id
+        WHERE uum.sevarth_number = '{{ current_username() }}'
+
+        UNION ALL
+
+        SELECT child.unit_master_id
+        FROM unit_master child
+        JOIN units parent
+            ON child.parent_unit_id = parent.unit_master_id
+    )
+    SELECT unit_master_id FROM units
+)
+--
+
+
+WITH RECURSIVE unit_tree AS (
+    SELECT id
+    FROM unit_master
+    WHERE id = 199072241   -- example: ACP PANVEL
+ 
+    UNION ALL
+ 
+    SELECT um.id
+    FROM unit_master um
+    JOIN unit_tree ut
+      ON um.parent_cd = ut.id
+)
+SELECT ut.id
+FROM unit_tree ut
+LEFT JOIN unit_master child
+  ON child.parent_cd = ut.id
+WHERE child.id IS NULL;
+
+--
+
+This is origial
+
+
+WITH RECURSIVE unit_tree AS (
+    SELECT id
+    FROM unit_master
+    WHERE id =  '{{ current_username() }}' --199072316
+
+    UNION ALL
+
+    SELECT um.id
+    FROM unit_master um
+    JOIN unit_tree ut
+      ON um.parent_cd = ut.id
+),
+leaf_units AS (
+    SELECT ut.id
+    FROM unit_tree ut
+    LEFT JOIN unit_master child
+      ON child.parent_cd = ut.id
+    WHERE child.id IS NULL
+)
+SELECT v.*
+FROM vw_ds_ba_trxn v
+JOIN leaf_units lu
+  ON v.unit_master_id = lu.id;
+
+====
+
+
+WITH RECURSIVE unit_tree AS (
+    SELECT id
+    FROM unit_master
+    WHERE id =  '{{ current_username() }}'
+
+    UNION ALL
+
+    SELECT um.id
+    FROM unit_master um
+    JOIN unit_tree ut
+      ON um.parent_cd = ut.id
+),
+leaf_units AS (
+    SELECT ut.id
+    FROM unit_tree ut
+    LEFT JOIN unit_master child
+      ON child.parent_cd = ut.id
+    WHERE child.id IS NULL
+)
+SELECT v.*
+FROM vw_ds_ba_trxn v
+JOIN leaf_units lu
+  ON v.unit_master_id = lu.id;
